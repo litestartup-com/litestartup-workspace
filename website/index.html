@@ -1,0 +1,2123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script defer src="https://ga.cloudkoonly.com/script.js"
+        data-website-id="9d8777ef-c484-46fa-871f-592c2b828cec"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://ga.cloudkoonly.com https://www.googletagmanager.com https://app.litestartup.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://ga.cloudkoonly.com https://app.litestartup.com https://api.litestartup.com; upgrade-insecure-requests;">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+    <meta name="description"
+        content="LiteStartup - The all-in-one email platform for startups. Workmail, marketing campaigns, transactional email, AI tools, live chat, and more.">
+    <meta name="keywords"
+        content="email marketing, startup email, AI email, email automation, transactional email, workmail, live chat, ticket system">
+    <meta name="author" content="LiteStartup">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:site_name" content="LiteStartup | All-in-One Email Platform for Startups" />
+    <meta property="og:title" content="LiteStartup | All-in-One Email Platform for Startups" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description"
+        content="Workmail, marketing campaigns, transactional email, AI content tools, website builder, live chat and ticket system. Built for startups." />
+    <meta property="og:image" content="https://www.litestartup.com/imgs/x.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:url" content="https://www.litestartup.com/" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.litestartup.com/">
+    <meta property="twitter:title" content="LiteStartup | All-in-One Email Platform for Startups">
+    <meta property="twitter:description"
+        content="Workmail, marketing campaigns, transactional email, AI content tools, website builder, live chat and ticket system. Built for startups.">
+    <meta property="twitter:image" content="https://www.litestartup.com/imgs/x.jpg">
+    <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="/favicon.ico?v=3.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=3.0">
+    <link rel="canonical" href="https://litestartup.com/">
+    <title>LiteStartup - All-in-One Platform for Startups</title>
+    <script src="https://app.litestartup.com/js/3.4.17.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Space Grotesk', sans-serif
+        }
+
+        code,
+        .mono {
+            font-family: 'JetBrains Mono', monospace
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            background: #fff;
+            color: #0a0a0a;
+            overflow-x: hidden
+        }
+
+        .nav-bar {
+            background: rgba(255, 255, 255, .92);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(0, 0, 0, .06)
+        }
+
+        .nav-dropdown {
+            position: relative
+        }
+
+        .nav-dropdown-menu {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translateX(-50%) translateY(6px);
+            min-width: 260px;
+            background: #fff;
+            border: 1px solid rgba(0, 0, 0, .08);
+            border-radius: 12px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, .1), 0 2px 8px rgba(0, 0, 0, .04);
+            padding: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .2s, transform .2s, visibility .2s;
+            z-index: 100
+        }
+
+        .nav-dropdown:hover .nav-dropdown-menu,
+        .nav-dropdown.active .nav-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(8px)
+        }
+
+        .nav-dropdown-menu a {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            transition: background .15s;
+            text-decoration: none
+        }
+
+        .nav-dropdown-menu a:hover {
+            background: #f5f5f5
+        }
+
+        .dd-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            background: #f5f5f5
+        }
+
+        .nav-dropdown-menu a:hover .dd-icon {
+            background: #ebebeb
+        }
+
+        .dd-title {
+            font-weight: 600;
+            font-size: .875rem;
+            color: #0a0a0a;
+            line-height: 1.3
+        }
+
+        .dd-desc {
+            font-size: .75rem;
+            color: #6b6b6b;
+            line-height: 1.4;
+            margin-top: 2px
+        }
+
+        .btn-primary {
+            background: #0a0a0a;
+            color: #fff;
+            padding: .625rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: .875rem;
+            transition: all .2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px
+        }
+
+        .btn-primary:hover {
+            background: #1a1a1a;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, .15);
+            transform: translateY(-1px)
+        }
+
+        .btn-secondary {
+            background: #fff;
+            color: #0a0a0a;
+            padding: .625rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: .875rem;
+            border: 1.5px solid rgba(0, 0, 0, .15);
+            transition: all .2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px
+        }
+
+        .btn-secondary:hover {
+            border-color: #0a0a0a;
+            background: #fafafa
+        }
+
+        .btn-primary-lg {
+            background: #0a0a0a;
+            color: #fff;
+            padding: .875rem 2rem;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all .2s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px
+        }
+
+        .btn-primary-lg:hover {
+            background: #1a1a1a;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, .18);
+            transform: translateY(-1px)
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid rgba(0, 0, 0, .08);
+            border-radius: 14px;
+            transition: all .3s
+        }
+
+        .card:hover {
+            border-color: rgba(0, 0, 0, .18);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, .08);
+            transform: translateY(-2px)
+        }
+
+        .card-highlight {
+            background: #0a0a0a;
+            color: #fff;
+            border: 1px solid #0a0a0a;
+            border-radius: 14px
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all .6s cubic-bezier(.4, 0, .2, 1)
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0, 0, 0, .08), transparent)
+        }
+
+        .code-block {
+            background: #fafafa;
+            border: 1px solid rgba(0, 0, 0, .08);
+            border-radius: 12px
+        }
+
+        .compare-table th,
+        .compare-table td {
+            padding: 14px 18px
+        }
+
+        .compare-table thead th {
+            border-bottom: 1px solid rgba(0, 0, 0, .08)
+        }
+
+        .compare-table tbody tr {
+            border-bottom: 1px solid rgba(0, 0, 0, .04);
+            transition: background .15s
+        }
+
+        .compare-table tbody tr:hover {
+            background: #fafafa
+        }
+
+        .compare-table tbody tr:last-child {
+            border-bottom: none
+        }
+
+        .pricing-toggle {
+            background: #f0f0f0;
+            border-radius: 8px;
+            padding: 3px
+        }
+
+        .pricing-toggle button {
+            padding: 6px 18px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: .875rem;
+            transition: all .2s;
+            color: #6b6b6b
+        }
+
+        .pricing-toggle button.active {
+            background: #0a0a0a;
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .12)
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #fafafa
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, .15);
+            border-radius: 3px
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 0, 0, .3)
+        }
+
+        #toTopBtn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 44px;
+            height: 44px;
+            background: #0a0a0a;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 90;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, .15);
+            transition: all .25s;
+            opacity: 0;
+            transform: translateY(12px)
+        }
+
+        #toTopBtn.show {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        #toTopBtn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, .2)
+        }
+
+        @media(max-width:480px) {
+            .btn-primary-lg {
+                padding: .75rem 1.5rem;
+                font-size: .875rem
+            }
+
+            h1 {
+                font-size: 2.25rem !important;
+                line-height: 1.15 !important
+            }
+        }
+
+        /* Fix: code-block overflow on small screens */
+        .code-block {
+            min-width: 0;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .code-block pre {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        @media(max-width:640px) {
+            .code-block pre {
+                font-size: .75rem;
+            }
+
+            .code-block {
+                padding: 1rem;
+            }
+
+            .compare-table th,
+            .compare-table td {
+                padding: 10px 8px;
+                font-size: .75rem;
+            }
+        }
+
+        /* Fix: Firefox SVG icon rendering in mobile menu button */
+        #mobileMenuBtn {
+            color: #0a0a0a;
+            -webkit-appearance: none;
+            appearance: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            line-height: 0;
+        }
+
+        /* Mega menu for Products dropdown - full-width Cloudflare style */
+        .mega-menu {
+            position: fixed;
+            top: 64px;
+            left: 0;
+            right: 0;
+            transform: translateY(-4px);
+            background: #fff;
+            border-bottom: 1px solid rgba(0, 0, 0, .08);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, .08), 0 2px 8px rgba(0, 0, 0, .03);
+            padding: 28px 0 32px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .2s, transform .2s, visibility .2s;
+            z-index: 100;
+        }
+
+        .nav-dropdown:hover .mega-menu,
+        .nav-dropdown.active .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .mega-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .mega-section {
+            padding: 12px 0;
+        }
+
+        .mega-section+.mega-section {
+            border-top: 1px solid rgba(0, 0, 0, .06);
+        }
+
+        .mega-cat-label {
+            font-size: .65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            color: #999;
+            padding: 0 0 10px;
+        }
+
+        .mega-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 4px;
+        }
+
+        .mega-menu a {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            transition: background .15s;
+            text-decoration: none;
+        }
+
+        .mega-menu a:hover {
+            background: #f5f5f5;
+        }
+
+        .mega-menu .dd-title {
+            font-size: .8125rem;
+            font-weight: 600;
+            color: #0a0a0a;
+            line-height: 1.3;
+        }
+
+        .mega-menu .dd-desc {
+            font-size: .7rem;
+            color: #888;
+            line-height: 1.4;
+            margin-top: 1px;
+        }
+
+        .mega-menu .dd-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .mega-menu .dd-icon svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .mega-coming {
+            opacity: .4;
+            pointer-events: none;
+        }
+
+        /* Slide-out mobile menu */
+        #mobileOverlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .4);
+            z-index: 60;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .3s, visibility .3s;
+        }
+
+        #mobileOverlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #mobileDrawer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 300px;
+            max-width: 85vw;
+            background: #fff;
+            z-index: 70;
+            transform: translateX(-100%);
+            transition: transform .3s cubic-bezier(.4, 0, .2, 1);
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        #mobileDrawer.active {
+            transform: translateX(0);
+        }
+
+        main#website-blog,
+        main#website-block {
+            padding-top: 100px;
+        }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C95033171M"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments) } gtag('js', new Date()); gtag('config', 'G-C95033171M');</script>
+    <script>(function (d, w) { w.LSChat = { key: 'ef0b16789bdb651237363dac381d9d15' }; var s = d.createElement('script'); s.src = 'https://app.litestartup.com/chat/widget/js'; s.async = 1; d.head.appendChild(s) })(document, window);</script>
+</head>
+
+<body>
+    <!-- HEADER/NAV (parseHtmlTemplate: menu) -->
+    <header>
+        <nav class="fixed w-full nav-bar z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <a href="/" class="flex items-center gap-2.5 flex-shrink-0">
+                        <div class="w-8 h-8 rounded-lg bg-black flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <span class="text-lg font-bold">LiteStartup</span>
+                    </a>
+                    <!-- Desktop Nav -->
+                    <div class="hidden lg:flex items-center gap-1">
+                        <div class="nav-dropdown">
+                            <button
+                                class="flex items-center gap-1 px-3 py-4 text-sm font-medium text-gray-600 hover:text-black transition-colors rounded-lg">Products
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg></button>
+                            <div class="mega-menu">
+                                <div class="mega-inner">
+                                    <!-- Email -->
+                                    <div class="mega-section">
+                                        <div class="mega-cat-label">Email</div>
+                                        <div class="mega-grid">
+                                            <a href="/products/workmail">
+                                                <div class="dd-icon"><svg class="text-gray-700" fill="none"
+                                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                                                    </svg></div>
+                                                <div>
+                                                    <div class="dd-title">Workmail</div>
+                                                    <div class="dd-desc">Business email with your own domain.</div>
+                                                </div>
+                                            </a>
+                                            <a href="/products/email-marketing">
+                                                <div class="dd-icon"><svg class="text-gray-700" fill="none"
+                                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 110-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 01-1.44-4.282m3.102.069a18.03 18.03 0 01-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 018.835 2.535M10.34 6.66a23.847 23.847 0 008.835-2.535m0 0A23.74 23.74 0 0018.795 3m.38 1.125a23.91 23.91 0 011.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 001.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 010 3.46" />
+                                                    </svg></div>
+                                                <div>
+                                                    <div class="dd-title">Email Marketing</div>
+                                                    <div class="dd-desc">Campaigns, automation &amp; analytics.</div>
+                                                </div>
+                                            </a>
+                                            <a href="/products/transactional-email">
+                                                <div class="dd-icon"><svg class="text-gray-700" fill="none"
+                                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                                                    </svg></div>
+                                                <div>
+                                                    <div class="dd-title">Transactional Email</div>
+                                                    <div class="dd-desc">API-driven emails for your app.</div>
+                                                </div>
+                                            </a>
+                                            <a href="/products/warm-up">
+                                                <div class="dd-icon"><svg class="text-gray-700" fill="none"
+                                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" />
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1.001A3.75 3.75 0 0012 18z" />
+                                                    </svg></div>
+                                                <div>
+                                                    <div class="dd-title">Warm-up</div>
+                                                    <div class="dd-desc">Build sender reputation automatically.</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Applications -->
+                                    <div class="mega-section">
+                                        <div class="mega-cat-label">Applications</div>
+                                        <div class="mega-grid">
+                                            <a href="/products/litesaas-admin">
+                                                <div class="dd-icon"><svg class="text-gray-700" fill="none"
+                                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+                                                    </svg></div>
+                                                <div>
+                                                    <div class="dd-title">Admin</div>
+                                                    <div class="dd-desc">Open-source SaaS admin dashboard.</div>
+                                                </div>
+                                            </a>
+                                            <a href="/products/website">
+                                                <div class="dd-icon"><svg class="text-gray-700" fill="none"
+                                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5a17.888 17.888 0 01-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                                                    </svg></div>
+                                                <div>
+                                                    <div class="dd-title">Website</div>
+                                                    <div class="dd-desc">Build and host your startup site.</div>
+                                                </div>
+                                            </a>
+                                            <a href="/products/blog">
+                                                <div class="dd-icon"><svg class="text-gray-700" fill="none"
+                                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
+                                                    </svg></div>
+                                                <div>
+                                                    <div class="dd-title">Blog</div>
+                                                    <div class="dd-desc">Publish content to grow your audience.</div>
+                                                </div>
+                                            </a>
+                                            <a href="/products/docs">
+                                                <div class="dd-icon"><svg class="text-gray-700" fill="none"
+                                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                                                    </svg></div>
+                                                <div>
+                                                    <div class="dd-title">Docs</div>
+                                                    <div class="dd-desc">Host product documentation easily.</div>
+                                                </div>
+                                            </a>
+                                            <a href="/products/changelog">
+                                                <div class="dd-icon"><svg class="text-gray-700" fill="none"
+                                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
+                                                    </svg></div>
+                                                <div>
+                                                    <div class="dd-title">Changelog</div>
+                                                    <div class="dd-desc">Share product updates with users.</div>
+                                                </div>
+                                            </a>
+                                            <a href="/products/live-chat">
+                                                <div class="dd-icon"><svg class="text-gray-700" fill="none"
+                                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+                                                    </svg></div>
+                                                <div>
+                                                    <div class="dd-title">Live Chat</div>
+                                                    <div class="dd-desc">Real-time chat widget for your site.</div>
+                                                </div>
+                                            </a>
+                                            <a href="/products/help-desk">
+                                                <div class="dd-icon"><svg class="text-gray-700" fill="none"
+                                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 010 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 010-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375z" />
+                                                    </svg></div>
+                                                <div>
+                                                    <div class="dd-title">Help Desk</div>
+                                                    <div class="dd-desc">Ticket management &amp; support portal.</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- Growth -->
+                                    <div class="mega-section">
+                                        <div class="mega-cat-label">Growth</div>
+                                        <div class="mega-grid">
+                                            <a href="/products/seo-automation">
+                                                <div class="dd-icon"><svg class="text-gray-700" fill="none"
+                                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                                    </svg></div>
+                                                <div>
+                                                    <div class="dd-title">SEO Automation</div>
+                                                    <div class="dd-desc">Automated SEO audits &amp;
+                                                        optimization.</div>
+                                                </div>
+                                            </a>
+                                            <a href="/products/marketing-automation">
+                                                <div class="dd-icon"><svg class="text-gray-700" fill="none"
+                                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182" />
+                                                    </svg></div>
+                                                <div>
+                                                    <div class="dd-title">Marketing Automation</div>
+                                                    <div class="dd-desc">Workflows, triggers &amp; sequences.</div>
+                                                </div>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                    <!-- AI Tools -->
+                                    <div class="mega-section">
+                                        <div class="mega-cat-label">AI Tools</div>
+                                        <div class="mega-grid">
+                                            <a href="/products/ai-content-assistant">
+                                                <div class="dd-icon"><svg class="text-gray-700" fill="none"
+                                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
+                                                    </svg></div>
+                                                <div>
+                                                    <div class="dd-title">AI Content Assistant</div>
+                                                    <div class="dd-desc">Generate emails &amp; copy with AI.</div>
+                                                </div>
+                                            </a>
+                                            <a href="/products/ai-agent">
+                                                <div class="dd-icon"><svg class="text-gray-700" fill="none"
+                                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25z" />
+                                                    </svg></div>
+                                                <div>
+                                                    <div class="dd-title">AI Agent</div>
+                                                    <div class="dd-desc">Custom AI agents for workflows.</div>
+                                                </div>
+                                            </a>
+                                            <a href="/products/ai-stack">
+                                                <div class="dd-icon"><svg class="text-gray-700" fill="none"
+                                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L12 12.75 6.43 9.75m11.14 0l4.179 2.25L12 17.25 2.25 12l4.179-2.25" />
+                                                    </svg></div>
+                                                <div>
+                                                    <div class="dd-title">AI Stack</div>
+                                                    <div class="dd-desc">Pre-built AI tool integrations.</div>
+                                                </div>
+                                            </a>
+                                            <a href="/products/ai-rag">
+                                                <div class="dd-icon"><svg class="text-gray-700" fill="none"
+                                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+                                                    </svg></div>
+                                                <div>
+                                                    <div class="dd-title">AI RAG</div>
+                                                    <div class="dd-desc">Open-source retrieval-augmented generation.
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-dropdown">
+                            <button
+                                class="flex items-center gap-1 px-3 py-4 text-sm font-medium text-gray-600 hover:text-black transition-colors rounded-lg">Solutions
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg></button>
+                            <div class="nav-dropdown-menu">
+                                <a href="/solutions/developers">
+                                    <div class="dd-icon"><svg class="w-4 h-4 text-gray-700" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                                        </svg></div>
+                                    <div>
+                                        <div class="dd-title">For Developers</div>
+                                        <div class="dd-desc">Simple REST API. No SDK lock-in.</div>
+                                    </div>
+                                </a>
+                                <a href="/solutions/startups">
+                                    <div class="dd-icon"><svg class="w-4 h-4 text-gray-700" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                                        </svg></div>
+                                    <div>
+                                        <div class="dd-title">For Startups</div>
+                                        <div class="dd-desc">All-in-one email tools at startup pricing.</div>
+                                    </div>
+                                </a>
+                                <a href="/solutions/saas">
+                                    <div class="dd-icon"><svg class="w-4 h-4 text-gray-700" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+                                        </svg></div>
+                                    <div>
+                                        <div class="dd-title">For SaaS</div>
+                                        <div class="dd-desc">Transactional + marketing in one platform.</div>
+                                    </div>
+                                </a>
+                                <a href="/solutions/ecommerce">
+                                    <div class="dd-icon"><svg class="w-4 h-4 text-gray-700" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                        </svg></div>
+                                    <div>
+                                        <div class="dd-title">For E-commerce</div>
+                                        <div class="dd-desc">Order confirmations, promotions, and more.</div>
+                                    </div>
+                                </a>
+                                <a href="/solutions/agencies">
+                                    <div class="dd-icon"><svg class="w-4 h-4 text-gray-700" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                                        </svg></div>
+                                    <div>
+                                        <div class="dd-title">For Agencies</div>
+                                        <div class="dd-desc">Manage multiple client accounts with teams.</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="nav-dropdown">
+                            <button
+                                class="flex items-center gap-1 px-3 py-4 text-sm font-medium text-gray-600 hover:text-black transition-colors rounded-lg">AI
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg></button>
+                            <div class="nav-dropdown-menu">
+                                <a href="/products/ai-content-assistant">
+                                    <div class="dd-icon"><svg class="w-4 h-4 text-gray-700" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
+                                        </svg></div>
+                                    <div>
+                                        <div class="dd-title">AI Content Assistant</div>
+                                        <div class="dd-desc">Generate email copy &amp; subject lines with AI.</div>
+                                    </div>
+                                </a>
+                                <a href="/products/ai-agent">
+                                    <div class="dd-icon"><svg class="w-4 h-4 text-gray-700" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25z" />
+                                        </svg></div>
+                                    <div>
+                                        <div class="dd-title">AI Agent</div>
+                                        <div class="dd-desc">Build custom AI agents for workflows.</div>
+                                    </div>
+                                </a>
+                                <a href="/products/ai-stack">
+                                    <div class="dd-icon"><svg class="w-4 h-4 text-gray-700" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L12 12.75 6.43 9.75m11.14 0l4.179 2.25L12 17.25 2.25 12l4.179-2.25" />
+                                        </svg></div>
+                                    <div>
+                                        <div class="dd-title">AI Stack</div>
+                                        <div class="dd-desc">Pre-built AI tool integrations.</div>
+                                    </div>
+                                </a>
+                                <a href="/products/ai-rag">
+                                    <div class="dd-icon"><svg class="w-4 h-4 text-gray-700" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+                                        </svg></div>
+                                    <div>
+                                        <div class="dd-title">AI RAG</div>
+                                        <div class="dd-desc">Open-source retrieval-augmented generation.</div>
+                                    </div>
+                                </a>
+                                <a href="/products/startups-skills">
+                                    <div class="dd-icon"><svg class="w-4 h-4 text-gray-700" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M4.26 10.147a60.438 60.438 0 00-.491 6.347A48.62 48.62 0 0112 20.904a48.62 48.62 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.636 50.636 0 00-2.658-.813A59.906 59.906 0 0112 3.493a59.903 59.903 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                                        </svg></div>
+                                    <div>
+                                        <div class="dd-title">Startups Skills</div>
+                                        <div class="dd-desc">Open-source AI skills for startups.</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <a href="/pricing"
+                            class="px-3 py-2 text-sm font-medium text-gray-600 hover:text-black transition-colors rounded-lg">Pricing</a>
+                        <div class="nav-dropdown">
+                            <button
+                                class="flex items-center gap-1 px-3 py-4 text-sm font-medium text-gray-600 hover:text-black transition-colors rounded-lg">Resources
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg></button>
+                            <div class="nav-dropdown-menu">
+                                <a href="/blog">
+                                    <div class="dd-icon"><svg class="w-4 h-4 text-gray-700" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
+                                        </svg></div>
+                                    <div>
+                                        <div class="dd-title">Blog</div>
+                                        <div class="dd-desc">Articles, tutorials, and insights.</div>
+                                    </div>
+                                </a>
+                                <a href="/docs" target="_blank">
+                                    <div class="dd-icon"><svg class="w-4 h-4 text-gray-700" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                                        </svg></div>
+                                    <div>
+                                        <div class="dd-title">Documentation</div>
+                                        <div class="dd-desc">Guides, tutorials, and references.</div>
+                                    </div>
+                                </a>
+                                <a href="/docs/api/README" target="_blank">
+                                    <div class="dd-icon"><svg class="w-4 h-4 text-gray-700" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                                        </svg></div>
+                                    <div>
+                                        <div class="dd-title">API Reference</div>
+                                        <div class="dd-desc">REST API endpoints and examples.</div>
+                                    </div>
+                                </a>
+                                <a href="/changelog">
+                                    <div class="dd-icon"><svg class="w-4 h-4 text-gray-700" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg></div>
+                                    <div>
+                                        <div class="dd-title">Changelog</div>
+                                        <div class="dd-desc">Latest updates and improvements.</div>
+                                    </div>
+                                </a>
+                                <a href="https://uptime.litestartup.com/status/litestartup" target="_blank">
+                                    <div class="dd-icon"><svg class="w-4 h-4 text-gray-700" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                                        </svg></div>
+                                    <div>
+                                        <div class="dd-title">Status Page</div>
+                                        <div class="dd-desc">Real-time system uptime.</div>
+                                    </div>
+                                </a>
+                                <a href="/contact">
+                                    <div class="dd-icon"><svg class="w-4 h-4 text-gray-700" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                                        </svg></div>
+                                    <div>
+                                        <div class="dd-title">Contact Us</div>
+                                        <div class="dd-desc">Get in touch with our team.</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="nav-dropdown">
+                            <button
+                                class="flex items-center gap-1 px-3 py-4 text-sm font-medium text-gray-600 hover:text-black transition-colors rounded-lg">Company
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg></button>
+                            <div class="nav-dropdown-menu" style="min-width:240px">
+                                <a href="/about">
+                                    <div class="dd-icon"><svg class="w-4 h-4 text-gray-700" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+                                        </svg></div>
+                                    <div>
+                                        <div class="dd-title">About Us</div>
+                                        <div class="dd-desc">Our mission and story.</div>
+                                    </div>
+                                </a>
+                                <a href="/privacy" target="_blank">
+                                    <div class="dd-icon"><svg class="w-4 h-4 text-gray-700" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                                        </svg></div>
+                                    <div>
+                                        <div class="dd-title">Privacy Policy</div>
+                                        <div class="dd-desc">How we protect your data.</div>
+                                    </div>
+                                </a>
+                                <a href="/terms" target="_blank">
+                                    <div class="dd-icon"><svg class="w-4 h-4 text-gray-700" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                                        </svg></div>
+                                    <div>
+                                        <div class="dd-title">Terms of Service</div>
+                                        <div class="dd-desc">Our terms and conditions.</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden lg:flex items-center gap-3">
+                        <a href="https://app.litestartup.com/login?{{utm_source}}"
+                            class="text-sm font-medium text-gray-600 hover:text-black transition-colors px-3 py-2">Sign
+                            In</a>
+                        <a href="https://app.litestartup.com/signup?{{utm_source}}" class="btn-primary">Get Started
+                            Free</a>
+                    </div>
+                    <button id="mobileMenuBtn" class="lg:hidden p-2 -mr-2">
+                        <svg id="menuOpenIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <svg id="menuCloseIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- Mobile Overlay + Drawer (inside header for parseHtmlTemplate, outside nav to avoid Firefox stacking context from backdrop-filter) -->
+        <div id="mobileOverlay" class="lg:hidden"></div>
+        <div id="mobileDrawer" class="lg:hidden">
+            <div class="flex items-center justify-between px-5 py-4 border-b border-gray-100">
+                <a href="/" class="flex items-center gap-2.5">
+                    <div class="w-7 h-7 rounded-lg bg-black flex items-center justify-center">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <span class="text-base font-bold">LiteStartup</span>
+                </a>
+                <button id="drawerCloseBtn"
+                    style="color:#0a0a0a;background:none;border:none;cursor:pointer;padding:4px">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="px-5 py-4 space-y-1 overflow-y-auto" style="max-height:calc(100vh - 65px)">
+                <div class="mobile-accordion"><button
+                        class="mobile-acc-btn flex items-center justify-between w-full py-2.5 text-sm font-medium text-gray-700">Products
+                        <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg></button>
+                    <div class="mobile-acc-content hidden pl-4 pb-2 space-y-1">
+                        <div class="pt-1 pb-1"><span class="text-[10px] font-bold uppercase tracking-wider">Email</span>
+                        </div>
+                        <a href="/products/workmail"
+                            class="block py-1.5 text-sm text-gray-500 hover:text-black">Workmail</a>
+                        <a href="/products/email-marketing"
+                            class="block py-1.5 text-sm text-gray-500 hover:text-black">Email Marketing</a>
+                        <a href="/products/transactional-email"
+                            class="block py-1.5 text-sm text-gray-500 hover:text-black">Transactional Email</a>
+                        <div class="pt-2 pb-1"><span
+                                class="text-[10px] font-bold uppercase tracking-wider">Applications</span>
+                        </div>
+                        <a href="/products/litesaas-admin"
+                            class="block py-1.5 text-sm text-gray-500 hover:text-black">Admin</a>
+                        <a href="/products/website"
+                            class="block py-1.5 text-sm text-gray-500 hover:text-black">Website</a>
+                        <a href="/products/blog" class="block py-1.5 text-sm text-gray-500 hover:text-black">Blog</a>
+                        <a href="/products/docs" class="block py-1.5 text-sm text-gray-500 hover:text-black">Docs</a>
+                        <a href="/products/changelog"
+                            class="block py-1.5 text-sm text-gray-500 hover:text-black">Changelog</a>
+                        <a href="/products/live-chat" class="block py-1.5 text-sm text-gray-500 hover:text-black">Live
+                            Chat</a>
+                        <a href="/products/help-desk" class="block py-1.5 text-sm text-gray-500 hover:text-black">Help
+                            Desk</a>
+                        <div class="pt-2 pb-1"><span
+                                class="text-[10px] font-bold uppercase tracking-wider">Growth</span>
+                        </div>
+                        <a href="/products/seo-automation"
+                            class="block py-1.5 text-sm text-gray-500 hover:text-black">SEO
+                            Automation</a>
+                        <a href="/products/marketing-automation"
+                            class="block py-1.5 text-sm text-gray-500 hover:text-black">Marketing Automation</a>
+                        <a href="/products/warm-up"
+                            class="block py-1.5 text-sm text-gray-500 hover:text-black">Warm-up</a>
+                        <div class="pt-2 pb-1"><span class="text-[10px] font-bold uppercase tracking-wider">AI
+                                Tools</span>
+                        </div>
+                        <a href="/products/ai-content-assistant"
+                            class="block py-1.5 text-sm text-gray-500 hover:text-black">AI Content Assistant</a>
+                        <a href="/products/ai-agent" class="block py-1.5 text-sm text-gray-500 hover:text-black">AI
+                            Agent</a>
+                        <a href="/products/ai-stack" class="block py-1.5 text-sm text-gray-500 hover:text-black">AI
+                            Stack</a>
+                        <a href="/products/ai-rag" class="block py-1.5 text-sm text-gray-500 hover:text-black">AI
+                            RAG</a>
+                    </div>
+                </div>
+                <div class="mobile-accordion"><button
+                        class="mobile-acc-btn flex items-center justify-between w-full py-2.5 text-sm font-medium text-gray-700">Solutions
+                        <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg></button>
+                    <div class="mobile-acc-content hidden pl-4 pb-2 space-y-1"><a href="/solutions/developers"
+                            class="block py-2 text-sm text-gray-500 hover:text-black">For Developers</a><a
+                            href="/solutions/startups" class="block py-2 text-sm text-gray-500 hover:text-black">For
+                            Startups</a><a href="/solutions/saas"
+                            class="block py-2 text-sm text-gray-500 hover:text-black">For SaaS</a><a
+                            href="/solutions/ecommerce" class="block py-2 text-sm text-gray-500 hover:text-black">For
+                            E-commerce</a><a href="/solutions/agencies"
+                            class="block py-2 text-sm text-gray-500 hover:text-black">For Agencies</a></div>
+                </div>
+                <div class="mobile-accordion"><button
+                        class="mobile-acc-btn flex items-center justify-between w-full py-2.5 text-sm font-medium text-gray-700">AI
+                        <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg></button>
+                    <div class="mobile-acc-content hidden pl-4 pb-2 space-y-1"><a href="/products/ai-content-assistant"
+                            class="block py-2 text-sm text-gray-500 hover:text-black">AI Content Assistant</a><a
+                            href="/products/ai-agent" class="block py-2 text-sm text-gray-500 hover:text-black">AI
+                            Agent</a><a href="/products/ai-stack"
+                            class="block py-2 text-sm text-gray-500 hover:text-black">AI Stack</a><a
+                            href="/products/ai-rag" class="block py-2 text-sm text-gray-500 hover:text-black">AI
+                            RAG</a><a href="/products/startups-skills"
+                            class="block py-2 text-sm text-gray-500 hover:text-black">Startups Skills</a></div>
+                </div>
+                <a href="/pricing" class="block py-2.5 text-sm font-medium text-gray-700">Pricing</a>
+                <div class="mobile-accordion"><button
+                        class="mobile-acc-btn flex items-center justify-between w-full py-2.5 text-sm font-medium text-gray-700">Resources
+                        <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg></button>
+                    <div class="mobile-acc-content hidden pl-4 pb-2 space-y-1"><a href="/blog"
+                            class="block py-2 text-sm text-gray-500 hover:text-black">Blog</a><a
+                            href="https://www.litestartup.com/docs" target="_blank"
+                            class="block py-2 text-sm text-gray-500 hover:text-black">Documentation</a><a
+                            href="https://www.litestartup.com/docs/api/README" target="_blank"
+                            class="block py-2 text-sm text-gray-500 hover:text-black">API Reference</a><a
+                            href="/changelog" class="block py-2 text-sm text-gray-500 hover:text-black">Changelog</a><a
+                            href="https://uptime.litestartup.com/status/litestartup" target="_blank"
+                            class="block py-2 text-sm text-gray-500 hover:text-black">Status Page</a><a
+                            href="mailto:support@litestartup.com"
+                            class="block py-2 text-sm text-gray-500 hover:text-black">Contact Us</a></div>
+                </div>
+                <div class="mobile-accordion"><button
+                        class="mobile-acc-btn flex items-center justify-between w-full py-2.5 text-sm font-medium text-gray-700">Company
+                        <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg></button>
+                    <div class="mobile-acc-content hidden pl-4 pb-2 space-y-1"><a href="/about"
+                            class="block py-2 text-sm text-gray-500 hover:text-black">About Us</a><a href="/privacy"
+                            target="_blank" class="block py-2 text-sm text-gray-500 hover:text-black">Privacy
+                            Policy</a><a href="/terms" target="_blank"
+                            class="block py-2 text-sm text-gray-500 hover:text-black">Terms of
+                            Service</a></div>
+                </div>
+                <div class="pt-4 border-t border-gray-100 space-y-2">
+                    <a href="https://app.litestartup.com/login?{{utm_source}}"
+                        class="block text-center py-2.5 text-sm font-medium text-gray-700">Sign In</a>
+                    <a href="https://app.litestartup.com/signup?{{utm_source}}"
+                        class="block text-center btn-primary py-2.5">Get Started Free</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="pt-28 sm:pt-36 pb-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto text-center fade-in">
+                <div
+                    class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gray-200 text-xs font-medium text-gray-600 mb-8 bg-white">
+                    <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+                    Now in v2.0 &mdash; AI-Powered Platform
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tighter mb-6">One
+                    Platform.<br class="hidden sm:block">Light Everything for Startups. </h1>
+                <p class="text-xl sm:text-2xl text-gray-500 max-w-3xl mx-auto mb-10 leading-relaxed">Email,
+                    workmail, website,
+                    blog, docs, live chat, helpdesk, AI tools — simple, lightweight
+                    infrastructure for startups.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-10">
+                    <a href="https://app.litestartup.com/signup?{{utm_source}}"
+                        class="btn-primary-lg w-full sm:w-auto">Start Free Trial <svg class="w-4 h-4" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg></a><span>-OR-</span>
+                    <a href="/whitepaper" class="btn-secondary w-full sm:w-auto">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                        </svg>
+                        Free Email Strategy Guide
+                    </a>
+                </div>
+                <div class="flex items-center justify-center gap-6 text-sm text-gray-400">
+                    <span class="flex items-center gap-1.5"><svg class="w-4 h-4" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                        </svg>No credit card</span>
+                    <span class="flex items-center gap-1.5"><svg class="w-4 h-4" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                        </svg>5,000 emails free</span>
+                    <span class="hidden sm:flex items-center gap-1.5"><svg class="w-4 h-4" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                        </svg>5 min setup</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="pb-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 fade-in">
+                    <div class="text-center p-5 rounded-xl border border-gray-100 bg-gray-50/50">
+                        <div class="text-2xl sm:text-3xl font-bold mb-1">5K</div>
+                        <div class="text-xs sm:text-sm text-gray-500">Free Emails/Month</div>
+                    </div>
+                    <div class="text-center p-5 rounded-xl border border-gray-100 bg-gray-50/50">
+                        <div class="text-2xl sm:text-3xl font-bold mb-1">98.7%</div>
+                        <div class="text-xs sm:text-sm text-gray-500">Delivery Rate</div>
+                    </div>
+                    <div class="text-center p-5 rounded-xl border border-gray-100 bg-gray-50/50">
+                        <div class="text-2xl sm:text-3xl font-bold mb-1">10-in-1</div>
+                        <div class="text-xs sm:text-sm text-gray-500">Unified Platform</div>
+                    </div>
+                    <div class="text-center p-5 rounded-xl border border-gray-100 bg-gray-50/50">
+                        <div class="text-2xl sm:text-3xl font-bold mb-1">$20</div>
+                        <div class="text-xs sm:text-sm text-gray-500">Pro Plan / Month</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- Products Section -->
+        <section id="products" class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-14 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Everything you need in one platform</h2>
+                    <p class="text-gray-500 text-lg max-w-2xl mx-auto">Stop juggling multiple tools. LiteStartup
+                        combines email, website, docs, live chat, help desk, growth automation, and AI into one
+                        affordable platform.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 fade-in">
+                    <!-- Email -->
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                            </svg></div>
+                        <div
+                            class="inline-block px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-black text-white rounded mb-3">
+                            Unique</div>
+                        <h3 class="text-lg font-bold mb-2">Workmail</h3>
+                        <p class="text-sm text-gray-500 mb-3">Business email like Gmail. Set up
+                            support@yourcompany.com
+                            in minutes. The only email marketing platform with built-in workmail.</p>
+                        <p class="text-sm font-semibold text-gray-900">Save $72-144/year per team member</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 110-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 01-1.44-4.282m3.102.069a18.03 18.03 0 01-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 018.835 2.535M10.34 6.66a23.847 23.847 0 008.835-2.535m0 0A23.74 23.74 0 0018.795 3m.38 1.125a23.91 23.91 0 011.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 001.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 010 3.46" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Email Marketing</h3>
+                        <p class="text-sm text-gray-500 mb-3">Create campaigns, manage contacts, use templates,
+                            track
+                            opens &amp; clicks. Unlimited contacts on Pro plan.</p>
+                        <p class="text-sm font-semibold text-gray-900">Pay per email sent, not per contact</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Transactional Email</h3>
+                        <p class="text-sm text-gray-500 mb-3">Send password resets, order confirmations, and
+                            notifications via simple REST API. No SDK lock-in.</p>
+                        <p class="text-sm font-semibold text-gray-900">5 minute integration</p>
+                    </div>
+                    <!-- Applications -->
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5a17.888 17.888 0 01-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Website &amp; Blog</h3>
+                        <p class="text-sm text-gray-500 mb-3">Build and host your startup site with AI. Publish blog
+                            posts to grow organic traffic and engage your audience.</p>
+                        <p class="text-sm font-semibold text-gray-900">From landing page to content hub</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Docs &amp; Changelog</h3>
+                        <p class="text-sm text-gray-500 mb-3">Host product documentation and share release notes
+                            with
+                            your users. Keep everyone informed with zero effort.</p>
+                        <p class="text-sm font-semibold text-gray-900">Keep users informed, always</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Live Chat</h3>
+                        <p class="text-sm text-gray-500 mb-3">Real-time chat widget for your website. Connect with
+                            visitors instantly and convert them into customers.</p>
+                        <p class="text-sm font-semibold text-gray-900">Never miss a lead again</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 010 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 010-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Help Desk</h3>
+                        <p class="text-sm text-gray-500 mb-3">Manage customer support tickets efficiently. Track,
+                            assign, and resolve issues directly from your inbox.</p>
+                        <p class="text-sm font-semibold text-gray-900">Streamline your support workflow</p>
+                    </div>
+                    <!-- Growth -->
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">SEO &amp; Marketing Automation</h3>
+                        <p class="text-sm text-gray-500 mb-3">Automated SEO audits, keyword optimization, and
+                            marketing
+                            workflows. Drive organic traffic and automate outreach at scale.</p>
+                        <p class="text-sm font-semibold text-gray-900">Grow on autopilot</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1.001A3.75 3.75 0 0012 18z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Warm-up</h3>
+                        <p class="text-sm text-gray-500 mb-3">Build sender reputation automatically before launching
+                            campaigns. Gradually increase sending volume to maximize deliverability.</p>
+                        <p class="text-sm font-semibold text-gray-900">Land in inbox, not spam</p>
+                    </div>
+                    <!-- AI -->
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
+                            </svg></div>
+                        <div
+                            class="inline-block px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-black text-white rounded mb-3">
+                            AI-Powered</div>
+                        <h3 class="text-lg font-bold mb-2">AI Content Assistant</h3>
+                        <p class="text-sm text-gray-500 mb-3">Generate email copy, subject lines, and A/B test
+                            variations with AI. Write 10x faster.</p>
+                        <p class="text-sm font-semibold text-gray-900">From idea to send in 1 minute</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25z" />
+                            </svg></div>
+                        <div
+                            class="inline-block px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-black text-white rounded mb-3">
+                            AI-Powered</div>
+                        <h3 class="text-lg font-bold mb-2">AI Agent</h3>
+                        <p class="text-sm text-gray-500 mb-3">Build custom AI agents for your workflows. Automate
+                            responses, content generation, and customer interactions.</p>
+                        <p class="text-sm font-semibold text-gray-900">Your always-on AI workforce</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5a1.5 1.5 0 001.5-1.5V5.25a1.5 1.5 0 00-1.5-1.5H3.75a1.5 1.5 0 00-1.5 1.5v14.25a1.5 1.5 0 001.5 1.5z" />
+                            </svg></div>
+                        <div
+                            class="inline-block px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider bg-black text-white rounded mb-3">
+                            AI-Powered</div>
+                        <h3 class="text-lg font-bold mb-2">AI Stack</h3>
+                        <p class="text-sm text-gray-500 mb-3">Image to text, speech to text, and more AI-powered
+                            tools.
+                            Extract data and transform content effortlessly.</p>
+                        <p class="text-sm font-semibold text-gray-900">AI tools at your fingertips</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- Video Demo -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-10 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">See it in action</h2>
+                    <p class="text-gray-500 text-lg">Watch how LiteStartup streamlines your email workflow</p>
+                </div>
+                <div class="fade-in">
+                    <div class="rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+                        <video src="/imgs/litestartup3.mp4" controls autoplay muted class="w-full"></video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- Comparison -->
+        <section id="comparison" class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">How we compare</h2>
+                    <p class="text-gray-500 text-lg">See why startups choose LiteStartup over other email providers
+                    </p>
+                </div>
+                <div class="border border-gray-200 rounded-xl overflow-x-auto fade-in">
+                    <table class="w-full min-w-[720px] compare-table">
+                        <thead>
+                            <tr>
+                                <th class="text-left text-sm font-semibold text-gray-500 w-1/4">Feature</th>
+                                <th class="text-center text-sm font-bold w-[18.75%]">LiteStartup</th>
+                                <th class="text-center text-sm font-medium text-gray-400 w-[18.75%]">Resend</th>
+                                <th class="text-center text-sm font-medium text-gray-400 w-[18.75%]">Mailgun</th>
+                                <th class="text-center text-sm font-medium text-gray-400 w-[18.75%]">SendGrid</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-sm font-medium text-gray-700">Free Plan</td>
+                                <td class="text-center text-sm font-bold">5,000/mo</td>
+                                <td class="text-center text-sm text-gray-400">3,000/mo</td>
+                                <td class="text-center text-sm text-gray-400">5,000/mo</td>
+                                <td class="text-center text-sm text-gray-400">100/day</td>
+                            </tr>
+                            <tr>
+                                <td class="text-sm font-medium text-gray-700">Workmail (Gmail-like)</td>
+                                <td class="text-center"><svg class="w-5 h-5 text-black mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M4.5 12.75l6 6 9-13.5" />
+                                    </svg></td>
+                                <td class="text-center"><svg class="w-5 h-5 text-gray-300 mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg></td>
+                                <td class="text-center"><svg class="w-5 h-5 text-gray-300 mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg></td>
+                                <td class="text-center"><svg class="w-5 h-5 text-gray-300 mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg></td>
+                            </tr>
+                            <tr>
+                                <td class="text-sm font-medium text-gray-700">AI Content Generation</td>
+                                <td class="text-center"><svg class="w-5 h-5 text-black mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M4.5 12.75l6 6 9-13.5" />
+                                    </svg></td>
+                                <td class="text-center"><svg class="w-5 h-5 text-gray-300 mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg></td>
+                                <td class="text-center"><svg class="w-5 h-5 text-gray-300 mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg></td>
+                                <td class="text-center"><svg class="w-5 h-5 text-gray-300 mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg></td>
+                            </tr>
+                            <tr>
+                                <td class="text-sm font-medium text-gray-700">Website &amp; Blog</td>
+                                <td class="text-center"><svg class="w-5 h-5 text-black mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M4.5 12.75l6 6 9-13.5" />
+                                    </svg></td>
+                                <td class="text-center"><svg class="w-5 h-5 text-gray-300 mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg></td>
+                                <td class="text-center"><svg class="w-5 h-5 text-gray-300 mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg></td>
+                                <td class="text-center"><svg class="w-5 h-5 text-gray-300 mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg></td>
+                            </tr>
+                            <tr>
+                                <td class="text-sm font-medium text-gray-700">Live Chat + Help Desk</td>
+                                <td class="text-center"><svg class="w-5 h-5 text-black mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M4.5 12.75l6 6 9-13.5" />
+                                    </svg></td>
+                                <td class="text-center"><svg class="w-5 h-5 text-gray-300 mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg></td>
+                                <td class="text-center"><svg class="w-5 h-5 text-gray-300 mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg></td>
+                                <td class="text-center"><svg class="w-5 h-5 text-gray-300 mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg></td>
+                            </tr>
+                            <tr>
+                                <td class="text-sm font-medium text-gray-700">SEO &amp; Marketing Automation</td>
+                                <td class="text-center"><svg class="w-5 h-5 text-black mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M4.5 12.75l6 6 9-13.5" />
+                                    </svg></td>
+                                <td class="text-center"><svg class="w-5 h-5 text-gray-300 mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg></td>
+                                <td class="text-center"><svg class="w-5 h-5 text-gray-300 mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg></td>
+                                <td class="text-center"><svg class="w-5 h-5 text-gray-300 mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg></td>
+                            </tr>
+                            <tr>
+                                <td class="text-sm font-medium text-gray-700">AI Agent</td>
+                                <td class="text-center"><svg class="w-5 h-5 text-black mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M4.5 12.75l6 6 9-13.5" />
+                                    </svg></td>
+                                <td class="text-center"><svg class="w-5 h-5 text-gray-300 mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg></td>
+                                <td class="text-center"><svg class="w-5 h-5 text-gray-300 mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg></td>
+                                <td class="text-center"><svg class="w-5 h-5 text-gray-300 mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                    </svg></td>
+                            </tr>
+                            <tr>
+                                <td class="text-sm font-medium text-gray-700">Overage per 1K emails</td>
+                                <td class="text-center text-sm font-bold">$0.40</td>
+                                <td class="text-center text-sm text-gray-400">$0.90</td>
+                                <td class="text-center text-sm text-gray-400">$1.10-1.80</td>
+                                <td class="text-center text-sm text-gray-400">$1.33</td>
+                            </tr>
+                            <tr>
+                                <td class="text-sm font-medium text-gray-700">Transactional + Marketing</td>
+                                <td class="text-center text-sm font-bold">Unified</td>
+                                <td class="text-center text-sm text-gray-400">Separate</td>
+                                <td class="text-center text-sm text-gray-400">Separate</td>
+                                <td class="text-center text-sm text-gray-400">Separate</td>
+                            </tr>
+                            <tr>
+                                <td class="text-sm font-medium text-gray-700">Setup Time</td>
+                                <td class="text-center text-sm font-bold">5 min</td>
+                                <td class="text-center text-sm text-gray-400">15-30 min</td>
+                                <td class="text-center text-sm text-gray-400">30+ min</td>
+                                <td class="text-center text-sm text-gray-400">30+ min</td>
+                            </tr>
+                            <tr>
+                                <td class="text-sm font-medium text-gray-700">24/7 Support</td>
+                                <td class="text-center"><svg class="w-5 h-5 text-black mx-auto" fill="none"
+                                        stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M4.5 12.75l6 6 9-13.5" />
+                                    </svg></td>
+                                <td class="text-center text-sm text-gray-400">Email only</td>
+                                <td class="text-center text-sm text-gray-400">Paid plans</td>
+                                <td class="text-center text-sm text-gray-400">Paid plans</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-center mt-10 fade-in">
+                    <a href="https://app.litestartup.com/signup?{{utm_source}}" class="btn-primary-lg">
+                        Start with LiteStartup Today
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- API Integration -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <div class="fade-in">
+                        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Integrate in minutes</h2>
+                        <p class="text-gray-500 text-lg mb-8">No vendor lock-in, no complex SDKs. Just simple
+                            RESTful
+                            API calls that work with any language.</p>
+                        <div class="space-y-5">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" stroke-width="1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold mb-1">Zero Vendor Lock-in</h3>
+                                    <p class="text-sm text-gray-500">Use standard REST APIs. Switch providers
+                                        anytime
+                                        without code changes.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" stroke-width="1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold mb-1">No Dependencies</h3>
+                                    <p class="text-sm text-gray-500">Works with any programming language or
+                                        framework.
+                                        Lightweight integration.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" stroke-width="1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold mb-1">5 Minutes Setup</h3>
+                                    <p class="text-sm text-gray-500">Get API credentials and start sending emails in
+                                        just a few minutes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-block p-5 fade-in">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-1.5">
+                                <div class="w-3 h-3 rounded-full bg-gray-300"></div>
+                                <div class="w-3 h-3 rounded-full bg-gray-300"></div>
+                                <div class="w-3 h-3 rounded-full bg-gray-300"></div>
+                            </div>
+                            <span class="text-xs text-gray-400 mono">terminal</span>
+                        </div>
+                        <pre class="text-sm text-gray-700 mono overflow-x-auto whitespace-pre"><code class="text-blue-600">curl</code> -X POST https://api.litestartup.com/client/v2/emails \
+  -H <code class="text-purple-600">"Authorization: Bearer YOUR_API_KEY"</code> \
+  -H <code class="text-purple-600">"Content-Type: application/json"</code> \
+  -d <code class="text-green-600">'{
+    "to": "user@example.com",
+    "from": "noreply@yourapp.com",
+    "subject": "Welcome!",
+    "html": "&lt;h1&gt;Hello&lt;/h1&gt;"
+  }'</code></pre>
+                        <div class="mt-5 pt-4 border-t border-gray-100 space-y-2 text-sm text-gray-500">
+                            <p class="flex items-center gap-2"><svg class="w-4 h-4 text-gray-400" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg> Works with any HTTP client</p>
+                            <p class="flex items-center gap-2"><svg class="w-4 h-4 text-gray-400" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg> No SDK lock-in</p>
+                            <p class="flex items-center gap-2"><svg class="w-4 h-4 text-gray-400" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg> Full API documentation included</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- Pricing -->
+        <section id="pricing" class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Simple, transparent pricing</h2>
+                    <p class="text-gray-500 text-lg mb-6">Start free, scale when you're ready</p>
+                    <div class="inline-flex pricing-toggle">
+                        <button id="monthlyToggle" class="active" onclick="setPricing('monthly')">Monthly</button>
+                        <button id="yearlyToggle" onclick="setPricing('yearly')">Yearly <span
+                                class="text-xs text-green-600 font-medium">Save $40</span></button>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6 mb-14 fade-in">
+                    <div class="card p-7">
+                        <h3 class="text-xl font-bold mb-2">Free</h3>
+                        <div class="flex items-baseline gap-1 mb-6"><span class="text-4xl font-bold">$0</span><span
+                                class="text-gray-400 text-sm">/month</span></div>
+                        <ul class="space-y-3 mb-8 text-sm">
+                            <li class="flex items-center gap-2.5"><svg class="w-4 h-4 text-gray-400 flex-shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg><span><strong>5,000 emails</strong> per month</span></li>
+                            <li class="flex items-center gap-2.5"><svg class="w-4 h-4 text-gray-400 flex-shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg><span><strong>1 GB</strong> storage</span></li>
+                            <li class="flex items-center gap-2.5"><svg class="w-4 h-4 text-gray-400 flex-shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg><span><strong>100</strong> AI generations/month</span></li>
+                            <li class="flex items-center gap-2.5"><svg class="w-4 h-4 text-gray-400 flex-shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg><span><strong>3</strong> team members</span></li>
+                            <li class="flex items-center gap-2.5"><svg class="w-4 h-4 text-gray-400 flex-shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg><span>30-day data retention</span></li>
+                        </ul>
+                        <a href="https://app.litestartup.com/signup?{{utm_source}}"
+                            class="btn-secondary w-full text-center py-3">Get Started Free</a>
+                    </div>
+                    <div class="card-highlight p-7 relative">
+                        <div
+                            class="absolute -top-3 left-1/2 -translate-x-1/2 bg-white text-black text-xs font-bold px-3 py-1 rounded-full">
+                            POPULAR</div>
+                        <h3 class="text-xl font-bold mb-2 text-white">Pro</h3>
+                        <div class="flex items-baseline gap-1 mb-1"><span id="proPrice"
+                                class="text-4xl font-bold text-white">$20</span><span id="proPeriod"
+                                class="text-gray-400 text-sm">/month</span></div>
+                        <p id="proSave" class="text-sm text-gray-400 mb-6 hidden">Save $40 compared to monthly</p>
+                        <ul class="space-y-3 mb-8 text-sm">
+                            <li class="flex items-center gap-2.5 text-gray-300"><svg
+                                    class="w-4 h-4 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg><span><strong class="text-white">50,000 emails</strong> per month</span></li>
+                            <li class="flex items-center gap-2.5 text-gray-300"><svg
+                                    class="w-4 h-4 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg><span><strong class="text-white">20 GB</strong> storage</span></li>
+                            <li class="flex items-center gap-2.5 text-gray-300"><svg
+                                    class="w-4 h-4 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg><span><strong class="text-white">400</strong> AI generations/month</span></li>
+                            <li class="flex items-center gap-2.5 text-gray-300"><svg
+                                    class="w-4 h-4 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg><span><strong class="text-white">Unlimited</strong> contacts &amp; team
+                                    members</span></li>
+                            <li class="flex items-center gap-2.5 text-gray-300"><svg
+                                    class="w-4 h-4 text-gray-500 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg><span>100-day retention &bull; Overage $0.40/1k</span></li>
+                        </ul>
+                        <a href="https://app.litestartup.com/signup?{{utm_source}}"
+                            class="block w-full text-center bg-white text-black font-semibold py-3 rounded-lg hover:bg-gray-100 transition-colors">Upgrade
+                            to Pro</a>
+                    </div>
+                </div>
+                <div class="fade-in text-center">
+                    <p class="text-sm font-semibold mb-4">All plans include</p>
+                    <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-gray-500">
+                        <span>Workmail</span>
+                        <span>Email Marketing</span>
+                        <span>Transactional Email</span>
+                        <span>Website</span>
+                        <span>Blog</span>
+                        <span>Live Chat</span>
+                        <span>Help Desk</span>
+                        <span>Docs</span>
+                        <span>Changelog</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- Whitepaper -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="card p-8 sm:p-10 fade-in" style="border-color:rgba(0,0,0,.15)">
+                    <div class="grid sm:grid-cols-5 gap-8 items-center">
+                        <div class="sm:col-span-3">
+                            <div
+                                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 text-xs font-medium text-gray-600 mb-4">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                                </svg>
+                                Free Whitepaper
+                            </div>
+                            <h2 class="text-2xl sm:text-3xl font-bold mb-3">Enterprise Email Strategy Guide</h2>
+                            <p class="text-gray-500 mb-5">10 chapters covering deliverability, security, AI-powered
+                                email, 6-vendor platform comparison, and a 30-day migration roadmap. 12,000+ words
+                                of
+                                actionable insights.</p>
+                            <div class="flex flex-wrap gap-4 text-sm text-gray-500">
+                                <span class="flex items-center gap-1.5">
+                                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M4.5 12.75l6 6 9-13.5" />
+                                    </svg>
+                                    Industry benchmarks
+                                </span>
+                                <span class="flex items-center gap-1.5">
+                                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M4.5 12.75l6 6 9-13.5" />
+                                    </svg>
+                                    TCO analysis
+                                </span>
+                                <span class="flex items-center gap-1.5">
+                                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M4.5 12.75l6 6 9-13.5" />
+                                    </svg>
+                                    Case studies
+                                </span>
+                            </div>
+                        </div>
+                        <div class="sm:col-span-2 text-center sm:text-right">
+                            <a href="/whitepaper" class="btn-primary-lg">
+                                Download Free
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                                </svg>
+                            </a>
+                            <p class="text-xs text-gray-400 mt-3">No credit card required</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- CTA -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center fade-in">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to simplify your email?</h2>
+                <p class="text-gray-500 mb-8 text-lg">5,000 emails/month free. No credit card required.</p>
+                <a href="https://app.litestartup.com/signup?{{utm_source}}" class="btn-primary-lg text-lg">
+                    Start Free Trial
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <script>
+            // Pricing toggle (page-specific)
+            function setPricing(type) {
+                const m = document.getElementById('monthlyToggle');
+                const y = document.getElementById('yearlyToggle');
+                const price = document.getElementById('proPrice');
+                const period = document.getElementById('proPeriod');
+                const save = document.getElementById('proSave');
+                if (type === 'yearly') { y.classList.add('active'); m.classList.remove('active'); price.textContent = '$200'; period.textContent = '/year'; save.classList.remove('hidden'); save.textContent = 'Save $40 compared to monthly' }
+                else { m.classList.add('active'); y.classList.remove('active'); price.textContent = '$20'; period.textContent = '/month'; save.classList.add('hidden') }
+            }
+        </script>
+    </main>
+
+    <footer style="background:#18181b;color:#fff" class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 mb-14">
+                <div class="col-span-2 sm:col-span-3 lg:col-span-2">
+                    <div class="flex items-center gap-2.5 mb-4">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center"
+                            style="background:rgba(255,255,255,.1)">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <span class="text-lg font-bold">LiteStartup</span>
+                    </div>
+                    <p class="text-sm mb-6" style="color:rgba(255,255,255,.5);line-height:1.7">The all-in-one email
+                        &amp; AI platform built for startups. Smarter, simpler, reliable.</p>
+                    <div class="flex items-center gap-3">
+                        <a href="https://github.com/litestartup-com" target="_blank" rel="noopener"
+                            class="w-8 h-8 rounded-lg flex items-center justify-center transition-colors"
+                            style="background:rgba(255,255,255,.08)"
+                            onmouseover="this.style.background='rgba(255,255,255,.15)'"
+                            onmouseout="this.style.background='rgba(255,255,255,.08)'">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </a>
+                        <a href="https://x.com/litestartup_com" target="_blank" rel="noopener"
+                            class="w-8 h-8 rounded-lg flex items-center justify-center transition-colors"
+                            style="background:rgba(255,255,255,.08)"
+                            onmouseover="this.style.background='rgba(255,255,255,.15)'"
+                            onmouseout="this.style.background='rgba(255,255,255,.08)'">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-xs uppercase tracking-wider mb-4" style="color:rgba(255,255,255,.45)">
+                        Products</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="/products/workmail" class="transition-colors" style="color:rgba(255,255,255,.6)"
+                                onmouseover="this.style.color='#fff'"
+                                onmouseout="this.style.color='rgba(255,255,255,.6)'">Workmail</a></li>
+                        <li><a href="/products/email-marketing" class="transition-colors"
+                                style="color:rgba(255,255,255,.6)" onmouseover="this.style.color='#fff'"
+                                onmouseout="this.style.color='rgba(255,255,255,.6)'">Email Marketing</a></li>
+                        <li><a href="/products/transactional-email" class="transition-colors"
+                                style="color:rgba(255,255,255,.6)" onmouseover="this.style.color='#fff'"
+                                onmouseout="this.style.color='rgba(255,255,255,.6)'">Transactional API</a></li>
+                        <li><a href="/products/website" class="transition-colors" style="color:rgba(255,255,255,.6)"
+                                onmouseover="this.style.color='#fff'"
+                                onmouseout="this.style.color='rgba(255,255,255,.6)'">Website</a></li>
+                        <li><a href="/products/live-chat" class="transition-colors" style="color:rgba(255,255,255,.6)"
+                                onmouseover="this.style.color='#fff'"
+                                onmouseout="this.style.color='rgba(255,255,255,.6)'">Live Chat</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-xs uppercase tracking-wider mb-4" style="color:rgba(255,255,255,.45)">
+                        AI &amp; Open Source</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="/products/ai-content-assistant" class="transition-colors"
+                                style="color:rgba(255,255,255,.6)" onmouseover="this.style.color='#fff'"
+                                onmouseout="this.style.color='rgba(255,255,255,.6)'">AI Content</a></li>
+                        <li><a href="/products/ai-agent" class="transition-colors" style="color:rgba(255,255,255,.6)"
+                                onmouseover="this.style.color='#fff'"
+                                onmouseout="this.style.color='rgba(255,255,255,.6)'">AI Agent</a></li>
+                        <li><a href="/products/ai-rag" class="transition-colors" style="color:rgba(255,255,255,.6)"
+                                onmouseover="this.style.color='#fff'"
+                                onmouseout="this.style.color='rgba(255,255,255,.6)'">AI RAG</a></li>
+                        <li><a href="/products/startups-skills" class="transition-colors"
+                                style="color:rgba(255,255,255,.6)" onmouseover="this.style.color='#fff'"
+                                onmouseout="this.style.color='rgba(255,255,255,.6)'">Startups Skills</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-xs uppercase tracking-wider mb-4" style="color:rgba(255,255,255,.45)">
+                        Resources</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="/blog" class="transition-colors" style="color:rgba(255,255,255,.6)"
+                                onmouseover="this.style.color='#fff'"
+                                onmouseout="this.style.color='rgba(255,255,255,.6)'">Blog</a></li>
+                        <li><a href="https://www.litestartup.com/docs" target="_blank" class="transition-colors"
+                                style="color:rgba(255,255,255,.6)" onmouseover="this.style.color='#fff'"
+                                onmouseout="this.style.color='rgba(255,255,255,.6)'">Documentation</a></li>
+                        <li><a href="/whitepaper" class="transition-colors" style="color:rgba(255,255,255,.6)"
+                                onmouseover="this.style.color='#fff'"
+                                onmouseout="this.style.color='rgba(255,255,255,.6)'">Whitepaper</a></li>
+                        <li><a href="/changelog" class="transition-colors" style="color:rgba(255,255,255,.6)"
+                                onmouseover="this.style.color='#fff'"
+                                onmouseout="this.style.color='rgba(255,255,255,.6)'">Changelog</a></li>
+                        <li><a href="https://uptime.litestartup.com/status/litestartup" target="_blank"
+                                class="transition-colors" style="color:rgba(255,255,255,.6)"
+                                onmouseover="this.style.color='#fff'"
+                                onmouseout="this.style.color='rgba(255,255,255,.6)'">Status</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-xs uppercase tracking-wider mb-4" style="color:rgba(255,255,255,.45)">
+                        Company</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="/about" class="transition-colors" style="color:rgba(255,255,255,.6)"
+                                onmouseover="this.style.color='#fff'"
+                                onmouseout="this.style.color='rgba(255,255,255,.6)'">About</a></li>
+                        <li><a href="mailto:support@litestartup.com" class="transition-colors"
+                                style="color:rgba(255,255,255,.6)" onmouseover="this.style.color='#fff'"
+                                onmouseout="this.style.color='rgba(255,255,255,.6)'">Contact</a></li>
+                        <li><a href="/privacy" target="_blank" class="transition-colors"
+                                style="color:rgba(255,255,255,.6)" onmouseover="this.style.color='#fff'"
+                                onmouseout="this.style.color='rgba(255,255,255,.6)'">Privacy</a></li>
+                        <li><a href="/terms" target="_blank" class="transition-colors"
+                                style="color:rgba(255,255,255,.6)" onmouseover="this.style.color='#fff'"
+                                onmouseout="this.style.color='rgba(255,255,255,.6)'">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs"
+                style="border-top:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.35)">
+                <p>&copy; 2026 LiteStartup. All rights reserved.</p>
+                <p>Built for startups, by a startup.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="toTopBtn" title="Back to top"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg></button>
+
+    <script>
+        // Mobile drawer menu (with null checks for child pages safety)
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileOverlay = document.getElementById('mobileOverlay');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+        function openDrawer() { if (mobileOverlay && mobileDrawer) { mobileOverlay.classList.add('active'); mobileDrawer.classList.add('active'); document.body.style.overflow = 'hidden' } }
+        function closeDrawer() { if (mobileOverlay && mobileDrawer) { mobileOverlay.classList.remove('active'); mobileDrawer.classList.remove('active'); document.body.style.overflow = '' } }
+        if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', openDrawer);
+        if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeDrawer);
+        if (mobileOverlay) mobileOverlay.addEventListener('click', closeDrawer);
+
+        // Mobile accordion
+        document.querySelectorAll('.mobile-acc-btn').forEach(btn => { btn.addEventListener('click', function () { const content = this.nextElementSibling; const icon = this.querySelector('svg'); content.classList.toggle('hidden'); icon.style.transform = content.classList.contains('hidden') ? '' : 'rotate(180deg)' }) });
+
+        // Fade in on scroll
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible') } }) }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"],a[href^="/#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { const href = this.getAttribute('href'); const hash = href.startsWith('/#') ? href.substring(1) : href; const target = document.querySelector(hash); if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); closeDrawer() } }) });
+
+        // Back to top
+        const toTopBtn = document.getElementById('toTopBtn');
+        if (toTopBtn) {
+            window.addEventListener('scroll', () => { if (window.pageYOffset > 300) { toTopBtn.classList.add('show') } else { toTopBtn.classList.remove('show') } });
+            toTopBtn.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }) });
+        }
+    </script>
+</body>
+
+</html>
