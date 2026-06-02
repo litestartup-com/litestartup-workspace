@@ -1,3 +1,2 @@
 - [Guide](index.md)
-- [Features](features/index.md)
 - [API Reference](api/README.md)
