@@ -1,0 +1,13 @@
+version: 1
+binding_id: 6
+endpoint: https://api.litestartup.com
+repo_url: https://github.com/litestartup-com/litestartup-workspace.git
+sync:
+  blog:
+    path: "blog/**/*.md"
+  website:
+    path: "website/**/*.html"
+  docs:
+    path: "docs/**/*.md"
+  changelog:
+    path: "changelog/**/*.md"
