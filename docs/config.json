@@ -1,0 +1,48 @@
+{
+  "site": {
+    "name": "LiteStartup",
+    "title": "LiteStartup Docs",
+    "description": "Official documentation for LiteStartup — AI-driven email platform for startups. Includes Workmail, Marketing, Transactional Emails, and AI-Powered Tools.",
+    "keywords": [
+      "litestartup",
+      "litestartup.com",
+      "documentation",
+      "guides",
+      "api",
+      "reference",
+      "email",
+      "marketing"
+    ],
+    "author": "LiteStartup",
+    "logo": "",
+    "favicon": ""
+  },
+  "locales": {
+    "default": "en",
+    "available": [
+      "en"
+    ]
+  },
+  "theme": {
+    "primary_color": "#000000",
+    "dark_mode": true
+  },
+  "seo": {
+    "canonical_base": "https://litestartup.com",
+    "og_image": "https://litestartup.com/imgs/litestartup-124925.png",
+    "twitter_site": "@litestartup_com"
+  },
+  "links": {
+    "github": "https://github.com/litestartup-com/document",
+    "twitter": "https://x.com/litestartup_com",
+    "discord": "",
+    "website": "https://litestartup.com"
+  },
+  "analytics": {
+    "google_analytics_id": "",
+    "google_tag_manager_id": ""
+  },
+  "footer": {
+    "copyright": "© 2026 LiteStartup"
+  }
+}
