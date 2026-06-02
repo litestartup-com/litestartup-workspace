@@ -1,5 +1,6 @@
 version: 1
 binding_id: 6
+domain_slug: domain-bab4cade66abd03b75eda09337a941f1
 endpoint: https://api.litestartup.com
 repo_url: https://github.com/litestartup-com/litestartup-workspace.git
 sync:
