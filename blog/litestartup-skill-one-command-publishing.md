@@ -83,4 +83,4 @@ Your AI editor now understands LiteStartup publishing. Ask it to "write a blog p
 
 Ship faster. Edit locally. Go live in seconds.
 
-*Last updated: June 2026*
+*Last updated: June 2, 2026 — tags now syncing correctly!*
