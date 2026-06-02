@@ -82,3 +82,5 @@ curl -fsSL https://litestartup.com/skill/install.sh | bash
 Your AI editor now understands LiteStartup publishing. Ask it to "write a blog post and publish" — it will.
 
 Ship faster. Edit locally. Go live in seconds.
+
+*Last updated: June 2026*
