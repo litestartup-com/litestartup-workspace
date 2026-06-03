@@ -1,0 +1,419 @@
+{{header}}
+
+<body>
+    {{menu}}
+
+    <main>
+        <!--seo:{"title":"AI RAG - Retrieval-Augmented Generation | LiteStartup","description":"LiteRAG - Lightweight RAG system with document management, vector search, and AI chat. Upload docs, search semantically, and chat with your knowledge base.","keywords":"RAG, retrieval augmented generation, AI knowledge base, vector search, semantic search, document management, AI chat, LLM","og_title":"AI RAG | LiteStartup","og_description":"Lightweight RAG system - Upload documents, search semantically, and chat with your knowledge base using AI.","og_url":"https://www.litestartup.com/products/ai-rag","og_image":"https://www.litestartup.com/imgs/x.jpg","twitter_title":"AI RAG | LiteStartup","twitter_description":"Lightweight RAG system - Upload documents, search semantically, and chat with your knowledge base using AI.","canonical":"https://www.litestartup.com/products/ai-rag"}-->
+        <!-- Hero -->
+        <section class="pt-28 sm:pt-36 pb-16 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center fade-in">
+                <div class="flex items-center justify-center gap-3 mb-8">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium"
+                        style="background:#f3f4f6;color:#555">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z" />
+                        </svg>
+                        MIT License
+                    </span>
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium"
+                        style="background:#f3f4f6;color:#555">Open Source</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tighter mb-6">LiteRAG</h1>
+                <p class="text-xl sm:text-2xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">Upload your
+                    documents, search semantically, and chat with your knowledge base. Lightweight RAG system,
+                    open-source
+                    under MIT.</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <a href="https://literag.litestartup.com" target="_blank"
+                        class="inline-flex items-center justify-center gap-2 text-white font-semibold text-sm rounded-lg px-6 py-3.5 transition-all w-full sm:w-auto"
+                        style="background:#0a0a0a"
+                        onmouseover="this.style.background='#1a1a1a';this.style.boxShadow='0 6px 24px rgba(0,0,0,.18)';this.style.transform='translateY(-1px)'"
+                        onmouseout="this.style.background='#0a0a0a';this.style.boxShadow='none';this.style.transform='none'">
+                        Live Demo
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/litestartup-com/literag" target="_blank" rel="noopener"
+                        class="inline-flex items-center justify-center gap-2 font-semibold text-sm rounded-lg px-6 py-3.5 transition-all w-full sm:w-auto"
+                        style="border:1.5px solid rgba(0,0,0,.15);background:#fff;color:#0a0a0a"
+                        onmouseover="this.style.borderColor='#0a0a0a';this.style.background='#fafafa'"
+                        onmouseout="this.style.borderColor='rgba(0,0,0,.15)';this.style.background='#fff'">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        Star on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- How RAG Works -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto fade-in">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">From documents to answers in seconds</h2>
+                    <p class="text-gray-500 text-lg max-w-2xl mx-auto">Your files go through an automated pipeline
+                        &mdash; parsed, chunked, embedded, and indexed &mdash; so AI can retrieve the right context
+                        every time.</p>
+                </div>
+                <div class="card p-6 sm:p-8 bg-gray-50">
+                    <div
+                        class="flex flex-col sm:flex-row items-center justify-between gap-4 text-center text-sm font-medium text-gray-700">
+                        <div class="flex flex-col items-center gap-2">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+                                </svg>
+                            </div>
+                            <span>Upload</span>
+                        </div>
+                        <svg class="w-5 h-5 text-gray-300 hidden sm:block" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5" />
+                        </svg>
+                        <div class="flex flex-col items-center gap-2">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                                </svg>
+                            </div>
+                            <span>Parse</span>
+                        </div>
+                        <svg class="w-5 h-5 text-gray-300 hidden sm:block" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5" />
+                        </svg>
+                        <div class="flex flex-col items-center gap-2">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+                                </svg>
+                            </div>
+                            <span>Chunk</span>
+                        </div>
+                        <svg class="w-5 h-5 text-gray-300 hidden sm:block" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5" />
+                        </svg>
+                        <div class="flex flex-col items-center gap-2">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+                                </svg>
+                            </div>
+                            <span>Embed</span>
+                        </div>
+                        <svg class="w-5 h-5 text-gray-300 hidden sm:block" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5" />
+                        </svg>
+                        <div class="flex flex-col items-center gap-2">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center">
+                                <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                                </svg>
+                            </div>
+                            <span>Search</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center text-sm text-gray-400 mt-4">Supports PDF, DOCX, PPTX, XLSX, HTML, Markdown, TXT,
+                    CSV, JSON, EML, and more.</p>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- Core Features -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-14 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Everything you need for knowledge retrieval</h2>
+                    <p class="text-gray-500 text-lg max-w-2xl mx-auto">A complete RAG platform &mdash; from document
+                        ingestion to AI-powered answers.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 fade-in">
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Document Management</h3>
+                        <p class="text-sm text-gray-500">Upload and manage documents in datasets. Automatic parsing with
+                            MarkItDown converts PDF, DOCX, PPTX, and 10+ formats to searchable text.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Hybrid Search</h3>
+                        <p class="text-sm text-gray-500">Three retrieval modes &mdash; semantic (vector), keyword
+                            (BM25), and hybrid. Weighted fusion finds the most relevant results every time.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">AI Chat</h3>
+                        <p class="text-sm text-gray-500">Chat with your knowledge base. AI retrieves relevant context
+                            and generates grounded answers with streaming output support.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Multi-Model Support</h3>
+                        <p class="text-sm text-gray-500">Connect OpenAI, Anthropic, Google Gemini, Ollama, or any
+                            OpenAI-compatible endpoint. Switch models without changing code.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Multi-Tenant Workspaces</h3>
+                        <p class="text-sm text-gray-500">Isolated workspaces with role-based access. Owner, Admin,
+                            Member, and Viewer roles for secure team collaboration.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Observability</h3>
+                        <p class="text-sm text-gray-500">Built-in Langfuse integration for LLM call tracing. Monitor
+                            latency, token usage, and retrieval quality in real time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- API Example -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto fade-in">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Dual API architecture</h2>
+                    <p class="text-gray-500 text-lg">Console API for your dashboard. Service API for programmatic
+                        access.</p>
+                </div>
+                <div class="card p-6 bg-gray-50 mb-6">
+                    <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Search your knowledge
+                        base</p>
+                    <pre class="text-sm mono overflow-x-auto leading-relaxed"><code class="text-gray-800">curl -X POST https://api.litestartup.com/api/v1/search/ \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "query": "How do I reset my password?",
+    "dataset_ids": ["ds-abc123"],
+    "mode": "hybrid",
+    "top_k": 5
+  }'</code></pre>
+                </div>
+                <div class="card p-6 bg-gray-50">
+                    <p class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Chat with context</p>
+                    <pre class="text-sm mono overflow-x-auto leading-relaxed"><code class="text-gray-800">curl -X POST https://api.litestartup.com/api/v1/chats/ \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "message": "Summarize our refund policy",
+    "conversation_id": "conv-xyz789",
+    "stream": true
+  }'</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- Tech Stack -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-14 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Built on production-grade infrastructure</h2>
+                    <p class="text-gray-500 text-lg max-w-2xl mx-auto">Modern stack designed for reliability and scale.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 fade-in">
+                    <div class="card p-4 text-center">
+                        <p class="font-bold text-sm mb-1">FastAPI</p>
+                        <p class="text-xs text-gray-400">Backend framework</p>
+                    </div>
+                    <div class="card p-4 text-center">
+                        <p class="font-bold text-sm mb-1">PostgreSQL</p>
+                        <p class="text-xs text-gray-400">Relational database</p>
+                    </div>
+                    <div class="card p-4 text-center">
+                        <p class="font-bold text-sm mb-1">Milvus</p>
+                        <p class="text-xs text-gray-400">Vector database</p>
+                    </div>
+                    <div class="card p-4 text-center">
+                        <p class="font-bold text-sm mb-1">Celery + Redis</p>
+                        <p class="text-xs text-gray-400">Async task queue</p>
+                    </div>
+                    <div class="card p-4 text-center">
+                        <p class="font-bold text-sm mb-1">React 19</p>
+                        <p class="text-xs text-gray-400">Frontend UI</p>
+                    </div>
+                    <div class="card p-4 text-center">
+                        <p class="font-bold text-sm mb-1">Tailwind CSS</p>
+                        <p class="text-xs text-gray-400">Styling</p>
+                    </div>
+                    <div class="card p-4 text-center">
+                        <p class="font-bold text-sm mb-1">Langfuse</p>
+                        <p class="text-xs text-gray-400">LLM observability</p>
+                    </div>
+                    <div class="card p-4 text-center">
+                        <p class="font-bold text-sm mb-1">Docker</p>
+                        <p class="text-xs text-gray-400">Container deployment</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- How it works -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-14 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Up and running in 3 steps</h2>
+                </div>
+                <div class="grid sm:grid-cols-3 gap-8 fade-in">
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center text-lg font-bold mx-auto mb-4">
+                            1</div>
+                        <h3 class="font-bold mb-2">Connect your model</h3>
+                        <p class="text-sm text-gray-500">Add your LLM provider &mdash; OpenAI, Anthropic, Gemini, or
+                            Ollama. Configure your embedding and inference models.</p>
+                    </div>
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center text-lg font-bold mx-auto mb-4">
+                            2</div>
+                        <h3 class="font-bold mb-2">Upload your documents</h3>
+                        <p class="text-sm text-gray-500">Create a dataset and upload files or paste text. Documents are
+                            parsed, chunked, and indexed automatically in the background.</p>
+                    </div>
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center text-lg font-bold mx-auto mb-4">
+                            3</div>
+                        <h3 class="font-bold mb-2">Search and chat</h3>
+                        <p class="text-sm text-gray-500">Use semantic search to find relevant content, or start a
+                            conversation and let AI answer questions grounded in your data.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- Use Cases -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-14 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Built for real-world use cases</h2>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-5 fade-in">
+                    <div class="card p-6">
+                        <h3 class="text-lg font-bold mb-2">Internal Knowledge Base</h3>
+                        <p class="text-sm text-gray-500">Upload company docs, policies, and playbooks. Let employees
+                            search and get instant answers instead of digging through wikis.</p>
+                    </div>
+                    <div class="card p-6">
+                        <h3 class="text-lg font-bold mb-2">Customer Support Bot</h3>
+                        <p class="text-sm text-gray-500">Feed your help center articles and FAQs into a dataset. Build a
+                            support chatbot that answers questions with accurate, sourced responses.</p>
+                    </div>
+                    <div class="card p-6">
+                        <h3 class="text-lg font-bold mb-2">Research Assistant</h3>
+                        <p class="text-sm text-gray-500">Upload research papers, reports, and notes. Ask questions
+                            across your entire research library and get cited answers.</p>
+                    </div>
+                    <div class="card p-6">
+                        <h3 class="text-lg font-bold mb-2">Product Documentation</h3>
+                        <p class="text-sm text-gray-500">Index your API docs, changelogs, and guides. Developers can ask
+                            natural language questions and get code-relevant answers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- CTA -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center fade-in">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to build your knowledge base?</h2>
+                <p class="text-gray-500 mb-8 text-lg">Open-source under MIT. Clone, deploy, and start building in
+                    minutes.</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <a href="https://literag.litestartup.com" target="_blank"
+                        class="inline-flex items-center justify-center gap-2 text-white font-semibold text-sm rounded-lg px-6 py-3.5 transition-all"
+                        style="background:#0a0a0a"
+                        onmouseover="this.style.background='#1a1a1a';this.style.boxShadow='0 6px 24px rgba(0,0,0,.18)';this.style.transform='translateY(-1px)'"
+                        onmouseout="this.style.background='#0a0a0a';this.style.boxShadow='none';this.style.transform='none'">
+                        Try Live Demo
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/litestartup-com/literag" target="_blank" rel="noopener"
+                        class="inline-flex items-center justify-center gap-2 font-semibold text-sm rounded-lg px-6 py-3.5 transition-all"
+                        style="border:1.5px solid rgba(0,0,0,.15);background:#fff;color:#0a0a0a"
+                        onmouseover="this.style.borderColor='#0a0a0a';this.style.background='#fafafa'"
+                        onmouseout="this.style.borderColor='rgba(0,0,0,.15)';this.style.background='#fff'">
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        Star on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {{bottom}}
+
+{{footer}}

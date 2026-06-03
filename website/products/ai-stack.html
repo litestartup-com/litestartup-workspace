@@ -1,0 +1,194 @@
+{{header}}
+
+<body>
+    {{menu}}
+
+    <main>
+        <!--seo:{"title":"AI Stack - Unified AI Tools API | LiteStartup","description":"LiteStartup AI Stack - Image to Text, Speech to Text, Text to Speech, and LLM Router APIs. Unified AI tools for developers via a single API.","keywords":"AI stack, AI API, image to text, speech to text, text to speech, LLM router, AI tools for developers","og_title":"AI Stack | LiteStartup","og_description":"Unified AI tools API - Image to Text, Speech to Text, Text to Speech, and LLM Router.","og_url":"https://www.litestartup.com/products/ai-stack","og_image":"https://www.litestartup.com/imgs/x.jpg","twitter_title":"AI Stack | LiteStartup","twitter_description":"Unified AI tools API - Image to Text, Speech to Text, Text to Speech, and LLM Router.","canonical":"https://www.litestartup.com/products/ai-stack"}-->
+        <!-- Hero -->
+        <section class="pt-28 sm:pt-36 pb-16 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center fade-in">
+                <div
+                    class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gray-200 text-xs font-medium text-gray-600 mb-8 bg-white">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3" />
+                    </svg>
+                    Product
+                </div>
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tighter mb-6">AI Stack
+                </h1>
+                <p class="text-xl sm:text-2xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">One API for Image
+                    to Text, Speech to Text, Text to Speech, and LLM routing. No more juggling 4 different AI
+                    providers.</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <a href="https://app.litestartup.com/signup?{{utm_source}}"
+                        class="btn-primary-lg w-full sm:w-auto">Start Free <svg class="w-4 h-4" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg></a>
+                    <a href="https://www.litestartup.com/docs" target="_blank"
+                        class="btn-secondary w-full sm:w-auto">Read Docs</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- Code Example -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto fade-in">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">One endpoint. Multiple AI capabilities.</h2>
+                    <p class="text-gray-500 text-lg">Extract text from images with a single API call.</p>
+                </div>
+                <div class="card p-6 bg-gray-50">
+                    <pre class="text-sm mono overflow-x-auto leading-relaxed"><code class="text-gray-800">curl -X POST https://api.litestartup.com/v2/ai/image-to-text \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -F "image=@receipt.jpg" \
+  -F "language=en"
+
+# Response:
+# { "text": "Invoice #1234\nTotal: $99.00\nDate: 2024-01-15" }</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- Features -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-14 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Four AI tools. One unified API.</h2>
+                    <p class="text-gray-500 text-lg max-w-2xl mx-auto">Stop managing separate accounts for every AI
+                        capability. We handle the infrastructure.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 fade-in">
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5a2.25 2.25 0 002.25-2.25V5.25a2.25 2.25 0 00-2.25-2.25H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Image to Text (OCR)</h3>
+                        <p class="text-sm text-gray-500">Extract text from images, receipts, documents, and
+                            screenshots. Multi-language support with high accuracy.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Speech to Text</h3>
+                        <p class="text-sm text-gray-500">Transcribe audio and video files to text. Support for multiple
+                            languages and file formats (MP3, WAV, MP4).</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Text to Speech</h3>
+                        <p class="text-sm text-gray-500">Convert text to natural-sounding speech. Multiple voices and
+                            languages. Perfect for audio content and accessibility.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">LLM Router</h3>
+                        <p class="text-sm text-gray-500">Route requests to the best LLM (GPT-4, Claude, etc.) based on
+                            cost, speed, or quality. One API, many models.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">API Key Management</h3>
+                        <p class="text-sm text-gray-500">Create multiple API keys with permissions, IP whitelists, and
+                            usage limits. Full control over access.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Usage Dashboard</h3>
+                        <p class="text-sm text-gray-500">Track API calls, costs, and usage per tool. Set alerts and
+                            budgets. Full visibility into your AI spend.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- How it works -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-14 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Integrate AI in 3 steps</h2>
+                </div>
+                <div class="grid sm:grid-cols-3 gap-8 fade-in">
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center text-lg font-bold mx-auto mb-4">
+                            1</div>
+                        <h3 class="font-bold mb-2">Get your API key</h3>
+                        <p class="text-sm text-gray-500">Sign up and generate an API key from the dashboard. Choose
+                            which AI tools to enable.</p>
+                    </div>
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center text-lg font-bold mx-auto mb-4">
+                            2</div>
+                        <h3 class="font-bold mb-2">Call the API</h3>
+                        <p class="text-sm text-gray-500">Simple REST endpoints for each tool. Upload files, send text,
+                            or route LLM requests. Works with any language.</p>
+                    </div>
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center text-lg font-bold mx-auto mb-4">
+                            3</div>
+                        <h3 class="font-bold mb-2">Get results</h3>
+                        <p class="text-sm text-gray-500">Receive structured JSON responses. Track usage and costs in
+                            real-time from the dashboard.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- CTA -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center fade-in">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to add AI to your app?</h2>
+                <p class="text-gray-500 mb-8 text-lg">Free tier available. No credit card required.</p>
+                <a href="https://app.litestartup.com/signup?{{utm_source}}" class="btn-primary-lg text-lg">
+                    Start Free Trial
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    {{bottom}}
+
+{{footer}}

@@ -1,0 +1,195 @@
+{{header}}
+
+<body>
+    {{menu}}
+
+    <main>
+        <!--seo:{"title":"Transactional Email - API Email Delivery | LiteStartup","description":"LiteStartup Transactional Email - Reliable API-driven email delivery for password resets, order confirmations, and notifications. 99% deliverability.","keywords":"transactional email, email API, SMTP relay, email delivery, password reset email, order confirmation email","og_title":"Transactional Email | LiteStartup","og_description":"API-driven email delivery. Reliable and fast. Built on AWS SES.","og_url":"https://www.litestartup.com/products/transactional-email","og_image":"https://www.litestartup.com/imgs/x.jpg","twitter_title":"Transactional Email | LiteStartup","twitter_description":"API-driven email delivery. Reliable and fast. Built on AWS SES.","canonical":"https://www.litestartup.com/products/transactional-email"}-->
+        <!-- Hero -->
+        <section class="pt-28 sm:pt-36 pb-16 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center fade-in">
+                <div
+                    class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gray-200 text-xs font-medium text-gray-600 mb-8 bg-white">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                    </svg>
+                    Product
+                </div>
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tighter mb-6">
+                    Transactional Email</h1>
+                <p class="text-xl sm:text-2xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">Send password
+                    resets, order confirmations, and notifications via a simple REST API &mdash; no SMTP hassle.</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <a href="https://app.litestartup.com/signup?{{utm_source}}"
+                        class="btn-primary-lg w-full sm:w-auto">Start Free <svg class="w-4 h-4" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg></a>
+                    <a href="https://www.litestartup.com/docs" target="_blank"
+                        class="btn-secondary w-full sm:w-auto">Read Docs</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- Code Example -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto fade-in">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">One API call. Email delivered.</h2>
+                    <p class="text-gray-500 text-lg">No SDK required. Just a simple HTTP POST.</p>
+                </div>
+                <div class="card p-6 bg-gray-50">
+                    <pre class="text-sm mono overflow-x-auto leading-relaxed"><code class="text-gray-800">curl -X POST https://api.litestartup.com/v2/email/send \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "from": "noreply@yourapp.com",
+    "to": "user@example.com",
+    "subject": "Your order is confirmed",
+    "html": "&lt;h1&gt;Order #1234&lt;/h1&gt;&lt;p&gt;Thank you!&lt;/p&gt;"
+  }'</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- Features -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-14 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Built for developers who ship fast</h2>
+                    <p class="text-gray-500 text-lg max-w-2xl mx-auto">Reliable email delivery backed by AWS SES
+                        infrastructure.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 fade-in">
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Simple REST API</h3>
+                        <p class="text-sm text-gray-500">Send emails with a single POST request. No SDKs, no
+                            dependencies. Works with any language.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Delivery Tracking</h3>
+                        <p class="text-sm text-gray-500">Real-time webhooks for delivery, bounce, and complaint events.
+                            Know the status of every email.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Fast Delivery</h3>
+                        <p class="text-sm text-gray-500">Emails hit inboxes in seconds, not minutes. Built on AWS SES
+                            for enterprise-grade reliability.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">API Key Auth</h3>
+                        <p class="text-sm text-gray-500">Secure Bearer token authentication. Create multiple API keys
+                            with different permissions and IP whitelists.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Custom Domains</h3>
+                        <p class="text-sm text-gray-500">Send from your own domain with full SPF, DKIM, and DMARC
+                            setup. Maximize inbox placement.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Email Logs</h3>
+                        <p class="text-sm text-gray-500">Full audit trail of every email sent. Search, filter, and
+                            debug delivery issues from the dashboard.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- How it works -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-14 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Start sending in 3 steps</h2>
+                </div>
+                <div class="grid sm:grid-cols-3 gap-8 fade-in">
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center text-lg font-bold mx-auto mb-4">
+                            1</div>
+                        <h3 class="font-bold mb-2">Get your API key</h3>
+                        <p class="text-sm text-gray-500">Sign up and generate an API key from the dashboard. Takes 30
+                            seconds.</p>
+                    </div>
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center text-lg font-bold mx-auto mb-4">
+                            2</div>
+                        <h3 class="font-bold mb-2">Verify your domain</h3>
+                        <p class="text-sm text-gray-500">Add DNS records for your sending domain. We auto-verify and
+                            configure SPF, DKIM, DMARC.</p>
+                    </div>
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center text-lg font-bold mx-auto mb-4">
+                            3</div>
+                        <h3 class="font-bold mb-2">Send your first email</h3>
+                        <p class="text-sm text-gray-500">Make a POST request to our API. Your email arrives in seconds.
+                            Track delivery in real-time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- CTA -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center fade-in">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to ship reliable email?</h2>
+                <p class="text-gray-500 mb-8 text-lg">5,000 emails/month free. No credit card required.</p>
+                <a href="https://app.litestartup.com/signup?{{utm_source}}" class="btn-primary-lg text-lg">
+                    Start Free Trial
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    {{bottom}}
+
+{{footer}}

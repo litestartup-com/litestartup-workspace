@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join my newsletter - Weekly insights on creativity, technology, and building in public">
+    <meta name="author" content="Creator">
+    <meta name="theme-color" content="#18181b">
+
+    <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="/favicon.ico?v=3.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=3.0">
+
+    <title>The Weekly Spark - A Newsletter for Curious Minds</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-gradient {
+            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(120, 119, 198, 0.15), transparent);
+        }
+
+        .input-glow:focus {
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px -10px rgba(102, 126, 234, 0.5);
+        }
+
+        .fade-up {
+            animation: fadeUp 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .testimonial-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+
+<body class="bg-zinc-50 text-zinc-900 font-sans antialiased">
+
+    <!-- Hero Section -->
+    <section class="min-h-screen hero-gradient relative overflow-hidden">
+        <!-- Decorative Elements -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+        <div class="absolute bottom-20 right-10 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse" style="animation-delay: 1s;"></div>
+
+        <div class="relative max-w-3xl mx-auto px-6 pt-20 pb-16 sm:pt-32 sm:pb-24">
+            <div class="text-center fade-up">
+                <!-- Avatar -->
+                <div class="mb-8">
+                    <div class="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg">
+                        <!-- Lucide Sparkles Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" />
+                            <path d="M20 3v4" />
+                            <path d="M22 5h-4" />
+                            <path d="M4 17v2" />
+                            <path d="M5 18H3" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-zinc-200 shadow-sm mb-8">
+                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                    <span class="text-sm font-medium text-zinc-600">Join 12,000+ readers</span>
+                </div>
+
+                <!-- Headline -->
+                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-zinc-900 mb-6 leading-tight">
+                    Ideas that spark<br>
+                    <span class="gradient-text">your next move</span>
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="text-lg sm:text-xl text-zinc-600 mb-10 max-w-xl mx-auto leading-relaxed">
+                    Every Sunday, I share one actionable idea on creativity, technology, and building a life you love. No fluff, just insights that matter.
+                </p>
+
+                <!-- Subscribe Form -->
+                <form class="max-w-md mx-auto mb-8">
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <input
+                            type="email"
+                            placeholder="Enter your email"
+                            class="flex-1 px-5 py-4 rounded-xl border border-zinc-200 bg-white text-zinc-900 placeholder-zinc-400 focus:outline-none input-glow transition-all text-base"
+                            required>
+                        <button type="submit" class="btn-gradient px-8 py-4 rounded-xl text-white font-semibold text-base whitespace-nowrap flex items-center justify-center gap-2">
+                            Subscribe
+                            <!-- Lucide ArrowRight Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14" />
+                                <path d="M12 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="text-sm text-zinc-500 mt-4">Free forever. Unsubscribe anytime.</p>
+                </form>
+
+                <!-- Social Proof -->
+                <div class="flex items-center justify-center gap-1 mb-12">
+                    <div class="flex -space-x-2">
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-pink-400 to-rose-500 border-2 border-white"></div>
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 border-2 border-white"></div>
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-amber-400 to-orange-500 border-2 border-white"></div>
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 border-2 border-white"></div>
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-violet-400 to-purple-500 border-2 border-white"></div>
+                    </div>
+                    <span class="text-sm text-zinc-500 ml-3">Loved by creators worldwide</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Get Section -->
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-zinc-900 mb-4">What you'll get</h2>
+                <p class="text-zinc-600 text-lg">Every issue is packed with value</p>
+            </div>
+
+            <div class="grid sm:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="text-center p-6">
+                    <div class="w-14 h-14 mx-auto mb-5 rounded-2xl bg-indigo-50 flex items-center justify-center">
+                        <!-- Lucide Lightbulb Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+                            <path d="M9 18h6" />
+                            <path d="M10 22h4" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg text-zinc-900 mb-2">One Big Idea</h3>
+                    <p class="text-zinc-600 text-sm leading-relaxed">A thought-provoking concept to shift your perspective and inspire action.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="text-center p-6">
+                    <div class="w-14 h-14 mx-auto mb-5 rounded-2xl bg-purple-50 flex items-center justify-center">
+                        <!-- Lucide Wrench Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9333ea" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg text-zinc-900 mb-2">Practical Tools</h3>
+                    <p class="text-zinc-600 text-sm leading-relaxed">Curated resources, frameworks, and tools you can use immediately.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="text-center p-6">
+                    <div class="w-14 h-14 mx-auto mb-5 rounded-2xl bg-rose-50 flex items-center justify-center">
+                        <!-- Lucide Zap Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e11d48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold text-lg text-zinc-900 mb-2">Quick Wins</h3>
+                    <p class="text-zinc-600 text-sm leading-relaxed">Bite-sized tips you can implement in under 5 minutes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 px-6 bg-zinc-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-zinc-900 mb-4">What readers say</h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-6 rounded-2xl border border-zinc-100">
+                    <div class="flex items-center gap-1 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                    </div>
+                    <p class="text-zinc-700 mb-4 leading-relaxed">"The only newsletter I actually read every week. Each issue feels like a conversation with a smart friend."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500"></div>
+                        <div>
+                            <p class="font-medium text-zinc-900 text-sm">Sarah Chen</p>
+                            <p class="text-zinc-500 text-xs">Product Designer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-6 rounded-2xl border border-zinc-100">
+                    <div class="flex items-center gap-1 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                    </div>
+                    <p class="text-zinc-700 mb-4 leading-relaxed">"Helped me land my dream job. The frameworks shared here changed how I approach problem-solving."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-400 to-teal-500"></div>
+                        <div>
+                            <p class="font-medium text-zinc-900 text-sm">Marcus Johnson</p>
+                            <p class="text-zinc-500 text-xs">Startup Founder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-24 px-6 bg-zinc-900">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mb-6">Ready to level up?</h2>
+            <p class="text-zinc-400 text-lg mb-10">Join thousands of curious minds getting smarter every Sunday.</p>
+
+            <form class="max-w-md mx-auto">
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                        class="flex-1 px-5 py-4 rounded-xl bg-zinc-800 border border-zinc-700 text-white placeholder-zinc-500 focus:outline-none focus:border-indigo-500 transition-all text-base"
+                        required>
+                    <button type="submit" class="btn-gradient px-8 py-4 rounded-xl text-white font-semibold text-base whitespace-nowrap">
+                        Subscribe
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 bg-zinc-900 border-t border-zinc-800">
+        <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <!-- Lucide Sparkles Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" />
+                </svg>
+                <span class="text-zinc-400 font-medium">The Weekly Spark</span>
+            </div>
+            <p class="text-zinc-500 text-sm">&copy; 2025 All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" class="text-zinc-500 hover:text-zinc-300 transition text-sm">Privacy</a>
+                <a href="#" class="text-zinc-500 hover:text-zinc-300 transition text-sm">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
