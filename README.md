@@ -6,7 +6,7 @@ Official content repository for [www.litestartup.com](https://www.litestartup.co
 
 ```
 blog/           ← Blog posts (markdown → HTML)
-website/        ← Website pages (HTML + Tailwind CSS)
+website/        ← Website pages (HTML)
 docs/           ← Documentation (Litestartup Docs format)
 changelog/      ← Release changelogs (markdown)
 ```
