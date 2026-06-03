@@ -14,8 +14,8 @@ changelog/      ← Release changelogs (markdown)
 ## Publishing
 
 ```bash
-# Sync all content to production
-./scripts/ls-sync.sh
+# Publish using a single line of natural language
+Sync this blog post using litestartup-skill
 ```
 
 Content goes live at [www.litestartup.com](https://www.litestartup.com).
