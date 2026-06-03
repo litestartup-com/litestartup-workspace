@@ -182,53 +182,65 @@
 
         <!-- How We Compare -->
         <section class="py-20 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-6xl mx-auto">
+            <div class="max-w-5xl mx-auto">
                 <div class="text-center mb-14 fade-in">
                     <h2 class="text-3xl sm:text-4xl font-bold mb-4">How We Compare</h2>
                     <p class="text-gray-500 text-lg">See how Litestartup Skill stacks up against other tools.</p>
                 </div>
-                <div class="grid md:grid-cols-2 gap-8 fade-in">
-                    <!-- Card 1: vs Documentation Tools -->
+                <div class="space-y-10 fade-in">
+                    <!-- Card 1: vs Mintlify / GitBook / Docusaurus -->
                     <div class="card p-6 sm:p-8">
-                        <h3 class="text-xl font-bold mb-4">vs Documentation Tools</h3>
-                        <p class="text-sm text-gray-500 mb-6">Compared with Mintlify, GitBook, and Docusaurus</p>
+                        <h3 class="text-xl font-bold mb-2">Litestartup Skill vs Mintlify vs GitBook vs Docusaurus</h3>
+                        <p class="text-sm text-gray-500 mb-6">All-in-one AI-native publishing vs traditional
+                            documentation platforms</p>
                         <div class="overflow-x-auto">
                             <table class="w-full text-sm text-left">
                                 <thead>
                                     <tr class="border-b">
-                                        <th class="pb-3 font-semibold text-gray-700"></th>
-                                        <th class="pb-3 font-bold text-black">Litestartup Skill</th>
-                                        <th class="pb-3 font-semibold text-gray-500">Others</th>
+                                        <th class="pb-3 pr-4 font-semibold text-gray-700 whitespace-nowrap"></th>
+                                        <th class="pb-3 pr-4 font-bold text-black whitespace-nowrap">Litestartup Skill
+                                        </th>
+                                        <th class="pb-3 pr-4 font-semibold text-gray-500 whitespace-nowrap">Mintlify
+                                        </th>
+                                        <th class="pb-3 pr-4 font-semibold text-gray-500 whitespace-nowrap">GitBook</th>
+                                        <th class="pb-3 font-semibold text-gray-500 whitespace-nowrap">Docusaurus</th>
                                     </tr>
                                 </thead>
                                 <tbody class="text-gray-600">
                                     <tr class="border-b">
-                                        <td class="py-2.5 font-medium">Content types</td>
-                                        <td class="py-2.5">Docs + Blog + Website + Changelog + Email</td>
-                                        <td class="py-2.5 text-gray-400">Docs only or Docs + Blog</td>
+                                        <td class="py-2.5 pr-4 font-medium whitespace-nowrap">Content types</td>
+                                        <td class="py-2.5 pr-4">Docs + Blog + Website + Changelog + Email</td>
+                                        <td class="py-2.5 pr-4 text-gray-400">Docs only</td>
+                                        <td class="py-2.5 pr-4 text-gray-400">Docs / Knowledge base</td>
+                                        <td class="py-2.5 text-gray-400">Docs + Blog</td>
                                     </tr>
                                     <tr class="border-b">
-                                        <td class="py-2.5 font-medium">Workflow</td>
-                                        <td class="py-2.5">Natural language prompt in your editor</td>
-                                        <td class="py-2.5 text-gray-400">Web dashboard / CLI build / Deploy pipeline
-                                        </td>
+                                        <td class="py-2.5 pr-4 font-medium whitespace-nowrap">Workflow</td>
+                                        <td class="py-2.5 pr-4">Natural language prompt in your AI editor</td>
+                                        <td class="py-2.5 pr-4 text-gray-400">CLI + GitHub App</td>
+                                        <td class="py-2.5 pr-4 text-gray-400">Web editor or Git sync</td>
+                                        <td class="py-2.5 text-gray-400">Local dev &rarr; build &rarr; deploy</td>
                                     </tr>
                                     <tr class="border-b">
-                                        <td class="py-2.5 font-medium">Infrastructure</td>
-                                        <td class="py-2.5">Zero &mdash; no CI/CD, no build, no server</td>
-                                        <td class="py-2.5 text-gray-400">CLI + GitHub App / Platform / Node.js + build
-                                        </td>
+                                        <td class="py-2.5 pr-4 font-medium whitespace-nowrap">Infrastructure</td>
+                                        <td class="py-2.5 pr-4">Zero &mdash; no CI/CD, no build, no server</td>
+                                        <td class="py-2.5 pr-4 text-gray-400">Mintlify CLI + GitHub App</td>
+                                        <td class="py-2.5 pr-4 text-gray-400">GitBook platform</td>
+                                        <td class="py-2.5 text-gray-400">Node.js + build pipeline + hosting</td>
                                     </tr>
                                     <tr class="border-b">
-                                        <td class="py-2.5 font-medium">AI integration</td>
-                                        <td class="py-2.5">Native &mdash; your AI editor is the CMS</td>
-                                        <td class="py-2.5 text-gray-400">AI search / suggestions (separate from editor)
-                                        </td>
+                                        <td class="py-2.5 pr-4 font-medium whitespace-nowrap">AI integration</td>
+                                        <td class="py-2.5 pr-4">Native &mdash; your AI editor is the CMS</td>
+                                        <td class="py-2.5 pr-4 text-gray-400">AI search &amp; suggestions</td>
+                                        <td class="py-2.5 pr-4 text-gray-400">AI search</td>
+                                        <td class="py-2.5 text-gray-400">None</td>
                                     </tr>
                                     <tr>
-                                        <td class="py-2.5 font-medium">Pricing</td>
-                                        <td class="py-2.5">Free + negligible pay-as-you-go</td>
-                                        <td class="py-2.5 text-gray-400">Free limited / Pro $6&ndash;$150+/mo</td>
+                                        <td class="py-2.5 pr-4 font-medium whitespace-nowrap">Pricing</td>
+                                        <td class="py-2.5 pr-4">Free + negligible pay-as-you-go</td>
+                                        <td class="py-2.5 pr-4 text-gray-400">Free limited / Pro $150+/mo</td>
+                                        <td class="py-2.5 pr-4 text-gray-400">Free limited / Pro $6.7/user/mo</td>
+                                        <td class="py-2.5 text-gray-400">Free (self-host costs)</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -238,49 +250,49 @@
                             extra tools, no extra cost.</p>
                     </div>
 
-                    <!-- Card 2: vs AI Editors Alone -->
+                    <!-- Card 2: vs Claude Code / Codex / Cursor Alone -->
                     <div class="card p-6 sm:p-8">
-                        <h3 class="text-xl font-bold mb-4">vs AI Editors Alone</h3>
-                        <p class="text-sm text-gray-500 mb-6">What Litestartup Skill adds to Claude Code, Codex, and
-                            Cursor</p>
+                        <h3 class="text-xl font-bold mb-2">Claude Code / Codex / Cursor + Litestartup Skill</h3>
+                        <p class="text-sm text-gray-500 mb-6">What Litestartup Skill adds to your AI coding editor</p>
                         <div class="overflow-x-auto">
                             <table class="w-full text-sm text-left">
                                 <thead>
                                     <tr class="border-b">
-                                        <th class="pb-3 font-semibold text-gray-700"></th>
-                                        <th class="pb-3 font-semibold text-gray-500">AI Editor Only</th>
-                                        <th class="pb-3 font-bold text-black">+ Litestartup Skill</th>
+                                        <th class="pb-3 pr-4 font-semibold text-gray-700 whitespace-nowrap"></th>
+                                        <th class="pb-3 pr-4 font-semibold text-gray-500 whitespace-nowrap">Claude Code
+                                            / Codex / Cursor alone</th>
+                                        <th class="pb-3 font-bold text-black whitespace-nowrap">+ Litestartup Skill</th>
                                     </tr>
                                 </thead>
                                 <tbody class="text-gray-600">
                                     <tr class="border-b">
-                                        <td class="py-2.5 font-medium">Write content</td>
-                                        <td class="py-2.5 text-gray-400">Can write files</td>
+                                        <td class="py-2.5 pr-4 font-medium whitespace-nowrap">Write content</td>
+                                        <td class="py-2.5 pr-4 text-gray-400">Can write files</td>
                                         <td class="py-2.5">Write + publish live in one prompt</td>
                                     </tr>
                                     <tr class="border-b">
-                                        <td class="py-2.5 font-medium">Publish to production</td>
-                                        <td class="py-2.5 text-gray-400">Needs manual deploy pipeline</td>
+                                        <td class="py-2.5 pr-4 font-medium whitespace-nowrap">Publish to production</td>
+                                        <td class="py-2.5 pr-4 text-gray-400">Needs manual deploy pipeline</td>
                                         <td class="py-2.5">Built-in sync API, no CI/CD needed</td>
                                     </tr>
                                     <tr class="border-b">
-                                        <td class="py-2.5 font-medium">Content format</td>
-                                        <td class="py-2.5 text-gray-400">AI guesses the format</td>
+                                        <td class="py-2.5 pr-4 font-medium whitespace-nowrap">Content format</td>
+                                        <td class="py-2.5 pr-4 text-gray-400">AI guesses the format</td>
                                         <td class="py-2.5">Spec files define exact structure</td>
                                     </tr>
                                     <tr class="border-b">
-                                        <td class="py-2.5 font-medium">Multi-content sync</td>
-                                        <td class="py-2.5 text-gray-400">Each file independent</td>
+                                        <td class="py-2.5 pr-4 font-medium whitespace-nowrap">Multi-content sync</td>
+                                        <td class="py-2.5 pr-4 text-gray-400">Each file independent</td>
                                         <td class="py-2.5">One change updates page + docs + changelog</td>
                                     </tr>
                                     <tr class="border-b">
-                                        <td class="py-2.5 font-medium">Send emails</td>
-                                        <td class="py-2.5 text-gray-400">&mdash;</td>
+                                        <td class="py-2.5 pr-4 font-medium whitespace-nowrap">Send emails</td>
+                                        <td class="py-2.5 pr-4 text-gray-400">&mdash;</td>
                                         <td class="py-2.5">Send from editor via API</td>
                                     </tr>
                                     <tr>
-                                        <td class="py-2.5 font-medium">Rollback</td>
-                                        <td class="py-2.5 text-gray-400">git revert only</td>
+                                        <td class="py-2.5 pr-4 font-medium whitespace-nowrap">Rollback</td>
+                                        <td class="py-2.5 pr-4 text-gray-400">git revert only</td>
                                         <td class="py-2.5">git revert + one prompt to re-publish</td>
                                     </tr>
                                 </tbody>
