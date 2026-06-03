@@ -2,7 +2,10 @@
 - [Quickstart](quickstart.md)
 - [Pricing & Plans](pricing.md)
 - **Features**
-- [Features Overview](features/index.md)
+- [Overview](features/index.md)
+- [Domains](features/domains.md)
+- [Settings](features/settings.md)
+- **Email**
 - [Mailbox](features/emails.md)
 - [Campaigns](features/marketing.md)
 - [Templates](features/templates.md)
@@ -10,10 +13,13 @@
 - [Analytics](features/analytics.md)
 - [Warm-up](features/warmup.md)
 - [Emails Setup](features/domain-emails.md)
-- [Domains](features/domains.md)
+- **Application**
 - [Website](features/website.md)
 - [Blog](features/blog.md)
 - [Docs](features/docs.md)
 - [Live Chat](features/live-chat.md)
 - [Help Desk](features/support.md)
-- [Settings](features/settings.md)
+- **AI**
+- [AI Content Assistant](features/ai-content-assistant.md)
+- [Litestartup Skill](features/litestartup-skill.md)
+- [AI Stack](features/ai-stack.md)
