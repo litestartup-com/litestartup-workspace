@@ -19,6 +19,7 @@
 - [Docs](features/docs.md)
 - [Live Chat](features/live-chat.md)
 - [Help Desk](features/support.md)
+- [App Setup](features/app-setup.md)
 - **AI**
 - [AI Content Assistant](features/ai-content-assistant.md)
 - [Litestartup Skill](features/litestartup-skill.md)
