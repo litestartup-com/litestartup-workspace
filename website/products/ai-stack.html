@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,10 @@
 
 
 <body>
-        <header><!-- header placeholder --></header>
+    <header><!-- header placeholder --></header>
 
     <main>
-        <!--seo:{"title":"AI Stack - Unified AI Tools API | LiteStartup","description":"LiteStartup AI Stack - Image to Text, Speech to Text, Text to Speech, and LLM Router APIs. Unified AI tools for developers via a single API.","keywords":"AI stack, AI API, image to text, speech to text, text to speech, LLM router, AI tools for developers","og_title":"AI Stack | LiteStartup","og_description":"Unified AI tools API - Image to Text, Speech to Text, Text to Speech, and LLM Router.","og_url":"https://www.litestartup.com/products/ai-stack","og_image":"https://www.litestartup.com/imgs/x.jpg","twitter_title":"AI Stack | LiteStartup","twitter_description":"Unified AI tools API - Image to Text, Speech to Text, Text to Speech, and LLM Router.","canonical":"https://www.litestartup.com/products/ai-stack"}-->
+        <!--seo:{"title":"AI Stack - 9 AI Tools, One Unified Platform | LiteStartup","description":"LiteStartup AI Stack - OCR, transcription, TTS, voice clone, podcast, image generation, video generation, and intelligent LLM routing. 9 AI capabilities through one platform.","keywords":"AI stack, AI API, image to text, audio to text, text to audio, voice clone, podcast, text to image, text to video, image to video, LLM router, AI tools","og_title":"AI Stack - 9 AI Tools | LiteStartup","og_description":"From OCR to podcast generation, from voice cloning to video creation. 9 AI tools, one unified platform.","og_url":"https://www.litestartup.com/products/ai-stack","og_image":"https://www.litestartup.com/imgs/x.jpg","twitter_title":"AI Stack - 9 AI Tools | LiteStartup","twitter_description":"From OCR to podcast generation, from voice cloning to video creation. 9 AI tools, one unified platform.","canonical":"https://www.litestartup.com/products/ai-stack"}-->
         <!-- Hero -->
         <section class="pt-28 sm:pt-36 pb-16 px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto text-center fade-in">
@@ -25,9 +26,8 @@
                 </div>
                 <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tighter mb-6">AI Stack
                 </h1>
-                <p class="text-xl sm:text-2xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">One API for Image
-                    to Text, Speech to Text, Text to Speech, and LLM routing. No more juggling 4 different AI
-                    providers.</p>
+                <p class="text-xl sm:text-2xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">9 AI tools, one
+                    unified platform. From OCR to podcast generation, from voice cloning to video creation.</p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
                     <a href="https://app.litestartup.com/signup?{{utm_source}}"
                         class="btn-primary-lg w-full sm:w-auto">Start Free <svg class="w-4 h-4" fill="none"
@@ -42,101 +42,170 @@
 
         <div class="section-divider max-w-5xl mx-auto"></div>
 
-        <!-- Code Example -->
+        <!-- Tool Categories -->
         <section class="py-20 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-3xl mx-auto fade-in">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">One endpoint. Multiple AI capabilities.</h2>
-                    <p class="text-gray-500 text-lg">Extract text from images with a single API call.</p>
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-14 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Every AI modality. One platform.</h2>
+                    <p class="text-gray-500 text-lg max-w-2xl mx-auto">Stop managing separate accounts for every AI
+                        capability. We handle the infrastructure.</p>
                 </div>
-                <div class="card p-6 bg-gray-50">
-                    <pre class="text-sm mono overflow-x-auto leading-relaxed"><code class="text-gray-800">curl -X POST https://api.litestartup.com/v2/ai/image-to-text \
-  -H "Authorization: Bearer YOUR_API_KEY" \
-  -F "image=@receipt.jpg" \
-  -F "language=en"
 
-# Response:
-# { "text": "Invoice #1234\nTotal: $99.00\nDate: 2024-01-15" }</code></pre>
+                <!-- Text & Language -->
+                <div class="mb-10 fade-in">
+                    <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4 px-1">Text &amp;
+                        Language</h3>
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div class="card p-6">
+                            <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                    class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5a2.25 2.25 0 002.25-2.25V5.25a2.25 2.25 0 00-2.25-2.25H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
+                                </svg></div>
+                            <h3 class="text-lg font-bold mb-2">Image to Text</h3>
+                            <p class="text-sm text-gray-500">Extract text from images, receipts, documents, and
+                                screenshots. Multimodal understanding with contextual interpretation.</p>
+                        </div>
+                        <div class="card p-6">
+                            <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                    class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+                                </svg></div>
+                            <h3 class="text-lg font-bold mb-2">LLM Router</h3>
+                            <p class="text-sm text-gray-500">Intelligent routing across 10+ LLM providers. Auto-classify
+                                tasks, direct model selection, tag-based routing, and failover chains.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audio -->
+                <div class="mb-10 fade-in">
+                    <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4 px-1">Audio</h3>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                        <div class="card p-6">
+                            <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                    class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+                                </svg></div>
+                            <h3 class="text-lg font-bold mb-2">Audio to Text</h3>
+                            <p class="text-sm text-gray-500">Transcribe audio and video files. Multi-language, multiple
+                                formats (MP3, WAV, MP4).</p>
+                        </div>
+                        <div class="card p-6">
+                            <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                    class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
+                                </svg></div>
+                            <h3 class="text-lg font-bold mb-2">Text to Audio</h3>
+                            <p class="text-sm text-gray-500">Natural-sounding speech synthesis. Multiple voices and
+                                languages, including cloned voices.</p>
+                        </div>
+                        <div class="card p-6">
+                            <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                    class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                                </svg></div>
+                            <h3 class="text-lg font-bold mb-2">Voice Clone</h3>
+                            <p class="text-sm text-gray-500">Clone any voice from a short audio sample. Reuse across TTS
+                                and podcast generation.</p>
+                        </div>
+                        <div class="card p-6">
+                            <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                    class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5" />
+                                </svg></div>
+                            <h3 class="text-lg font-bold mb-2">Text to Podcast</h3>
+                            <p class="text-sm text-gray-500">Generate multi-speaker podcast episodes from text or URLs.
+                                AI-powered script and dialogue.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual -->
+                <div class="mb-10 fade-in">
+                    <h3 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4 px-1">Visual</h3>
+                    <div class="grid sm:grid-cols-3 gap-5">
+                        <div class="card p-6">
+                            <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                    class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
+                                </svg></div>
+                            <h3 class="text-lg font-bold mb-2">Text to Image</h3>
+                            <p class="text-sm text-gray-500">Generate images from text prompts. Multiple aspect ratios,
+                                styles, and quality levels.</p>
+                        </div>
+                        <div class="card p-6">
+                            <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                    class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
+                                </svg></div>
+                            <h3 class="text-lg font-bold mb-2">Text to Video</h3>
+                            <p class="text-sm text-gray-500">Generate videos from text descriptions. Async processing
+                                with status polling.</p>
+                        </div>
+                        <div class="card p-6">
+                            <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                    class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h1.5C5.496 19.5 6 18.996 6 18.375m-3.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-1.5A1.125 1.125 0 0118 18.375M20.625 4.5H3.375m17.25 0c.621 0 1.125.504 1.125 1.125M20.625 4.5h-1.5C18.504 4.5 18 5.004 18 5.625m3.75 0v1.5c0 .621-.504 1.125-1.125 1.125M3.375 4.5c-.621 0-1.125.504-1.125 1.125M3.375 4.5h1.5C5.496 4.5 6 5.004 6 5.625m-3.75 0v1.5c0 .621.504 1.125 1.125 1.125m0 0h1.5m-1.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m1.5-3.75C5.496 8.25 6 7.746 6 7.125v-1.5M4.875 8.25C5.496 8.25 6 8.754 6 9.375v1.5m0-5.25v5.25m0-5.25C6 5.004 6.504 4.5 7.125 4.5h9.75c.621 0 1.125.504 1.125 1.125m1.125 2.625h1.5m-1.5 0A1.125 1.125 0 0118 7.125v-1.5m1.125 2.625c-.621 0-1.125.504-1.125 1.125v1.5m2.625-2.625c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125M18 5.625v5.25M7.125 12h9.75m-9.75 0A1.125 1.125 0 016 10.875M7.125 12C6.504 12 6 12.504 6 13.125m0-2.25C6 11.496 5.496 12 4.875 12M18 10.875c0 .621-.504 1.125-1.125 1.125M18 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125m-12 5.25v-5.25m0 5.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125m-12 0v-1.5c0-.621-.504-1.125-1.125-1.125M18 18.375v-5.25m0 5.25v-1.5c0-.621.504-1.125 1.125-1.125M18 13.125v1.5c0 .621.504 1.125 1.125 1.125M18 13.125c0-.621.504-1.125 1.125-1.125M6 13.125v1.5c0 .621-.504 1.125-1.125 1.125M6 13.125C6 12.504 5.496 12 4.875 12m-1.5 0h1.5m-1.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M19.125 12h1.5m0 0c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h1.5m14.25 0h1.5" />
+                                </svg></div>
+                            <h3 class="text-lg font-bold mb-2">Image to Video</h3>
+                            <p class="text-sm text-gray-500">Animate static images into short video clips. Describe the
+                                motion you want.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <div class="section-divider max-w-5xl mx-auto"></div>
 
-        <!-- Features -->
+        <!-- LLM Router Highlight -->
         <section class="py-20 px-4 sm:px-6 lg:px-8">
-            <div class="max-w-5xl mx-auto">
-                <div class="text-center mb-14 fade-in">
-                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Four AI tools. One unified API.</h2>
-                    <p class="text-gray-500 text-lg max-w-2xl mx-auto">Stop managing separate accounts for every AI
-                        capability. We handle the infrastructure.</p>
+            <div class="max-w-4xl mx-auto fade-in">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">LLM Router: 4 routing modes</h2>
+                    <p class="text-gray-500 text-lg">One endpoint, 10+ models. Route to the best LLM for every task.</p>
                 </div>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 fade-in">
-                    <div class="card p-6">
-                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
-                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                stroke-width="1.5">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5a2.25 2.25 0 002.25-2.25V5.25a2.25 2.25 0 00-2.25-2.25H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z" />
-                            </svg></div>
-                        <h3 class="text-lg font-bold mb-2">Image to Text (OCR)</h3>
-                        <p class="text-sm text-gray-500">Extract text from images, receipts, documents, and
-                            screenshots. Multi-language support with high accuracy.</p>
+                <div class="grid sm:grid-cols-2 gap-5">
+                    <div class="card p-5">
+                        <h4 class="font-bold mb-1">Auto</h4>
+                        <p class="text-sm text-gray-500">AI classifies your prompt and picks the optimal model by cost,
+                            speed, and complexity.</p>
                     </div>
-                    <div class="card p-6">
-                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
-                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                stroke-width="1.5">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
-                            </svg></div>
-                        <h3 class="text-lg font-bold mb-2">Speech to Text</h3>
-                        <p class="text-sm text-gray-500">Transcribe audio and video files to text. Support for multiple
-                            languages and file formats (MP3, WAV, MP4).</p>
+                    <div class="card p-5">
+                        <h4 class="font-bold mb-1">Direct</h4>
+                        <p class="text-sm text-gray-500">Choose the exact model yourself with real-time pricing per
+                            million tokens.</p>
                     </div>
-                    <div class="card p-6">
-                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
-                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                stroke-width="1.5">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
-                            </svg></div>
-                        <h3 class="text-lg font-bold mb-2">Text to Speech</h3>
-                        <p class="text-sm text-gray-500">Convert text to natural-sounding speech. Multiple voices and
-                            languages. Perfect for audio content and accessibility.</p>
+                    <div class="card p-5">
+                        <h4 class="font-bold mb-1">Tag Routes</h4>
+                        <p class="text-sm text-gray-500">Map tags like <code
+                                class="text-xs bg-gray-100 px-1 py-0.5 rounded">fast</code>, <code
+                                class="text-xs bg-gray-100 px-1 py-0.5 rounded">smart</code>, <code
+                                class="text-xs bg-gray-100 px-1 py-0.5 rounded">creative</code> to pre-configured
+                            models.</p>
                     </div>
-                    <div class="card p-6">
-                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
-                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                stroke-width="1.5">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
-                            </svg></div>
-                        <h3 class="text-lg font-bold mb-2">LLM Router</h3>
-                        <p class="text-sm text-gray-500">Route requests to the best LLM (GPT-4, Claude, etc.) based on
-                            cost, speed, or quality. One API, many models.</p>
-                    </div>
-                    <div class="card p-6">
-                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
-                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                stroke-width="1.5">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" />
-                            </svg></div>
-                        <h3 class="text-lg font-bold mb-2">API Key Management</h3>
-                        <p class="text-sm text-gray-500">Create multiple API keys with permissions, IP whitelists, and
-                            usage limits. Full control over access.</p>
-                    </div>
-                    <div class="card p-6">
-                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
-                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                stroke-width="1.5">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
-                            </svg></div>
-                        <h3 class="text-lg font-bold mb-2">Usage Dashboard</h3>
-                        <p class="text-sm text-gray-500">Track API calls, costs, and usage per tool. Set alerts and
-                            budgets. Full visibility into your AI spend.</p>
+                    <div class="card p-5">
+                        <h4 class="font-bold mb-1">Fallback</h4>
+                        <p class="text-sm text-gray-500">Chain multiple models with automatic failover if the primary is
+                            unavailable.</p>
                     </div>
                 </div>
             </div>
@@ -148,32 +217,32 @@
         <section class="py-20 px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto">
                 <div class="text-center mb-14 fade-in">
-                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Integrate AI in 3 steps</h2>
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Get started in 3 steps</h2>
                 </div>
                 <div class="grid sm:grid-cols-3 gap-8 fade-in">
                     <div class="text-center">
                         <div
                             class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center text-lg font-bold mx-auto mb-4">
                             1</div>
-                        <h3 class="font-bold mb-2">Get your API key</h3>
-                        <p class="text-sm text-gray-500">Sign up and generate an API key from the dashboard. Choose
-                            which AI tools to enable.</p>
+                        <h3 class="font-bold mb-2">Open AI Stack</h3>
+                        <p class="text-sm text-gray-500">Navigate to AI Stack in your dashboard sidebar. All 9 tools are
+                            ready to use instantly.</p>
                     </div>
                     <div class="text-center">
                         <div
                             class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center text-lg font-bold mx-auto mb-4">
                             2</div>
-                        <h3 class="font-bold mb-2">Call the API</h3>
-                        <p class="text-sm text-gray-500">Simple REST endpoints for each tool. Upload files, send text,
-                            or route LLM requests. Works with any language.</p>
+                        <h3 class="font-bold mb-2">Choose a tool</h3>
+                        <p class="text-sm text-gray-500">Select the AI tool you need. Provide input — text, image,
+                            audio, or URL — and hit submit.</p>
                     </div>
                     <div class="text-center">
                         <div
                             class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center text-lg font-bold mx-auto mb-4">
                             3</div>
                         <h3 class="font-bold mb-2">Get results</h3>
-                        <p class="text-sm text-gray-500">Receive structured JSON responses. Track usage and costs in
-                            real-time from the dashboard.</p>
+                        <p class="text-sm text-gray-500">Instant results for sync tools. Async tasks (video, podcast)
+                            return via status polling — no timeouts.</p>
                     </div>
                 </div>
             </div>
@@ -184,8 +253,8 @@
         <!-- CTA -->
         <section class="py-20 px-4 sm:px-6 lg:px-8">
             <div class="max-w-3xl mx-auto text-center fade-in">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to add AI to your app?</h2>
-                <p class="text-gray-500 mb-8 text-lg">Free tier available. No credit card required.</p>
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to use AI Stack?</h2>
+                <p class="text-gray-500 mb-8 text-lg">9 AI tools included in your plan. No credit card required.</p>
                 <a href="https://app.litestartup.com/signup?{{utm_source}}" class="btn-primary-lg text-lg">
                     Start Free Trial
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
@@ -196,7 +265,7 @@
         </section>
     </main>
 
-        <footer><!-- footer placeholder --></footer>
+    <footer><!-- footer placeholder --></footer>
 
 
 </html>
