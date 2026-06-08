@@ -1,15 +1,17 @@
 ---
 title: AI Stack
-description: Unified AI tools — 9 capabilities covering text, audio, image, and video. OCR, transcription, TTS, voice clone, podcast, image generation, video generation, and intelligent LLM routing.
+description: Unified AI tools — 8 capabilities covering text, audio, image, and video. OCR, transcription, TTS, voice clone, image generation, video generation, and intelligent LLM routing.
 ---
 
 # AI Stack
 
-> 9 AI tools, one unified platform. From OCR to podcast generation, from voice cloning to video creation.
+> 8 AI tools, one unified platform. From OCR to video creation, from voice cloning to image generation.
 
 ## Overview
 
 AI Stack provides a complete suite of AI capabilities through LiteStartup's dashboard and API. Instead of managing separate services for OCR, transcription, TTS, image generation, video creation, and LLM access — use AI Stack for all of them with unified auth, billing, and monitoring.
+
+> **Note**: Text to Podcast is temporarily unavailable while we add English language support. It will return in a future release.
 
 ## Tools
 
@@ -33,21 +35,9 @@ Convert text to natural-sounding speech with multiple voices and languages. Choo
 
 ### Voice Clone
 
-Clone any voice from a short audio sample (10–30 seconds). The cloned voice can be used in Text to Audio and Podcast generation. Voice profiles are stored per team and reusable across all audio tools.
+Clone any voice from a short audio sample (10–30 seconds). The cloned voice can be used in Text to Audio. Voice profiles are stored per team and reusable across all audio tools.
 
 **Use cases**: Personalized TTS, branded audio content, podcast hosts with consistent voice identity.
-
-### Text to Podcast
-
-Generate multi-speaker podcast episodes from text content or URLs. AI generates a conversational script from your input, then synthesizes natural-sounding dialogue between two speakers.
-
-**Features**:
-- Input a long article, URL, or topic description
-- AI generates a structured multi-turn conversation script
-- Two-speaker synthesis with distinct voices (customizable)
-- Asynchronous processing with progress tracking
-
-**Use cases**: Convert blog posts to audio, create educational podcasts, repurpose long-form content.
 
 ### Text to Image
 
@@ -93,7 +83,7 @@ All tools are accessible from the **AI Stack** section in your dashboard sidebar
 
 ### Async Tasks
 
-Heavy processing tasks (video generation, podcast creation, image generation) run asynchronously:
+Heavy processing tasks (video generation, image generation) run asynchronously:
 
 1. **Submit** — Send your request, receive a `usage_id`
 2. **Poll** — Check task status with the usage ID
@@ -109,9 +99,9 @@ Task status includes progress updates so your application can show meaningful fe
 
 ## Key Features
 
-- **Unified Platform** — One dashboard, one auth mechanism, 9 AI capabilities
+- **Unified Platform** — One dashboard, one auth mechanism, 8 AI capabilities
 - **Async Architecture** — Heavy tasks run in the background with status polling, no timeouts
-- **Voice Library** — Built-in voices plus voice cloning for personalized audio
+- **Voice Library** — Built-in voices plus voice cloning for personalized TTS
 - **Smart LLM Routing** — Auto-classify tasks and route to the best model by cost/quality/speed
 - **Markdown Rendering** — LLM Router responses render with full formatting (code blocks, tables, lists)
 - **Usage Tracking** — Per-tool usage logs with billing integration

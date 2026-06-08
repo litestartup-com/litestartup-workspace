@@ -1,13 +1,13 @@
 ---
-title: "AI Stack: 9 AI Tools, One Unified API"
+title: "AI Stack: 8 AI Tools, One Unified API"
 date: 2026-06-08
 slug: "ai-stack-full-modality-launch"
 tags: ["ai", "feature", "product"]
 status: "published"
-excerpt: "From OCR to podcast generation, from voice cloning to video creation — AI Stack now covers every modality through a single API."
+excerpt: "From OCR to video creation, from voice cloning to image generation — AI Stack now covers every modality through a single API."
 ---
 
-We just shipped the biggest update to LiteStartup's AI capabilities: **AI Stack Full Modality**. Nine AI tools, one API, zero infrastructure headaches.
+We just shipped the biggest update to LiteStartup's AI capabilities: **AI Stack Full Modality**. Eight AI tools, one API, zero infrastructure headaches.
 
 ## What's AI Stack?
 
@@ -29,7 +29,6 @@ AI Stack is LiteStartup's unified AI toolkit. Instead of stitching together sepa
 | **Audio to Text** | Transcribe meetings, interviews, and audio files to text |
 | **Text to Audio** | Convert text to natural-sounding speech with multiple voices |
 | **Voice Clone** | Clone any voice from a short audio sample for personalized TTS |
-| **Text to Podcast** | Generate multi-speaker podcast episodes from articles or URLs |
 
 ### Visual
 
@@ -53,7 +52,7 @@ The router displays real-time pricing (input/output per million tokens) so you a
 
 ## Async by Design
 
-Heavy tasks like video generation and podcast creation run asynchronously. You submit a task, get a `usage_id`, and poll for status. No timeouts, no broken connections on long-running jobs.
+Heavy tasks like video generation run asynchronously. You submit a task, get a `usage_id`, and poll for status. No timeouts, no broken connections on long-running jobs.
 
 ```
 Submit → Processing → Completed → Download
@@ -66,7 +65,6 @@ Each task status includes progress updates, so your UI can show meaningful feedb
 Upload a short audio sample (10–30 seconds), and AI Stack creates a voice profile. Use that cloned voice in:
 
 - **Text to Audio** — Read any text in the cloned voice
-- **Podcast generation** — Create podcast episodes with familiar voices
 
 Voice profiles are stored per team, reusable across all audio tools.
 
