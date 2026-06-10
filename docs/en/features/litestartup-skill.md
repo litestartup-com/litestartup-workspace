@@ -1,6 +1,6 @@
 ---
 title: Litestartup Skill
-description: Publish blog, docs, website, and changelog directly from your AI-powered editor. Complete setup guide with step-by-step instructions.
+description: Publish blog, docs, website, and changelog directly from your AI coding agent. Complete setup guide with step-by-step instructions.
 ---
 
 # Litestartup Skill
@@ -9,7 +9,7 @@ description: Publish blog, docs, website, and changelog directly from your AI-po
 
 ## Overview
 
-Litestartup Skill is an open-source skill package that connects your AI-powered editor (Cursor, Claude Code, Codex, Windsurf) to the LiteStartup platform. Write markdown or HTML in your editor, run one prompt, and your content is live.
+Litestartup Skill is an open-source skill package that connects your AI coding agent (Cursor, Claude Code, Codex, Windsurf) to the LiteStartup platform. Write markdown or HTML in your editor, run one prompt, and your content is live.
 
 With Litestartup Skill, you can update your website, docs, blog, and changelog in the same coding session — keeping content in sync with your project at all times.
 

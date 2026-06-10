@@ -143,7 +143,7 @@ To be fair, Litestartup Skill is not the right choice for every project:
 
 - You're a **solo founder or small team** shipping fast
 - You want **one tool for docs + blog + website + changelog**
-- You use an **AI-powered editor** and want to publish without context-switching
+- You use an **AI coding agent** and want to publish without context-switching
 - You want **zero build complexity** — no Node.js, no CI/CD, no hosting config
 - You care about **total cost** over 12+ months
 - You want **git as the single source of truth** with instant publishing
