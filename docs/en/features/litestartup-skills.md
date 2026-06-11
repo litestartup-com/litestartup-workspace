@@ -1,17 +1,17 @@
 ---
-title: Litestartup Skill
+title: Litestartup Skills
 description: Publish blog, docs, website, and changelog directly from your AI coding agent. Complete setup guide with step-by-step instructions.
 ---
 
-# Litestartup Skill
+# Litestartup Skills
 
 > Publish from your editor. No dashboard needed.
 
 ## Overview
 
-Litestartup Skill is an open-source skill package that connects your AI coding agent (Cursor, Claude Code, Codex, Windsurf) to the LiteStartup platform. Write markdown or HTML in your editor, run one prompt, and your content is live.
+Litestartup Skills is an open-source skill package that connects your AI coding agent (Cursor, Claude Code, Codex, Windsurf) to the LiteStartup platform. Write markdown or HTML in your editor, run one prompt, and your content is live.
 
-With Litestartup Skill, you can update your website, docs, blog, and changelog in the same coding session — keeping content in sync with your project at all times.
+With Litestartup Skills, you can update your website, docs, blog, and changelog in the same coding session — keeping content in sync with your project at all times.
 
 ---
 
@@ -39,12 +39,12 @@ git remote add origin https://github.com/yourname/my-content.git
 
 ---
 
-## Step 2: Install Litestartup Skill
+## Step 2: Install Litestartup Skills
 
 Clone the skill repo and copy the adapter file for your editor into your content repo:
 
 ```bash
-git clone https://github.com/litestartup-com/litestartup-skill.git
+git clone https://github.com/litestartup-com/litestartup-skills.git
 ```
 
 Copy the adapter for your editor:
@@ -56,7 +56,7 @@ Copy the adapter for your editor:
 | Codex | `adapters/codex/AGENTS.md` | `AGENTS.md` (repo root) |
 | Windsurf | `adapters/windsurf/.windsurfrules` | `.windsurfrules` (repo root) |
 
-The adapter file tells your AI editor how to use Litestartup Skill — it loads the capabilities and specs automatically.
+The adapter file tells your AI editor how to use Litestartup Skills — it loads the capabilities and specs automatically.
 
 ---
 
@@ -117,7 +117,7 @@ Initialize this content repo for my project "MyApp". Create:
 - A v1.0.0 changelog entry
 ```
 
-The AI will create files following the Litestartup Skill specs:
+The AI will create files following the Litestartup Skills specs:
 
 ```
 my-content/
@@ -170,7 +170,7 @@ Your content is now live at `https://yourdomain.com`.
 
 ## Step 7: Ongoing workflow
 
-Once set up, you use Litestartup Skill just like you use your AI editor for coding — continuous, natural language driven updates:
+Once set up, you use Litestartup Skills just like you use your AI editor for coding — continuous, natural language driven updates:
 
 **Update content when your project changes:**
 
@@ -230,7 +230,7 @@ I only updated the pricing page. Sync just that file.
 
 ## Pricing
 
-Litestartup Skill is **free and open source** (MIT license).
+Litestartup Skills is **free and open source** (MIT license).
 
 | Item | Cost |
 |------|------|

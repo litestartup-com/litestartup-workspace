@@ -168,4 +168,4 @@ For teams that already live inside AI editors (and in 2026, that's most of us), 
 
 ---
 
-*Try it yourself: [github.com/litestartup-com/litestartup-skill](https://github.com/litestartup-com/litestartup-skill) — MIT licensed, no signup required to start.*
+*Try it yourself: [github.com/litestartup-com/litestartup-skills](https://github.com/litestartup-com/litestartup-skills) — MIT licensed, no signup required to start.*

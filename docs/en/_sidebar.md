@@ -22,5 +22,5 @@
 - [App Setup](features/app-setup.md)
 - **AI**
 - [AI Content Assistant](features/ai-content-assistant.md)
-- [Litestartup Skill](features/litestartup-skill.md)
+- [Litestartup Skills](features/litestartup-skills.md)
 - [AI Stack](features/ai-stack.md)

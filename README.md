@@ -1,6 +1,6 @@
 # litestartup-workspace
 
-Official content repository for [www.litestartup.com](https://www.litestartup.com). Managed via [litestartup-skill](https://github.com/litestartup-com/litestartup-skill).
+Official content repository for [www.litestartup.com](https://www.litestartup.com). Managed via [litestartup-skills](https://github.com/litestartup-com/litestartup-skills).
 
 ## Structure
 
@@ -15,7 +15,7 @@ changelog/      ← Release changelogs (markdown)
 
 ```bash
 # Publish using a single line of natural language
-Sync this blog post using litestartup-skill
+Sync this blog post using litestartup-skills
 ```
 
 Content goes live at [www.litestartup.com](https://www.litestartup.com).
