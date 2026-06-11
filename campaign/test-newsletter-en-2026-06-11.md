@@ -12,21 +12,23 @@ This is a **test campaign** sent via the LiteStartup Publish Skill's new campaig
 
 ## What's Being Tested
 
-- Campaign file sync from content repo
-- Tag resolution by name (`newsletter_en`)
-- Markdown to HTML conversion
-- Campaign creation in the backend
+- ✅ Campaign file sync from content repo
+- ✅ Tag resolution by name (`newsletter_en`)
+- ✅ Markdown to HTML conversion
+- ✅ Campaign creation in the backend
+- ✅ Contact count validation (status=subscribed, is_active=1)
 
-## Next Steps
+## Campaign Workflow
 
-Once this test passes, the full campaign workflow will be available:
+The full skill-driven campaign workflow:
 
-1. Write campaign content in Markdown
-2. Sync to LiteStartup
-3. AI review and approval
-4. Automatic sending to tagged contacts
+1. AI queries available tags via `GET /repo-sync/tags`
+2. User picks a tag (or specifies one directly)
+3. AI writes campaign Markdown with frontmatter
+4. Sync triggers campaign creation
+5. AI review → approval → send
 
 ---
 
-Best regards,
+Cheers,
 The LiteStartup Team
