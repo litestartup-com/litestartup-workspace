@@ -1,6 +1,6 @@
 ---
 title: Litestartup Skills
-description: Publish blog, docs, website, and changelog directly from your AI coding agent. Complete setup guide with step-by-step instructions.
+description: Publish blog, docs, website, changelog, and campaign emails directly from your AI coding agent. Complete setup guide with step-by-step instructions.
 ---
 
 # Litestartup Skills
@@ -11,7 +11,7 @@ description: Publish blog, docs, website, and changelog directly from your AI co
 
 Litestartup Skills is an open-source skill package that connects your AI coding agent (Cursor, Claude Code, Codex, Windsurf) to the LiteStartup platform. Write markdown or HTML in your editor, run one prompt, and your content is live.
 
-With Litestartup Skills, you can update your website, docs, blog, and changelog in the same coding session — keeping content in sync with your project at all times.
+With Litestartup Skills, you can update your website, docs, blog, changelog, and send campaign emails in the same coding session — keeping content in sync with your project at all times.
 
 ---
 
@@ -133,8 +133,10 @@ my-content/
 │       ├── _nav.md
 │       ├── _sidebar.md
 │       └── index.md
-└── changelog/
-    └── v1.0.0.md
+├── changelog/
+│   └── v1.0.0.md
+└── campaign/
+    └── .gitkeep
 ```
 
 ---
@@ -190,7 +192,15 @@ Write a blog post about our new API v2 release. Include the key improvements and
 We just shipped a dark mode feature. Add a "Dark Mode" section to the features docs and update the changelog.
 ```
 
-**Send an announcement email:**
+**Send a campaign email to subscribers:**
+
+```
+Send a campaign email to newsletter_en subscribers announcing our new dark mode feature.
+```
+
+The AI writes a Markdown email in `campaign/`, commits, pushes, and triggers sync. LiteStartup converts it to HTML, runs an AI safety review, and sends to all active contacts in the tag.
+
+**Send a notification email:**
 
 ```
 Send a notification email about our new dark mode feature. Subject: "Dark mode is here!" Body: brief announcement with a link to the docs.
@@ -202,7 +212,7 @@ Send a notification email about our new dark mode feature. Subject: "Dark mode i
 I only updated the pricing page. Sync just that file.
 ```
 
-> **Key insight**: You can develop your project and keep all content (website, docs, blog, changelog) up to date in the same AI coding session. No context switching, no separate CMS, no manual copy-pasting.
+> **Key insight**: You can develop your project and keep all content (website, docs, blog, changelog) up to date — and send campaign emails to your subscribers — in the same AI coding session. No context switching, no separate CMS, no manual copy-pasting.
 
 ---
 
@@ -214,6 +224,7 @@ I only updated the pricing page. Sync just that file.
 | Documentation | Litestartup Docs markdown | `docs/{lang}/**/*.md` | `/docs/{lang}/path` |
 | Website | HTML with Tailwind CSS | `website/**/*.html` | `/path` |
 | Changelog | Markdown | `changelog/*.md` | `/changelog/slug` |
+| Campaign | Markdown + YAML frontmatter | `campaign/*.md` | Sent via email to tagged contacts |
 
 ---
 
@@ -235,7 +246,7 @@ Litestartup Skills is **free and open source** (MIT license).
 | Item | Cost |
 |------|------|
 | Skill package | Free |
-| Content sync (blog, docs, website, changelog) | Free |
+| Content sync (blog, docs, website, changelog, campaign) | Free |
 | Custom domain hosting | Free |
 | Email sending | Pay-as-you-go (negligible cost) |
 | Storage & bandwidth | Pay-as-you-go (negligible cost) |

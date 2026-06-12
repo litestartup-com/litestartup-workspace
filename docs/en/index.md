@@ -1,6 +1,6 @@
 ---
 title: LiteStartup Documentation
-description: Official documentation for LiteStartup — AI-driven email service for startups. Includes Workmail, Marketing, Transactional Emails, and AI-Powered Tools.
+description: Official documentation for LiteStartup — AI-driven email service for startups. Includes Workmail, Marketing, Transactional Emails, AI-Powered Tools, and Campaign Emails via AI Skills.
 ---
 
 # LiteStartup Documentation

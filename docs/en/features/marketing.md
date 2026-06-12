@@ -65,6 +65,57 @@ Once you're ready to send your email to your Audience, click on **Send**, and sl
 
 **Note**: Test emails do not include any custom Reply-To address that may have been configured. This behavior is limited to test mode and does not affect actual email sends.
 
+## Sending a Campaign from Your AI Editor
+
+With [Litestartup Skills](litestartup-skills.md), you can write and send campaign emails directly from your AI coding editor — no dashboard needed.
+
+### How it works
+
+1. Tell your AI agent: *"Send a campaign to newsletter subscribers about our new feature."*
+2. The AI writes the email in Markdown with YAML frontmatter and saves it to your `campaign/` directory.
+3. The AI commits, pushes, and triggers a sync.
+4. LiteStartup converts the Markdown to HTML, runs an AI safety review, and sends the campaign to all active contacts in the selected tag.
+
+### Campaign file format
+
+Campaign files are Markdown files in the `campaign/` directory with YAML frontmatter:
+
+```markdown
+---
+subject: "Your Email Subject"
+from: "all@mail.yourdomain.com"
+from_name: "Your Brand"
+tag: "newsletter_en"
+status: "ready"
+---
+
+Hi {{SUBSCRIBER_FIRST_NAME}},
+
+Your email content in **Markdown** here.
+```
+
+### Frontmatter fields
+
+| Field | Required | Description |
+|-------|----------|-------------|
+| `subject` | Yes | Email subject line |
+| `from` | Yes | Sender email address (must be a verified domain email) |
+| `from_name` | No | Sender display name |
+| `tag` | Yes | Contact tag name to send to (e.g. `newsletter_en`) |
+| `status` | Yes | Set to `ready` to send immediately, or `draft` to save without sending |
+
+### Personalization placeholders
+
+You can use the same placeholders as dashboard campaigns:
+
+* `{{SUBSCRIBER_FIRST_NAME}}` — Contact's first name
+* `{{SUBSCRIBER_LAST_NAME}}` — Contact's last name
+* `{{SUBSCRIBER_EMAIL}}` — Contact's email address
+
+Unsubscribe links, open tracking, and click tracking are added automatically.
+
+> **Tip**: This is the fastest way to send a campaign — write it in the same session where you ship your feature, and your users hear about it immediately.
+
 ## Sending a Marketing Email from the API
 
 We also offer the option to send your Marketing Email from our [Marketing API](api/marketing-create.md).
