@@ -136,7 +136,7 @@ my-content/
 ├── changelog/
 │   └── v1.0.0.md
 └── campaign/
-    └── .gitkeep
+    └── email-campaign-skill-launch.md
 ```
 
 ---
