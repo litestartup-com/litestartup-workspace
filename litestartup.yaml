@@ -6,6 +6,8 @@ repo_url: https://github.com/litestartup-com/litestartup-workspace.git
 sync:
   blog:
     path: "blog/**/*.md"
+  campaign:
+    path: "campaign/**/*.md"
   website:
     path: "website/**/*.html"
   docs:
