@@ -1247,9 +1247,9 @@
                 <div class="grid lg:grid-cols-5 gap-8 items-center">
                     <div class="lg:col-span-2 fade-in">
                         <h2 class="text-3xl sm:text-4xl font-bold mb-4">From one prompt to live updates</h2>
-                        <p class="text-gray-500 mb-5">One command. Six tasks. Your site, blog, docs, and campaign — all
+                        <p class="text-gray-500 mb-5">One prompt. Your site, blog, docs, changelog and campaign — all
                             live in seconds.</p>
-                        <a href="/products/litestartup-skills" class="btn-secondary">Learn about AI Skills</a>
+                        <a href="/products/litestartup-skills" class="btn-secondary">Learn about Litestartup Skills</a>
                     </div>
                     <div class="lg:col-span-3 fade-in rounded-2xl overflow-hidden border border-gray-200 shadow-lg"
                         id="demoConsole">
@@ -1262,11 +1262,11 @@
                             </div>
                             <div class="flex items-center gap-2">
                                 <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-                                <span class="text-xs text-gray-400 font-medium">LiteStartup AI Agent</span>
+                                <span class="text-xs text-gray-400 font-medium">Coding Agent</span>
                             </div>
                         </div>
                         <!-- Console body -->
-                        <div style="background:#0f0f0f;min-height:320px" class="px-5 py-5 mono text-sm" id="demoBody">
+                        <div style="background:#0f0f0f;min-height:420px" class="px-5 py-5 mono text-sm" id="demoBody">
                             <!-- User prompt -->
                             <div class="flex items-start gap-3 mb-5" id="demoPrompt" style="opacity:0">
                                 <div class="w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5"
@@ -1287,7 +1287,7 @@
                                     stroke="currentColor" stroke-width="2">
                                     <circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="12" />
                                 </svg>
-                                <span class="text-xs text-yellow-400">Thinking...</span>
+                                <span class="text-xs text-yellow-400" id="demoThinkingText">Thinking...</span>
                             </div>
                             <!-- Task list -->
                             <div id="demoTasks" style="border-top:1px solid rgba(255,255,255,0.05)" class="pt-4 hidden">
@@ -1302,8 +1302,10 @@
                                         <path stroke-linecap="round" stroke-linejoin="round"
                                             d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
                                     </svg>
-                                    <span class="text-xs text-green-400 font-semibold">Done in <span
-                                            id="demoTime">0.0</span>s · 6 tasks completed</span>
+                                    <span class="text-xs text-green-400 font-semibold"
+                                        style="text-shadow:0 0 8px rgba(74,222,128,0.3)">Done in <span
+                                            id="demoTime">0.0</span>s · <span id="demoCount">0</span> tasks
+                                        completed</span>
                                 </div>
                                 <div class="flex items-center gap-2">
                                     <svg class="w-3.5 h-3.5 text-emerald-300" fill="none" stroke="currentColor"
@@ -1324,14 +1326,14 @@
             (function () {
                 const PROMPT_TEXT = 'Publish this release and send a campaign to newsletter subscribers about our new AI features.';
                 const TASKS = [
-                    { name: 'Website copy updated', time: '0.8' },
+                    { name: 'Content drafted', time: '5.6' },
+                    { name: 'Website updated', time: '0.8' },
                     { name: 'Blog post published', time: '1.2' },
                     { name: 'Docs refreshed', time: '0.6' },
                     { name: 'Changelog entry added', time: '0.4' },
-                    { name: 'Campaign sent to 1,247 subscribers', time: '2.1' },
-                    { name: 'All changes live', time: '0.3' }
+                    { name: 'Campaign sent to 1,247 subscribers', time: '2.1' }
                 ];
-                const TOTAL_TIME = '5.4';
+                const TOTAL_TIME = '10.7';
                 let running = false;
 
                 function createTaskEl(task) {
@@ -1368,6 +1370,9 @@
                     const summary = document.getElementById('demoSummary');
                     const timeEl = document.getElementById('demoTime');
 
+                    const thinkingText = document.getElementById('demoThinkingText');
+                    const countEl = document.getElementById('demoCount');
+
                     // Reset
                     typing.textContent = '';
                     taskList.innerHTML = '';
@@ -1376,6 +1381,8 @@
                     thinking.style.opacity = '0';
                     prompt.style.opacity = '0';
                     timeEl.textContent = '0.0';
+                    countEl.textContent = '0';
+                    thinkingText.textContent = 'Thinking...';
 
                     // Step 1: Show prompt and type
                     setTimeout(function () {
@@ -1385,51 +1392,62 @@
                             cursor.style.display = 'none';
                             setTimeout(function () {
                                 thinking.style.opacity = '1';
-                                // Step 3: Tasks
+                                // Step 2b: Switch to Executing
                                 setTimeout(function () {
-                                    thinking.style.opacity = '0';
-                                    tasks.classList.remove('hidden');
-                                    TASKS.forEach(function (task, idx) {
-                                        const el = createTaskEl(task);
-                                        taskList.appendChild(el);
-                                        setTimeout(function () {
-                                            el.style.opacity = '1';
-                                            el.style.transform = 'translateY(0)';
-                                        }, idx * 650 + 100);
-                                    });
-                                    // Step 4: Summary
+                                    thinkingText.textContent = 'Executing ' + TASKS.length + ' tasks...';
+                                    // Step 3: Tasks
                                     setTimeout(function () {
-                                        summary.classList.remove('hidden');
-                                        summary.style.opacity = '0';
-                                        summary.style.transform = 'translateY(6px)';
-                                        summary.style.transition = 'all .4s ease';
-                                        setTimeout(function () {
-                                            summary.style.opacity = '1';
-                                            summary.style.transform = 'translateY(0)';
-                                            // Animate time counter
-                                            let t = 0;
-                                            const target = parseFloat(TOTAL_TIME);
-                                            const step = target / 15;
-                                            const iv = setInterval(function () {
-                                                t += step;
-                                                if (t >= target) { t = target; clearInterval(iv); }
-                                                timeEl.textContent = t.toFixed(1);
-                                            }, 25);
-                                        }, 50);
-                                        // Step 5: Wait then restart
-                                        setTimeout(function () {
-                                            const body = document.getElementById('demoBody');
-                                            body.style.transition = 'opacity .6s ease';
-                                            body.style.opacity = '0';
+                                        thinking.style.opacity = '0';
+                                        tasks.classList.remove('hidden');
+                                        TASKS.forEach(function (task, idx) {
+                                            const el = createTaskEl(task);
+                                            taskList.appendChild(el);
                                             setTimeout(function () {
-                                                body.style.opacity = '1';
-                                                cursor.style.display = '';
-                                                running = false;
-                                                runDemo();
-                                            }, 1500);
-                                        }, 3000);
-                                    }, TASKS.length * 650 + 400);
-                                }, 600);
+                                                el.style.opacity = '1';
+                                                el.style.transform = 'translateY(0)';
+                                            }, idx * 650 + 100);
+                                        });
+                                        // Step 4: Summary
+                                        setTimeout(function () {
+                                            summary.classList.remove('hidden');
+                                            summary.style.opacity = '0';
+                                            summary.style.transform = 'translateY(6px)';
+                                            summary.style.transition = 'all .4s ease';
+                                            setTimeout(function () {
+                                                summary.style.opacity = '1';
+                                                summary.style.transform = 'translateY(0)';
+                                                // Animate time counter
+                                                let t = 0;
+                                                const target = parseFloat(TOTAL_TIME);
+                                                const step = target / 15;
+                                                const iv = setInterval(function () {
+                                                    t += step;
+                                                    if (t >= target) { t = target; clearInterval(iv); }
+                                                    timeEl.textContent = t.toFixed(1);
+                                                }, 25);
+                                                // Animate task count
+                                                let c = 0;
+                                                const civ = setInterval(function () {
+                                                    c++;
+                                                    countEl.textContent = c;
+                                                    if (c >= TASKS.length) clearInterval(civ);
+                                                }, 60);
+                                            }, 50);
+                                            // Step 5: Wait then restart
+                                            setTimeout(function () {
+                                                const body = document.getElementById('demoBody');
+                                                body.style.transition = 'opacity .6s ease';
+                                                body.style.opacity = '0';
+                                                setTimeout(function () {
+                                                    body.style.opacity = '1';
+                                                    cursor.style.display = '';
+                                                    running = false;
+                                                    runDemo();
+                                                }, 1500);
+                                            }, 4000);
+                                        }, TASKS.length * 650 + 400);
+                                    }, 1000);
+                                }, 1200);
                             }, 400);
                         });
                     }, 300);
