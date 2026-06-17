@@ -1377,9 +1377,15 @@
                     typing.textContent = '';
                     taskList.innerHTML = '';
                     tasks.classList.add('hidden');
+                    tasks.style.opacity = '1';
                     summary.classList.add('hidden');
+                    summary.style.opacity = '0';
+                    summary.style.transform = '';
+                    summary.style.transition = '';
                     thinking.style.opacity = '0';
+                    thinking.style.transition = '';
                     prompt.style.opacity = '0';
+                    prompt.style.transition = '';
                     timeEl.textContent = '0.0';
                     countEl.textContent = '0';
                     thinkingText.textContent = 'Thinking...';
