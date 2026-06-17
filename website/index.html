@@ -1435,11 +1435,15 @@
                                             }, 50);
                                             // Step 5: Wait then restart
                                             setTimeout(function () {
-                                                const body = document.getElementById('demoBody');
-                                                body.style.transition = 'opacity .6s ease';
-                                                body.style.opacity = '0';
+                                                // Fade out content elements only, keep console bg
+                                                [prompt, thinking, tasks, summary].forEach(function (el) {
+                                                    el.style.transition = 'opacity .6s ease';
+                                                    el.style.opacity = '0';
+                                                });
                                                 setTimeout(function () {
-                                                    body.style.opacity = '1';
+                                                    [prompt, thinking, tasks, summary].forEach(function (el) {
+                                                        el.style.transition = '';
+                                                    });
                                                     cursor.style.display = '';
                                                     running = false;
                                                     runDemo();
