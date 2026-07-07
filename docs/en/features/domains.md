@@ -9,6 +9,61 @@ description: Configure and verify your sending domains for email delivery with L
 
 Domains are essential for sending emails from your own addresses like `hello@yourdomain.com`. LiteStartup requires domain verification to ensure email deliverability and protect your sender reputation.
 
+## Domain Registration (Beta)
+
+> Register a domain directly from LiteStartup and start sending emails in minutes — no manual DNS configuration required.
+
+Instead of bringing your own domain, you can now purchase one directly inside LiteStartup. The platform handles everything: registration, DNS setup, email routing, and sending identity configuration.
+
+### How It Works
+
+1. Go to **Domains** → **Register Domain**
+2. Search for an available domain name
+3. Review pricing (Cloudflare wholesale, zero markup)
+4. Complete payment via PayPal
+5. Wait for automatic setup to complete (2-3 minutes)
+6. Create an email address and start sending
+
+### What Gets Configured Automatically
+
+| Component | Description |
+|-----------|-------------|
+| DNS Records | MX, SPF, DKIM, DMARC |
+| Email Routing | Cloudflare Email Routing with catch-all Worker |
+| Sending Identity | AWS SES domain identity with custom DKIM |
+| MAIL FROM | Custom MAIL FROM subdomain |
+| Reputation | Configuration set with bounce/complaint suppression |
+
+### Included with Every Registration
+
+- **$0 markup** — Cloudflare wholesale pricing passed through directly
+- **WHOIS privacy** — Free redaction included
+- **Auto-renewal** — Enabled by default
+- **No lock-in** — Transfer your domain anytime after 60 days
+
+### Supported TLDs
+
+50+ extensions are supported including `.com`, `.net`, `.org`, `.io`, `.dev`, `.app`, and many more. Premium domains and some country-code TLDs are not yet available.
+
+### Beta Limitations
+
+- Domain registration requires Owner or Admin role
+- Premium domains not supported via API
+- Some country-code TLDs unavailable
+- Transfer-in not yet supported (coming soon)
+
+### Setup Progress Tracking
+
+After payment, you can monitor the configuration progress in real-time:
+
+1. **Domain Registration** — Submitted to Cloudflare Registrar
+2. **DNS Records** — SPF, DKIM, DMARC, MX records added
+3. **Email Routing** — Inbound email routing configured
+4. **Sending Identity** — AWS SES identity verified
+5. **Complete** — Ready to create email addresses and send
+
+---
+
 ## Getting Started
 
 1. Go to **Domains** from the sidebar

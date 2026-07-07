@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>/products/domain-registration</title>
+</head>
+
+
+<body>
+    <header><!-- header placeholder --></header>
+
+    <main>
+        <!-- Hero -->
+        <section class="pt-28 sm:pt-36 pb-16 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center fade-in">
+                <div
+                    class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gray-200 text-xs font-medium text-gray-600 mb-8 bg-white">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5a17.888 17.888 0 01-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                    </svg>
+                    Beta
+                </div>
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tighter mb-6">Domain
+                    Registration</h1>
+                <p class="text-xl sm:text-2xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">Register a domain
+                    and send your first email in minutes. No DNS config, no waiting &mdash; just search, pay, and
+                    send.</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <a href="https://app.litestartup.com/signup?{{utm_source}}"
+                        class="btn-primary-lg w-full sm:w-auto">Start Free <svg class="w-4 h-4" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg></a>
+                    <a href="/pricing" class="btn-secondary w-full sm:w-auto">View Pricing</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- Pain Points: Before vs After -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-14 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">The old way vs. the LiteStartup way</h2>
+                    <p class="text-gray-500 text-lg max-w-2xl mx-auto">Setting up email on a new domain used to take
+                        hours. Now it takes minutes.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-6 fade-in">
+                    <div class="card p-6 border-red-100">
+                        <div class="text-xs font-bold uppercase tracking-wider text-red-400 mb-4">The old way</div>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li class="flex items-start gap-2"><svg class="w-4 h-4 text-red-400 mt-0.5 shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>Buy domain from registrar A</li>
+                            <li class="flex items-start gap-2"><svg class="w-4 h-4 text-red-400 mt-0.5 shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>Configure DNS at provider B</li>
+                            <li class="flex items-start gap-2"><svg class="w-4 h-4 text-red-400 mt-0.5 shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>Manually add SPF, DKIM, DMARC, MX</li>
+                            <li class="flex items-start gap-2"><svg class="w-4 h-4 text-red-400 mt-0.5 shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>Wait for DNS propagation (hours)</li>
+                            <li class="flex items-start gap-2"><svg class="w-4 h-4 text-red-400 mt-0.5 shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>Verify domain in email provider C</li>
+                            <li class="flex items-start gap-2"><svg class="w-4 h-4 text-red-400 mt-0.5 shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>Debug when something goes wrong</li>
+                        </ul>
+                        <div class="mt-5 pt-4 border-t border-gray-100 text-center">
+                            <span class="text-2xl font-bold text-red-500">2-24 hours</span>
+                            <p class="text-xs text-gray-400 mt-1">Average setup time</p>
+                        </div>
+                    </div>
+                    <div class="card p-6 border-emerald-100">
+                        <div class="text-xs font-bold uppercase tracking-wider text-emerald-500 mb-4">The LiteStartup
+                            way</div>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li class="flex items-start gap-2"><svg class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>Search &amp; register domain</li>
+                            <li class="flex items-start gap-2"><svg class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>Pay with PayPal</li>
+                            <li class="flex items-start gap-2"><svg class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>Everything configured automatically</li>
+                            <li class="flex items-start gap-2"><svg class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0"
+                                    fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>Create email address &amp; send</li>
+                        </ul>
+                        <div class="mt-5 pt-4 border-t border-gray-100 text-center">
+                            <span class="text-2xl font-bold text-emerald-500">2-3 minutes</span>
+                            <p class="text-xs text-gray-400 mt-1">From search to first email</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- Features -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-14 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">Everything handled for you</h2>
+                    <p class="text-gray-500 text-lg max-w-2xl mx-auto">Register once. We configure the entire email
+                        infrastructure automatically.</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 fade-in">
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Domain Search</h3>
+                        <p class="text-sm text-gray-500">Search across 50+ TLDs. See real-time availability and pricing
+                            instantly.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Wholesale Pricing</h3>
+                        <p class="text-sm text-gray-500">Cloudflare registrar prices with zero markup. Typically
+                            $8-12/year for .com domains.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Auto Configuration</h3>
+                        <p class="text-sm text-gray-500">DNS records, DKIM, SPF, DMARC, MX, and email routing &mdash;
+                            all set up automatically.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">WHOIS Privacy</h3>
+                        <p class="text-sm text-gray-500">Free WHOIS redaction included with every registration. Your
+                            personal info stays private.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">Live Progress</h3>
+                        <p class="text-sm text-gray-500">Watch each setup step complete in real-time. Know exactly when
+                            your domain is ready to send.</p>
+                    </div>
+                    <div class="card p-6">
+                        <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mb-4"><svg
+                                class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.5 10.5V6.75a4.5 4.5 0 119 0v3.75M3.75 21.75h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H3.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                            </svg></div>
+                        <h3 class="text-lg font-bold mb-2">No Lock-in</h3>
+                        <p class="text-sm text-gray-500">You own the domain. Transfer it out anytime after 60 days. No
+                            vendor lock-in, ever.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- How it works -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-14 fade-in">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-4">From zero to sending in 4 steps</h2>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 fade-in">
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center text-lg font-bold mx-auto mb-4">
+                            1</div>
+                        <h3 class="font-bold mb-2">Search</h3>
+                        <p class="text-sm text-gray-500">Enter a keyword or domain name. See available options with
+                            pricing instantly.</p>
+                    </div>
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center text-lg font-bold mx-auto mb-4">
+                            2</div>
+                        <h3 class="font-bold mb-2">Pay</h3>
+                        <p class="text-sm text-gray-500">Confirm your choice and complete payment securely via PayPal.
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center text-lg font-bold mx-auto mb-4">
+                            3</div>
+                        <h3 class="font-bold mb-2">Auto Setup</h3>
+                        <p class="text-sm text-gray-500">DNS, email routing, and sending identity are configured
+                            automatically in ~2 minutes.</p>
+                    </div>
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center text-lg font-bold mx-auto mb-4">
+                            4</div>
+                        <h3 class="font-bold mb-2">Send</h3>
+                        <p class="text-sm text-gray-500">Create an email address and start sending. Your domain is fully
+                            ready.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider max-w-5xl mx-auto"></div>
+
+        <!-- CTA -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center fade-in">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to register your domain?</h2>
+                <p class="text-gray-500 mb-8 text-lg">Search, register, and send your first email in under 5 minutes.
+                    Wholesale pricing, zero config.</p>
+                <a href="https://app.litestartup.com/signup?{{utm_source}}" class="btn-primary-lg text-lg">
+                    Get Started
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer><!-- footer placeholder --></footer>
+
+
+</html>
