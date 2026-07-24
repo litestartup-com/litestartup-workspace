@@ -54,7 +54,7 @@ Go to **Settings > API Keys** in your dashboard and create a new key. This key w
 All modalities use the same unified endpoint — just change the `model` field:
 
 ```bash
-curl https://api.litestartup.com/ai/generations \
+curl https://api.litestartup.com/client/v2/ai/generations \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
@@ -66,16 +66,41 @@ curl https://api.litestartup.com/ai/generations \
 ### 3. Get results
 
 - **Sync** — LLM chat, TTS, OCR, and transcription return results immediately.
-- **Async** — Video generation and digital human return a `task_id`. Poll `/ai/tasks/{id}` for status.
+- **Async** — Video generation and digital human return a `task_id`. Poll `/client/v2/ai/tasks/{id}` for status.
 
-## API Endpoint
+## API Endpoints
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
-| `/ai/generations` | POST | Unified generation — all modalities via `model` field |
-| `/ai/tasks/{id}` | GET | Check async task status |
+| `/client/v2/ai/generations` | POST | Unified generation — all modalities via `model` field |
+| `/client/v2/ai/chat/completions` | POST | OpenAI-compatible chat completions (LLM only) |
+| `/client/v2/ai/tasks/{id}` | GET | Check async task status |
 
-The `model` field determines which capability is invoked. See the [API Reference](/docs/en/api/ai-gateway-generations) for full request/response documentation.
+### OpenAI-Compatible Mode (LLM)
+
+For LLM chat, you can use the standard OpenAI SDK with our base URL:
+
+```python
+from openai import OpenAI
+
+client = OpenAI(
+    api_key="YOUR_API_KEY",
+    base_url="https://api.litestartup.com/client/v2/ai"
+)
+
+response = client.chat.completions.create(
+    model="deepseek-v3",
+    messages=[{"role": "user", "content": "Hello!"}]
+)
+print(response.choices[0].message.content)
+```
+
+This endpoint is fully compatible with OpenAI's Chat Completions API — same request/response format, same SDKs.
+
+> **Note**: `/client/v2/ai/chat/completions` only supports LLM models. For image, video, audio and other modalities, use the unified `/client/v2/ai/generations` endpoint.
+
+The `model` field determines which capability is invoked. See the [API Reference](/docs/en/api/ai-gateway-generations) for full request/response documentation.  
+For LLM-only usage with existing OpenAI SDKs, see the [OpenAI-Compatible Mode](#openai-compatible-mode-llm) section above.
 
 > **Tip**: Try it interactively in the [Playground](https://app.litestartup.com/ai-stack) within your dashboard.
 
@@ -99,7 +124,7 @@ Available models are listed in the Playground. Intelligent routing features are 
 **Asynchronous** endpoints return a `task_id` immediately:
 - Video Generation, Image to Video, Digital Human
 
-For async tasks, poll `GET /ai/tasks/{task_id}` until status is `completed`, then retrieve the output URL from the response.
+For async tasks, poll `GET /client/v2/ai/tasks/{task_id}` until status is `completed`, then retrieve the output URL from the response.
 
 ## Billing
 

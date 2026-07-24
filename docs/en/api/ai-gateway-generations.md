@@ -1,8 +1,111 @@
-# AI Gateway — Generations (Unified)
+# AI Gateway API Reference
 
-> Single endpoint for all AI modalities: LLM chat, image generation, video creation, audio synthesis, OCR, transcription, and more.
+> Unified multimodal AI API with OpenAI-compatible LLM access.
 
-**Endpoint**: `POST https://api.litestartup.com/ai/generations`
+## Endpoints Overview
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/client/v2/ai/generations` | POST | Unified generation — all modalities via `model` field |
+| `/client/v2/ai/chat/completions` | POST | OpenAI-compatible chat completions (LLM only) |
+| `/client/v2/ai/tasks/{id}` | GET | Check async task status |
+
+---
+
+## OpenAI-Compatible: Chat Completions
+
+**Endpoint**: `POST https://api.litestartup.com/client/v2/ai/chat/completions`
+
+Fully compatible with OpenAI's Chat Completions API. Use any OpenAI SDK by changing the `base_url`:
+
+```python
+from openai import OpenAI
+
+client = OpenAI(
+    api_key="YOUR_API_KEY",
+    base_url="https://api.litestartup.com/client/v2/ai"
+)
+
+response = client.chat.completions.create(
+    model="deepseek-v3",
+    messages=[{"role": "user", "content": "Hello!"}],
+    temperature=0.7,
+    max_tokens=4096
+)
+```
+
+```javascript
+import OpenAI from 'openai';
+
+const client = new OpenAI({
+  apiKey: 'YOUR_API_KEY',
+  baseURL: 'https://api.litestartup.com/client/v2/ai',
+});
+
+const response = await client.chat.completions.create({
+  model: 'deepseek-v3',
+  messages: [{ role: 'user', content: 'Hello!' }],
+});
+```
+
+```bash
+curl -X POST https://api.litestartup.com/client/v2/ai/chat/completions \
+     -H 'Authorization: Bearer <your_api_key>' \
+     -H 'Content-Type: application/json' \
+     -d '{
+  "model": "deepseek-v3",
+  "messages": [
+    {"role": "system", "content": "You are a helpful assistant."},
+    {"role": "user", "content": "What is LiteStartup?"}
+  ],
+  "temperature": 0.7,
+  "max_tokens": 4096
+}'
+```
+
+### Request Parameters
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| model | string | Yes | LLM model identifier (e.g. `deepseek-v3`, `gpt-4o`, `claude-sonnet-4-20250514`) |
+| messages | array | Yes | Chat messages array |
+| temperature | number | No | Sampling temperature (0-2, default varies by model) |
+| max_tokens | integer | No | Maximum tokens in the response |
+| stream | boolean | No | Enable streaming (default: false) |
+
+### Response
+
+```json
+{
+  "id": "chatcmpl-a1b2c3d4e5f6",
+  "object": "chat.completion",
+  "created": 1721836800,
+  "model": "deepseek-v3",
+  "choices": [
+    {
+      "index": 0,
+      "message": {"role": "assistant", "content": "LiteStartup is..."},
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 24,
+    "completion_tokens": 128,
+    "total_tokens": 152,
+    "cost": "0.0012"
+  }
+}
+```
+
+> **Note**: This endpoint only accepts LLM models. Non-LLM models (image, video, audio) will return a `400` error. Use `/client/v2/ai/generations` for those.
+
+---
+
+## Unified: Generations
+
+**Endpoint**: `POST https://api.litestartup.com/client/v2/ai/generations`
+
+All modalities (LLM, image, video, audio, OCR) through a single endpoint. The `model` field determines which capability is invoked.
 
 **Headers**
 
@@ -29,7 +132,7 @@
 ### LLM Chat
 
 ```bash
-curl -X POST https://api.litestartup.com/ai/generations \
+curl -X POST https://api.litestartup.com/client/v2/ai/generations \
      -H 'Authorization: Bearer <your_api_key>' \
      -H 'Content-Type: application/json' \
      -d '{
@@ -71,7 +174,7 @@ curl -X POST https://api.litestartup.com/ai/generations \
 ### Image Generation (Sync)
 
 ```bash
-curl -X POST https://api.litestartup.com/ai/generations \
+curl -X POST https://api.litestartup.com/client/v2/ai/generations \
      -H 'Authorization: Bearer <your_api_key>' \
      -H 'Content-Type: application/json' \
      -d '{
@@ -89,7 +192,7 @@ curl -X POST https://api.litestartup.com/ai/generations \
 ### Image OCR (Sync)
 
 ```bash
-curl -X POST https://api.litestartup.com/ai/generations \
+curl -X POST https://api.litestartup.com/client/v2/ai/generations \
      -H 'Authorization: Bearer <your_api_key>' \
      -H 'Content-Type: application/json' \
      -d '{
@@ -105,7 +208,7 @@ curl -X POST https://api.litestartup.com/ai/generations \
 ### Text to Video (Async)
 
 ```bash
-curl -X POST https://api.litestartup.com/ai/generations \
+curl -X POST https://api.litestartup.com/client/v2/ai/generations \
      -H 'Authorization: Bearer <your_api_key>' \
      -H 'Content-Type: application/json' \
      -d '{
@@ -140,7 +243,7 @@ curl -X POST https://api.litestartup.com/ai/generations \
 ### Text to Speech (Sync)
 
 ```bash
-curl -X POST https://api.litestartup.com/ai/generations \
+curl -X POST https://api.litestartup.com/client/v2/ai/generations \
      -H 'Authorization: Bearer <your_api_key>' \
      -H 'Content-Type: application/json' \
      -d '{
@@ -157,7 +260,7 @@ curl -X POST https://api.litestartup.com/ai/generations \
 ### Speech to Text / Transcription (Sync)
 
 ```bash
-curl -X POST https://api.litestartup.com/ai/generations \
+curl -X POST https://api.litestartup.com/client/v2/ai/generations \
      -H 'Authorization: Bearer <your_api_key>' \
      -H 'Content-Type: application/json' \
      -d '{
@@ -206,10 +309,10 @@ curl -X POST https://api.litestartup.com/ai/generations \
 }
 ```
 
-For async tasks, poll `GET /ai/tasks/{task_id}` until status is `completed`:
+For async tasks, poll `GET /client/v2/ai/tasks/{task_id}` until status is `completed`:
 
 ```bash
-curl https://api.litestartup.com/ai/tasks/12345 \
+curl https://api.litestartup.com/client/v2/ai/tasks/12345 \
      -H 'Authorization: Bearer <your_api_key>'
 ```
 
