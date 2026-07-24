@@ -66,6 +66,5 @@
   - <delete>[Remove Member](team-remove-member.md)
   - <put>[Update Role](team-update-member-role.md)
 - **AI Gateway**
-  - <post>[Chat Completions (OpenAI-compatible)](ai-gateway-generations.md#openai-compatible-chat-completions)
-  - <post>[Generations (Unified)](ai-gateway-generations.md#unified-generations)
+  - <post>[API Reference](ai-gateway-generations.md)
   - <get>[Task Status](ai-request-status.md)
