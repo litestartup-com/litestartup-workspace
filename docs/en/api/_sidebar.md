@@ -65,5 +65,5 @@
   - <put>[Set Default](team-set-default.md)
   - <delete>[Remove Member](team-remove-member.md)
   - <put>[Update Role](team-update-member-role.md)
-- **AI Stack**
+- **AI Gateway**
   - <post>[Image to Text (OCR)](ai-stack-image-to-text.md)

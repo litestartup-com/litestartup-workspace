@@ -1,111 +1,110 @@
 ---
-title: AI Stack
-description: Unified AI tools — 8 capabilities covering text, audio, image, and video. OCR, transcription, TTS, voice clone, image generation, video generation, and intelligent LLM routing.
+title: AI Gateway
+description: Unified multimodal AI API — one API key for LLM chat, image generation, video creation, speech synthesis, OCR, transcription, voice cloning, and more.
 ---
 
-# AI Stack
+# AI Gateway
 
-> 8 AI tools, one unified platform. From OCR to video creation, from voice cloning to image generation.
+> One API key. Every AI modality. Unified under a single endpoint.
 
 ## Overview
 
-AI Stack provides a complete suite of AI capabilities through LiteStartup's dashboard and API. Instead of managing separate services for OCR, transcription, TTS, image generation, video creation, and LLM access — use AI Stack for all of them with unified auth, billing, and monitoring.
+AI Gateway is LiteStartup's unified multimodal AI API. Instead of managing separate provider accounts for LLM, image, video, and audio — use one API key for all of them with unified billing, rate limiting, and intelligent model routing.
 
-> **Note**: Text to Podcast is temporarily unavailable while we add English language support. It will return in a future release.
+## Capabilities
 
-## Tools
+### Text & Language
 
-### Image to Text (OCR)
+| Capability | Description |
+|------------|-------------|
+| **LLM Chat** | OpenAI-compatible chat completions with intelligent routing (auto, direct, tag, failover) |
+| **OCR** | Extract text from images, receipts, documents with contextual interpretation |
 
-Extract text from images, receipts, documents, and screenshots. Supports multimodal understanding — not just OCR, but contextual interpretation of visual content.
+### Audio
 
-**Use cases**: Receipt scanning, document digitization, screenshot text extraction, handwriting recognition.
+| Capability | Description |
+|------------|-------------|
+| **Speech to Text** | Transcribe audio/video files with multi-language support |
+| **Text to Speech** | Natural-sounding speech synthesis with multiple voices |
+| **Voice Clone** | Clone any voice from a short audio sample for personalized TTS |
 
-### Audio to Text (Transcription)
+### Image
 
-Transcribe audio and video files to text. Supports multiple languages and file formats including MP3, WAV, and MP4.
+| Capability | Description |
+|------------|-------------|
+| **Image Generation** | Generate images from text prompts with multiple styles and aspect ratios |
+| **Image Edit** | Transform images with text instructions — inpainting, style transfer, editing |
 
-**Use cases**: Meeting transcription, interview notes, subtitle generation, voice memo processing.
+### Video
 
-### Text to Audio (TTS)
+| Capability | Description |
+|------------|-------------|
+| **Text to Video** | Generate videos from text descriptions (async) |
+| **Image to Video** | Animate static images into video clips (async) |
+| **Digital Human** | Generate talking-head videos from a photo and audio (async) |
 
-Convert text to natural-sounding speech with multiple voices and languages. Choose from a library of built-in voices or use your own cloned voice.
+## Quick Start
 
-**Use cases**: Audio content creation, accessibility, podcast narration, notification audio.
+### 1. Get your API key
 
-### Voice Clone
+Go to **Settings > API Keys** in your dashboard and create a new key. This key works for all AI Gateway endpoints.
 
-Clone any voice from a short audio sample (10–30 seconds). The cloned voice can be used in Text to Audio. Voice profiles are stored per team and reusable across all audio tools.
+### 2. Call the API
 
-**Use cases**: Personalized TTS, branded audio content, podcast hosts with consistent voice identity.
+Use the OpenAI-compatible endpoint or any modality-specific alias:
 
-### Text to Image
+```bash
+curl https://api.litestartup.com/ai/chat/completions \
+  -H "Authorization: Bearer YOUR_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{"model": "auto", "messages": [{"role": "user", "content": "Hello!"}]}'
+```
 
-Generate images from text prompts using Seedream 3.0. Supports multiple aspect ratios, styles, and quality levels.
+### 3. Get results
 
-**Use cases**: Marketing visuals, social media graphics, product mockups, illustration generation.
+- **Sync** — LLM chat, TTS, OCR, and transcription return results immediately.
+- **Async** — Video generation and digital human return a `task_id`. Poll `/ai/tasks/{id}` for status.
 
-### Text to Video
+## API Endpoints
 
-Generate videos from text descriptions. Asynchronous processing — submit a prompt, get a video when ready.
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/ai/chat/completions` | POST | LLM chat (OpenAI-compatible) |
+| `/ai/images/ocr` | POST | Image to text |
+| `/ai/audio/transcriptions` | POST | Speech to text |
+| `/ai/audio/speech` | POST | Text to speech |
+| `/ai/audio/speech/clone` | POST | Voice clone |
+| `/ai/images/generate` | POST | Image generation |
+| `/ai/images/edit` | POST | Image editing |
+| `/ai/videos/generate` | POST | Text to video |
+| `/ai/videos/animate` | POST | Image to video |
+| `/ai/videos/digital-human` | POST | Digital human video |
+| `/ai/models` | GET | List available models |
+| `/ai/tasks/{id}` | GET | Check async task status |
 
-**Use cases**: Social media content, product demos, explainer clips, creative storytelling.
+> **Tip**: Full API documentation with request/response examples is available in the [Playground](https://app.litestartup.com/ai-stack) within your dashboard.
 
-### Image to Video
+## LLM Routing
 
-Animate a static image into a short video clip. Upload an image and describe the desired motion or animation.
+AI Gateway supports 4 routing strategies for LLM requests:
 
-**Use cases**: Bring product photos to life, create animated social posts, generate motion from stills.
+| Strategy | How to use |
+|----------|-----------|
+| **Auto** | Set `"model": "auto"` — AI picks the best model by cost, speed, and complexity |
+| **Direct** | Set `"model": "model-name"` — choose a specific model |
+| **Tag** | Set `"model": "fast"` or `"smart"` — route to a pre-configured model |
+| **Failover** | Configured server-side — automatic fallback if primary model is unavailable |
 
-### LLM Router
+## Sync vs Async
 
-Intelligent model routing across 10+ LLM providers (GPT, Claude, DeepSeek, Gemini, and more). Four routing modes:
+**Synchronous** endpoints return results in the HTTP response:
+- LLM Chat, OCR, Speech to Text, Text to Speech
 
-| Mode | Description |
-|------|-------------|
-| **Auto** | AI classifies your prompt and selects the optimal model based on task type, cost, and complexity |
-| **Direct** | Choose the exact model yourself, with real-time pricing (input/output per million tokens) |
-| **Tag Routes** | Map tags like `fast`, `smart`, `creative` to pre-configured models |
-| **Fallback** | Chain multiple models with automatic failover if primary is unavailable |
+**Asynchronous** endpoints return a `task_id` immediately:
+- Video Generation, Image to Video, Digital Human
 
-**Use cases**: Cost-optimized LLM access, multi-model experimentation, production AI pipelines with failover.
+For async tasks, poll `GET /ai/tasks/{task_id}` until status is `completed`, then retrieve the output URL from the response.
 
-## How It Works
+## Billing
 
-### Dashboard Access
-
-All tools are accessible from the **AI Stack** section in your dashboard sidebar. Each tool has its own page with a simple interface:
-
-1. Navigate to **AI Stack** in the sidebar
-2. Select the tool you need
-3. Provide input (text, image, audio, or URL)
-4. Get results instantly (sync tools) or via status polling (async tools)
-
-### Async Tasks
-
-Heavy processing tasks (video generation, image generation) run asynchronously:
-
-1. **Submit** — Send your request, receive a `usage_id`
-2. **Poll** — Check task status with the usage ID
-3. **Complete** — Download your result when processing finishes
-
-Task status includes progress updates so your application can show meaningful feedback.
-
-### API Access
-
-1. Go to **Settings > API Keys** and create a new API key
-2. Use the API key in your requests to any AI Stack endpoint
-3. Monitor usage in **Settings > Usage**
-
-## Key Features
-
-- **Unified Platform** — One dashboard, one auth mechanism, 8 AI capabilities
-- **Async Architecture** — Heavy tasks run in the background with status polling, no timeouts
-- **Voice Library** — Built-in voices plus voice cloning for personalized TTS
-- **Smart LLM Routing** — Auto-classify tasks and route to the best model by cost/quality/speed
-- **Markdown Rendering** — LLM Router responses render with full formatting (code blocks, tables, lists)
-- **Usage Tracking** — Per-tool usage logs with billing integration
-
-## Pricing
-
-AI Stack usage is included in your plan's monthly AI Stack quota. Different tools consume different amounts based on processing complexity. See the [Pricing page](pricing.md) for details.
+AI Gateway usage consumes AI credits from your plan's monthly quota. Different capabilities consume different amounts based on processing complexity. See the [Pricing page](pricing.md) for details.

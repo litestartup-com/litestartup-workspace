@@ -59,7 +59,7 @@ AI-powered tools that supercharge your workflow — from content generation to p
 
 - **[AI Content Assistant](ai-content-assistant.md)** — Generate email copy, subject lines, and A/B test variations with AI. Write 10x faster.
 - **[Litestartup Skills](litestartup-skills.md)** — Publish blog, docs, website, and changelog directly from your AI editor (Cursor, Claude Code, Codex, Windsurf). One prompt to go live.
-- **[AI Stack](ai-stack.md)** — Image to text, speech to text, text to speech, and LLM Router. Unified AI API for your applications.
+- **[AI Gateway](ai-stack.md)** — One API key for every AI modality — LLM chat, image generation, video creation, speech, OCR, and more. Unified multimodal AI API.
 
 ---
 

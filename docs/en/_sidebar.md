@@ -23,4 +23,4 @@
 - **AI**
 - [AI Content Assistant](features/ai-content-assistant.md)
 - [Litestartup Skills](features/litestartup-skills.md)
-- [AI Stack](features/ai-stack.md)
+- [AI Gateway](features/ai-stack.md)
