@@ -17,7 +17,7 @@ AI Gateway is LiteStartup's unified multimodal AI API. Instead of managing separ
 
 | Capability | Description |
 |------------|-------------|
-| **LLM Chat** | OpenAI-compatible chat completions with intelligent routing (auto, direct, tag, failover) |
+| **LLM Chat** | Chat completions with 30+ models (DeepSeek, GPT, Claude, Qwen, etc.) |
 | **OCR** | Extract text from images, receipts, documents with contextual interpretation |
 
 ### Audio
@@ -51,13 +51,16 @@ Go to **Settings > API Keys** in your dashboard and create a new key. This key w
 
 ### 2. Call the API
 
-Use the OpenAI-compatible endpoint or any modality-specific alias:
+All modalities use the same unified endpoint — just change the `model` field:
 
 ```bash
-curl https://api.litestartup.com/ai/chat/completions \
+curl https://api.litestartup.com/ai/generations \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
-  -d '{"model": "auto", "messages": [{"role": "user", "content": "Hello!"}]}'
+  -d '{
+    "model": "deepseek-v3",
+    "messages": [{"role": "user", "content": "Hello!"}]
+  }'
 ```
 
 ### 3. Get results
@@ -65,35 +68,28 @@ curl https://api.litestartup.com/ai/chat/completions \
 - **Sync** — LLM chat, TTS, OCR, and transcription return results immediately.
 - **Async** — Video generation and digital human return a `task_id`. Poll `/ai/tasks/{id}` for status.
 
-## API Endpoints
+## API Endpoint
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
-| `/ai/chat/completions` | POST | LLM chat (OpenAI-compatible) |
-| `/ai/images/ocr` | POST | Image to text |
-| `/ai/audio/transcriptions` | POST | Speech to text |
-| `/ai/audio/speech` | POST | Text to speech |
-| `/ai/audio/speech/clone` | POST | Voice clone |
-| `/ai/images/generate` | POST | Image generation |
-| `/ai/images/edit` | POST | Image editing |
-| `/ai/videos/generate` | POST | Text to video |
-| `/ai/videos/animate` | POST | Image to video |
-| `/ai/videos/digital-human` | POST | Digital human video |
-| `/ai/models` | GET | List available models |
+| `/ai/generations` | POST | Unified generation — all modalities via `model` field |
 | `/ai/tasks/{id}` | GET | Check async task status |
 
-> **Tip**: Full API documentation with request/response examples is available in the [Playground](https://app.litestartup.com/ai-stack) within your dashboard.
+The `model` field determines which capability is invoked. See the [API Reference](/docs/en/api/ai-gateway-generations) for full request/response documentation.
 
-## LLM Routing
+> **Tip**: Try it interactively in the [Playground](https://app.litestartup.com/ai-stack) within your dashboard.
 
-AI Gateway supports 4 routing strategies for LLM requests:
+## Model Selection
 
-| Strategy | How to use |
-|----------|-----------|
-| **Auto** | Set `"model": "auto"` — AI picks the best model by cost, speed, and complexity |
-| **Direct** | Set `"model": "model-name"` — choose a specific model |
-| **Tag** | Set `"model": "fast"` or `"smart"` — route to a pre-configured model |
-| **Failover** | Configured server-side — automatic fallback if primary model is unavailable |
+Specify the model you want directly in the `model` field:
+
+```json
+{"model": "deepseek-v3", "messages": [...]}
+{"model": "seedream-v5.0-lite-t2i", "input": {...}}
+{"model": "wan-2.7-t2v", "input": {...}}
+```
+
+Available models are listed in the Playground. Intelligent routing features are planned for a future release.
 
 ## Sync vs Async
 

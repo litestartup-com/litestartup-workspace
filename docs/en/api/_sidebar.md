@@ -66,4 +66,5 @@
   - <delete>[Remove Member](team-remove-member.md)
   - <put>[Update Role](team-update-member-role.md)
 - **AI Gateway**
-  - <post>[Image to Text (OCR)](ai-stack-image-to-text.md)
+  - <post>[Generations (Unified)](ai-gateway-generations.md)
+  - <get>[Task Status](ai-request-status.md)
