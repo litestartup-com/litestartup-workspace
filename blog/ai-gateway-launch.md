@@ -52,7 +52,7 @@ Four routing strategies for LLM requests:
 
 ### Uncensored Models
 
-For creative professionals and adult content platforms, AI Gateway now offers access to uncensored image and video generation models with no content filters. [Learn more →](/products/models/uncensored)
+For creative professionals and adult content platforms, AI Gateway now offers access to uncensored image and video generation models with no content filters. [Learn more →](/models/uncensored)
 
 ## Migration
 
