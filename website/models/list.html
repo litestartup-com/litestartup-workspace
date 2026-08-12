@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Models | LiteStartup</title>
+</head>
+
+<body>
+    <header><!-- header placeholder --></header>
+
+    <main>
+        <!--seo:{"title":"AI Models - Video, Image, Audio & LLM API | LiteStartup","description":"Browse 100+ AI models for video generation, image creation, audio synthesis, and LLM. One API key, unified billing. Try models in playground or integrate via REST API.","keywords":"AI models, AI API, video generation API, image generation API, audio API, LLM API, AI gateway, unified AI API, text to video, text to image, text to speech","og_title":"AI Models - Video, Image, Audio & LLM | LiteStartup AI Gateway","og_description":"Browse 100+ AI models. One API key, unified billing. Video, image, audio, and LLM generation.","og_url":"https://www.litestartup.com/models/list","og_image":"https://www.litestartup.com/imgs/x.jpg","twitter_title":"AI Models - Video, Image, Audio & LLM | LiteStartup","twitter_description":"Browse 100+ AI models with one API key. Video, image, audio, and LLM generation.","canonical":"https://www.litestartup.com/models/list"}-->
+
+        <section class="pt-28 sm:pt-36 pb-8 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-6xl mx-auto">
+
+                <!-- Page Header -->
+                <div class="text-center mb-10 fade-in">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-gray-200 text-xs font-medium text-gray-600 mb-6 bg-white">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+                            <line x1="12" y1="22.08" x2="12" y2="12" />
+                        </svg>
+                        AI Gateway · Models
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tighter mb-4">AI Models</h1>
+                    <p class="text-lg sm:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed">Browse models, try in Playground, or copy API code for your app.</p>
+                </div>
+
+                <!-- Search -->
+                <div class="flex justify-center mb-8">
+                    <div class="relative w-full max-w-md">
+                        <svg class="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+                        <input type="text" id="modelSearch" placeholder="Search models..." class="pl-10 pr-4 py-2.5 w-full border border-gray-200 rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-black/10 focus:border-gray-300">
+                    </div>
+                </div>
+
+                <!-- Tabs + Controls -->
+                <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-6 border-b border-gray-200 gap-2 sm:gap-0">
+                    <div class="flex items-center gap-0 overflow-x-auto -mb-px" id="tabList" role="tablist">
+                        <button data-tab="video" class="model-tab whitespace-nowrap px-4 py-2.5 text-sm font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-900 transition-colors">Video</button>
+                        <button data-tab="image" class="model-tab whitespace-nowrap px-4 py-2.5 text-sm font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-900 transition-colors">Image</button>
+                        <button data-tab="audio" class="model-tab whitespace-nowrap px-4 py-2.5 text-sm font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-900 transition-colors">Audio</button>
+                        <button data-tab="llm" class="model-tab whitespace-nowrap px-4 py-2.5 text-sm font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-900 transition-colors">LLM</button>
+                    </div>
+                    <div class="flex items-center gap-2 mb-2 flex-shrink-0">
+                        <div class="sort-select-wrap" id="modelProviderFilterWrap">
+                            <svg class="sort-select-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            <select id="modelProviderFilter" class="sort-select" aria-label="Filter by provider">
+                                <option value="all">All Providers</option>
+                            </select>
+                            <svg class="sort-select-caret" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                        <div class="sort-select-wrap">
+                            <svg class="sort-select-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 6h18M6 12h12M10 18h4"></path></svg>
+                            <select id="modelSort" class="sort-select" aria-label="Sort models">
+                                <option value="popular">Popular</option>
+                                <option value="newest">Newest</option>
+                            </select>
+                            <svg class="sort-select-caret" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                        <button id="viewModeToggle" type="button" class="view-toggle-btn" aria-label="Switch view mode"></button>
+                    </div>
+                </div>
+
+                <!-- Loading -->
+                <div id="modelsLoading" class="flex flex-col items-center justify-center py-20">
+                    <svg class="w-6 h-6 animate-spin text-gray-400 mb-3" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path></svg>
+                    <p class="text-sm font-medium text-gray-600">Loading models</p>
+                </div>
+
+                <!-- Models Grid -->
+                <div id="modelsGrid" class="hidden"></div>
+
+                <!-- Empty State -->
+                <div id="modelsEmpty" class="hidden">
+                    <div class="flex flex-col items-center justify-center py-20">
+                        <svg class="w-10 h-10 text-gray-300 mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                        <p class="text-sm font-medium text-gray-700">No models found</p>
+                        <p class="text-xs text-gray-500 mt-1">Try adjusting your search or filter</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-16 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center fade-in">
+                <h2 class="text-2xl sm:text-3xl font-bold mb-4">Ready to integrate?</h2>
+                <p class="text-gray-500 mb-8 text-lg">One API key for all models. Unified billing. Start building in minutes.</p>
+                <a href="https://app.litestartup.com/signup?{{utm_source}}" class="btn-primary-lg text-lg">
+                    Get API Access
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <style>
+            .model-tab.active {
+                color: #111827;
+                border-bottom-color: #111827;
+            }
+
+            .view-toggle-btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.375rem;
+                height: 1.875rem;
+                padding: 0 0.625rem;
+                border: 1px solid #e5e7eb;
+                border-radius: 0.5rem;
+                font-size: 0.75rem;
+                font-weight: 500;
+                color: #6b7280;
+                background: #fff;
+                transition: color 0.15s, border-color 0.15s, background 0.15s;
+                cursor: pointer;
+            }
+            .view-toggle-btn:hover {
+                color: #111827;
+                border-color: #d1d5db;
+                background: #f9fafb;
+            }
+            .view-toggle-btn svg {
+                width: 0.875rem;
+                height: 0.875rem;
+                flex-shrink: 0;
+            }
+
+            .try-btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid #e5e7eb;
+                border-radius: 0.5rem;
+                background: #ffffff;
+                color: #111827;
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 1;
+                padding: 0.5rem 0.75rem;
+                transition: background 0.15s, border-color 0.15s;
+            }
+            .try-btn:hover {
+                background: #f9fafb;
+                border-color: #d1d5db;
+            }
+
+            .sort-select-wrap {
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+            }
+            .sort-select-wrap:hover .sort-select {
+                border-color: #d1d5db;
+                background: #f9fafb;
+            }
+            .sort-select {
+                appearance: none;
+                -webkit-appearance: none;
+                height: 1.875rem;
+                padding: 0 1.85rem 0 1.9rem;
+                border: 1px solid #e5e7eb;
+                border-radius: 0.5rem;
+                font-size: 0.75rem;
+                font-weight: 500;
+                color: #111827;
+                background: #f9fafb;
+                cursor: pointer;
+                transition: border-color 0.15s, background 0.15s;
+            }
+            .sort-select:focus-visible {
+                outline: none;
+                border-color: #9ca3af;
+                box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+            }
+            .sort-select-icon {
+                position: absolute;
+                left: 0.6rem;
+                width: 0.8rem;
+                height: 0.8rem;
+                color: #9ca3af;
+                pointer-events: none;
+            }
+            .sort-select-caret {
+                position: absolute;
+                right: 0.55rem;
+                width: 0.7rem;
+                height: 0.7rem;
+                color: #9ca3af;
+                pointer-events: none;
+            }
+
+            .model-card {
+                border: 1px solid #e5e7eb;
+                border-radius: 0.875rem;
+                background: #fff;
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                min-height: 16rem;
+                transition: border-color 0.15s, box-shadow 0.15s, transform 0.12s;
+                text-decoration: none;
+                color: inherit;
+            }
+            .model-card:hover {
+                border-color: #d1d5db;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+                transform: translateY(-1px);
+            }
+
+            .model-type-chip {
+                display: inline-flex;
+                align-items: center;
+                font-size: 10px;
+                font-weight: 600;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+                padding: 2px 7px;
+                border-radius: 9999px;
+                white-space: nowrap;
+            }
+            .chip-llm { background: rgba(59,130,246,0.1); color: #2563eb; }
+            .chip-audio { background: rgba(16,185,129,0.12); color: #059669; }
+            .chip-image { background: rgba(245,158,11,0.12); color: #d97706; }
+            .chip-video { background: rgba(219,39,119,0.12); color: #be185d; }
+
+            .model-io-inline,
+            .io-flow-inline {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.28rem;
+                font-size: 11px;
+                color: #6b7280;
+                white-space: nowrap;
+            }
+            .model-io-inline svg,
+            .io-flow-inline svg {
+                width: 12px;
+                height: 12px;
+                flex-shrink: 0;
+            }
+
+            .model-desc {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                min-height: 3.75rem;
+            }
+            .model-desc-wrap {
+                position: relative;
+            }
+            .model-desc-wrap::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 1.25rem;
+                background: linear-gradient(to bottom, transparent, #fff);
+                pointer-events: none;
+            }
+
+            .llm-specs {
+                font-size: 12px;
+                color: #6b7280;
+            }
+            .llm-bottom-price {
+                font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+                font-size: 13px;
+                font-weight: 600;
+                color: #111827;
+                letter-spacing: 0.01em;
+            }
+
+            .model-list-shell {
+                border: 1px solid #e5e7eb;
+                border-radius: 0.875rem;
+                overflow: hidden;
+                background: #fff;
+            }
+            .model-list-header {
+                display: none;
+                border-bottom: 1px solid #e5e7eb;
+                padding: 0.625rem 1rem;
+                font-size: 11px;
+                font-weight: 600;
+                color: #6b7280;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                grid-template-columns: 1fr 140px 120px 80px;
+                gap: 0.75rem;
+            }
+            @media (min-width: 640px) {
+                .model-list-header { display: grid; }
+            }
+            .model-list-row {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.75rem 1rem;
+                border-bottom: 1px solid #f3f4f6;
+                transition: background 0.1s;
+                text-decoration: none;
+                color: inherit;
+            }
+            .model-list-row:last-child { border-bottom: none; }
+            .model-list-row:hover { background: #f9fafb; }
+            .model-list-row .list-col-name { flex: 1; min-width: 0; }
+            .model-list-row .list-col-type { display: none; }
+            .model-list-row .list-col-price { font-size: 13px; }
+            .model-list-row .list-col-action { margin-left: auto; }
+            @media (min-width: 640px) {
+                .model-list-row {
+                    display: grid;
+                    grid-template-columns: 1fr 140px 120px 80px;
+                    gap: 0.75rem;
+                    flex-wrap: nowrap;
+                }
+                .model-list-row .list-col-type { display: block; }
+            }
+        </style>
+
+        <script>
+        const APP_BASE = 'https://app.litestartup.com';
+        const API_BASE = 'https://api.litestartup.com';
+
+        const I = {
+            text: '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>',
+            image: '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>',
+            audio: '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>',
+            video: '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>',
+            arrow: '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>',
+            grid: '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect></svg>',
+            list: '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>',
+        };
+
+        const ModelsPage = {
+            models: [],
+            activeTab: 'video',
+            searchQuery: '',
+            viewMode: 'card',
+            sortMode: 'popular',
+            providerFilter: 'all',
+
+            async init() {
+                this.initTabFromUrl();
+                this.initViewMode();
+                this.syncTabActiveState();
+                await this.fetchModels();
+                this.syncUrlTab();
+                this.updateProviderFilterOptions();
+                this.bindEvents();
+                this.updateViewModeToggle();
+                this.render();
+            },
+
+            initTabFromUrl() {
+                const params = new URLSearchParams(window.location.search);
+                const type = params.get('type');
+                const allowedTabs = ['llm', 'audio', 'image', 'video'];
+                if (type && allowedTabs.includes(type)) {
+                    this.activeTab = type;
+                } else {
+                    this.activeTab = 'video';
+                }
+            },
+
+            syncUrlTab() {
+                const url = new URL(window.location);
+                url.searchParams.set('type', this.activeTab);
+                window.history.replaceState(null, '', url);
+            },
+
+            initViewMode() {
+                const saved = window.localStorage.getItem('ai_models_view_mode');
+                this.viewMode = (saved === 'list' || saved === 'card') ? saved : 'card';
+            },
+
+            async fetchModels() {
+                try {
+                    const res = await fetch(`${API_BASE}/api/public/ai-stack/models`);
+                    if (!res.ok) throw new Error('Failed to fetch');
+                    const json = await res.json();
+                    this.models = json.data || [];
+                } catch (e) {
+                    console.error('Failed to load models:', e);
+                    this.models = [];
+                }
+            },
+
+            bindEvents() {
+                document.querySelectorAll('.model-tab').forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        this.activeTab = tab.dataset.tab;
+                        this.syncUrlTab();
+                        this.updateProviderFilterOptions();
+                        this.syncTabActiveState();
+                        this.render();
+                    });
+                });
+
+                document.getElementById('modelSearch').addEventListener('input', (e) => {
+                    this.searchQuery = e.target.value.toLowerCase();
+                    this.render();
+                });
+
+                const sortSelect = document.getElementById('modelSort');
+                if (sortSelect) {
+                    sortSelect.value = this.sortMode;
+                    sortSelect.addEventListener('change', (e) => {
+                        this.sortMode = e.target.value;
+                        this.render();
+                    });
+                }
+
+                const providerSelect = document.getElementById('modelProviderFilter');
+                if (providerSelect) {
+                    providerSelect.addEventListener('change', (e) => {
+                        this.providerFilter = e.target.value;
+                        this.render();
+                    });
+                }
+
+                const toggle = document.getElementById('viewModeToggle');
+                if (toggle) {
+                    toggle.addEventListener('click', () => {
+                        const nextMode = this.viewMode === 'card' ? 'list' : 'card';
+                        this.setViewMode(nextMode);
+                    });
+                }
+            },
+
+            syncTabActiveState() {
+                document.querySelectorAll('.model-tab').forEach(tab => {
+                    tab.classList.toggle('active', tab.dataset.tab === this.activeTab);
+                });
+            },
+
+            setViewMode(mode) {
+                if (!['card', 'list'].includes(mode)) return;
+                this.viewMode = mode;
+                window.localStorage.setItem('ai_models_view_mode', mode);
+                this.updateViewModeToggle();
+                this.render();
+            },
+
+            updateViewModeToggle() {
+                const toggle = document.getElementById('viewModeToggle');
+                if (!toggle) return;
+
+                if (this.viewMode === 'card') {
+                    toggle.innerHTML = `${I.list}<span>List</span>`;
+                    toggle.title = 'Switch to list view';
+                    return;
+                }
+
+                toggle.innerHTML = `${I.grid}<span>Cards</span>`;
+                toggle.title = 'Switch to card view';
+            },
+
+            updateProviderFilterOptions() {
+                const select = document.getElementById('modelProviderFilter');
+                if (!select) return;
+
+                const activeType = String(this.activeTab || '').toLowerCase();
+                const providers = [...new Set(
+                    this.models
+                        .filter(m => String(m.type || '').toLowerCase() === activeType)
+                        .map(m => m.provider)
+                        .filter(Boolean)
+                )].sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
+
+                const prev = this.providerFilter;
+                select.innerHTML = '<option value="all">All Providers</option>' +
+                    providers.map(p => `<option value="${p}"${p === prev ? ' selected' : ''}>${p}</option>`).join('');
+
+                if (prev !== 'all' && !providers.includes(prev)) {
+                    this.providerFilter = 'all';
+                    select.value = 'all';
+                }
+            },
+
+            getFilteredModels() {
+                const filtered = this.models.filter(m => {
+                    if (String(m.type || '').toLowerCase() !== String(this.activeTab || '').toLowerCase()) return false;
+                    if (this.providerFilter !== 'all' && m.provider !== this.providerFilter) return false;
+                    if (this.searchQuery) {
+                        const q = this.searchQuery;
+                        return [m.id, m.name, m.provider, m.description].some(s => s && s.toLowerCase().includes(q));
+                    }
+                    return true;
+                });
+
+                if (this.sortMode === 'newest') {
+                    filtered.sort((a, b) => (b.add_time || '').localeCompare(a.add_time || '') || (a.sort ?? 999) - (b.sort ?? 999));
+                } else {
+                    filtered.sort((a, b) => (a.sort ?? 999) - (b.sort ?? 999));
+                }
+                return filtered;
+            },
+
+            applyContainerMode(container) {
+                container.className = '';
+                if (this.viewMode !== 'card') {
+                    container.className = 'space-y-2';
+                    return;
+                }
+                container.className = 'grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3';
+            },
+
+            render() {
+                const filtered = this.getFilteredModels();
+                document.getElementById('modelsLoading').classList.add('hidden');
+
+                const container = document.getElementById('modelsGrid');
+                const empty = document.getElementById('modelsEmpty');
+
+                if (!filtered.length) {
+                    container.classList.add('hidden');
+                    empty.classList.remove('hidden');
+                    return;
+                }
+
+                empty.classList.add('hidden');
+                container.classList.remove('hidden');
+                this.applyContainerMode(container);
+
+                if (this.viewMode === 'card') {
+                    container.innerHTML = filtered.map(m => this.renderCard(m)).join('');
+                    return;
+                }
+
+                container.innerHTML = `
+                    <div class="model-list-shell">
+                        <div class="model-list-header">
+                            <span>Model</span>
+                            <span>Type</span>
+                            <span>Price</span>
+                            <span></span>
+                        </div>
+                        ${filtered.map(m => this.renderListRow(m)).join('')}
+                    </div>
+                `;
+            },
+
+            renderCard(m) {
+                if (m.type === 'llm') return this.renderLlmCard(m);
+                return this.renderMultimodalCard(m);
+            },
+
+            renderLlmCard(m) {
+                const io = this.getIO(m);
+                const context = this.formatTokens(m.context_length);
+                const maxOutput = this.formatTokens(m.max_output_tokens);
+                const inLabel = io.inLabel ? `<span>${io.inLabel}</span>` : '';
+
+                return `
+                    <a href="${APP_BASE}/ai-stack/${m.type}/${m.id}" class="model-card">
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="model-type-chip chip-llm">LLM</span>
+                            <span class="model-io-inline">${io.inIcon}${inLabel}${I.arrow}${io.outIcon}<span>${io.outLabel}</span></span>
+                        </div>
+
+                        <h3 class="text-[15px] font-semibold leading-tight text-gray-900 mb-0.5">${m.name}</h3>
+                        <p class="text-xs text-gray-500 mb-3">by ${m.provider}</p>
+
+                        <p class="llm-specs mb-4">${context} context · ${maxOutput} output</p>
+
+                        <div class="mt-auto pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                            <span class="llm-bottom-price">${this.fmtLlmInOut(m.pricing)}</span>
+                            <span class="try-btn">Try it</span>
+                        </div>
+                    </a>
+                `;
+            },
+
+            renderMultimodalCard(m) {
+                const io = this.getIO(m);
+                const price = this.fmtCompactPrice(m.pricing);
+
+                return `
+                    <a href="${APP_BASE}/ai-stack/${m.type}/${m.id}" class="model-card">
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="model-type-chip chip-${m.type}">${this.getTypeLabel(m.type)}</span>
+                            <span class="model-io-inline">${io.inIcon}<span>${io.inLabel}</span>${I.arrow}${io.outIcon}<span>${io.outLabel}</span></span>
+                        </div>
+
+                        <h3 class="text-[15px] font-semibold leading-tight text-gray-900 mb-1.5">${m.name}</h3>
+                        <p class="text-xs text-gray-500">by ${m.provider}</p>
+                        <div class="model-desc-wrap mt-3 mb-4"><p class="model-desc text-xs text-gray-500">${m.description || ''}</p></div>
+
+                        <div class="mt-auto pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+                            <span class="text-sm font-mono font-semibold text-gray-900 tabular-nums">${price}</span>
+                            <span class="try-btn">Try it</span>
+                        </div>
+                    </a>
+                `;
+            },
+
+            renderListRow(m) {
+                const io = this.getIO(m);
+                const price = m.type === 'llm' ? this.fmtLlmInOut(m.pricing) : this.fmtCompactPrice(m.pricing);
+
+                return `
+                    <a href="${APP_BASE}/ai-stack/${m.type}/${m.id}" class="model-list-row">
+                        <div class="list-col-name min-w-0">
+                            <div class="font-medium text-sm text-gray-900 leading-tight truncate">${m.name}</div>
+                            <div class="text-xs text-gray-500 truncate mt-0.5">by ${m.provider}${m.context_length ? ' · ' + this.formatTokens(m.context_length) + ' ctx' : ''}</div>
+                        </div>
+                        <div class="list-col-type">
+                            <span class="io-flow-inline">${io.inIcon}<span>${io.inLabel}</span>${I.arrow}${io.outIcon}<span>${io.outLabel}</span></span>
+                        </div>
+                        <div class="list-col-price text-sm font-mono font-medium text-gray-900 tabular-nums">${price}</div>
+                        <div class="list-col-action flex justify-end">
+                            <span class="try-btn">Try it</span>
+                        </div>
+                    </a>
+                `;
+            },
+
+            getTypeLabel(type) {
+                const labels = { llm: 'LLM', audio: 'Audio', image: 'Image', video: 'Video' };
+                return labels[type] || String(type || '').toUpperCase();
+            },
+
+            getIO(m) {
+                const caps = Array.isArray(m.capabilities) ? m.capabilities : [];
+
+                if (m.type === 'llm') {
+                    const hasVision = caps.includes('vision');
+                    return {
+                        inIcon: hasVision ? I.text + I.image : I.text,
+                        outIcon: I.text,
+                        inLabel: hasVision ? '' : 'Text',
+                        outLabel: 'Text'
+                    };
+                }
+
+                if (m.type === 'image') {
+                    if (caps.includes('ocr')) return { inIcon: I.image, outIcon: I.text, inLabel: 'Image', outLabel: 'Text' };
+                    if (caps.includes('image_generation') && caps.includes('image_edit')) return { inIcon: I.text + I.image, outIcon: I.image, inLabel: 'Text/Image', outLabel: 'Image' };
+                    if (caps.includes('image_generation')) return { inIcon: I.text, outIcon: I.image, inLabel: 'Text', outLabel: 'Image' };
+                    if (caps.includes('image_edit')) return { inIcon: I.image, outIcon: I.image, inLabel: 'Image', outLabel: 'Image' };
+                    return { inIcon: I.text, outIcon: I.image, inLabel: 'Text', outLabel: 'Image' };
+                }
+
+                if (m.type === 'audio') {
+                    if (caps.includes('asr') || caps.includes('transcription')) return { inIcon: I.audio, outIcon: I.text, inLabel: 'Audio', outLabel: 'Text' };
+                    return { inIcon: I.text, outIcon: I.audio, inLabel: 'Text', outLabel: 'Audio' };
+                }
+
+                if (m.type === 'video') {
+                    if (caps.includes('digital_human')) return { inIcon: I.audio, outIcon: I.video, inLabel: 'Audio', outLabel: 'Video' };
+                    const hasText = caps.includes('text_to_video');
+                    const hasImage = caps.includes('image_to_video') || caps.includes('reference_to_video') || caps.includes('video_studio');
+                    const hasVideo = caps.includes('video_to_video');
+
+                    if (hasText && hasImage && hasVideo) return { inIcon: I.text + I.image + I.video, outIcon: I.video, inLabel: 'Text/Image/Video', outLabel: 'Video' };
+                    if (hasText && hasImage) return { inIcon: I.text + I.image, outIcon: I.video, inLabel: 'Text/Image', outLabel: 'Video' };
+                    if (hasText && hasVideo) return { inIcon: I.text + I.video, outIcon: I.video, inLabel: 'Text/Video', outLabel: 'Video' };
+                    if (hasImage && hasVideo) return { inIcon: I.image + I.video, outIcon: I.video, inLabel: 'Image/Video', outLabel: 'Video' };
+                    if (hasImage) return { inIcon: I.image, outIcon: I.video, inLabel: 'Image', outLabel: 'Video' };
+                    if (hasVideo) return { inIcon: I.video, outIcon: I.video, inLabel: 'Video', outLabel: 'Video' };
+                    return { inIcon: I.text, outIcon: I.video, inLabel: 'Text', outLabel: 'Video' };
+                }
+
+                return { inIcon: I.text, outIcon: I.text, inLabel: 'Text', outLabel: 'Text' };
+            },
+
+            formatTokens(value) {
+                const n = Number(value);
+                if (!Number.isFinite(n) || n <= 0) return '\u2014';
+                if (n >= 1000000) {
+                    const m = n / 1000000;
+                    return `${m % 1 === 0 ? m.toFixed(0) : m.toFixed(1)}M`;
+                }
+                if (n >= 1000) {
+                    const k = n / 1000;
+                    return `${k % 1 === 0 ? k.toFixed(0) : k.toFixed(1)}K`;
+                }
+                return String(n);
+            },
+
+            fmtMoney(value) {
+                if (value === undefined || value === null || value === '') return '\u2014';
+                const n = Number(value);
+                if (!Number.isFinite(n)) return `$${value}`;
+                return `$${n.toFixed(4).replace(/\.?0+$/, '')}`;
+            },
+
+            fmtLlmInOut(pricing) {
+                const input = pricing && pricing.input !== undefined ? this.fmtMoney(pricing.input) : '\u2014';
+                const output = pricing && pricing.output !== undefined ? this.fmtMoney(pricing.output) : '\u2014';
+                return `${input} in / ${output} out`;
+            },
+
+            fmtCompactPrice(pricing) {
+                if (!pricing) return '\u2014';
+                if (pricing.per_request) return `${this.fmtMoney(pricing.per_request)}/req`;
+                if (pricing.per_image) return `${this.fmtMoney(pricing.per_image)}/img`;
+                if (pricing.per_video) return `${this.fmtMoney(pricing.per_video)}/vid`;
+                if (pricing.per_second) return `${this.fmtMoney(pricing.per_second)}/s`;
+                if (pricing.per_minute) return `${this.fmtMoney(pricing.per_minute)}/min`;
+                if (pricing.per_token) return `${this.fmtMoney(pricing.per_token)}/tok`;
+                if (pricing.input || pricing.output) return `${this.fmtMoney(pricing.input)}/${this.fmtMoney(pricing.output)}`;
+                return '\u2014';
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => ModelsPage.init());
+        </script>
+    </main>
+
+    <footer><!-- footer placeholder --></footer>
+</body>
+
+</html>
