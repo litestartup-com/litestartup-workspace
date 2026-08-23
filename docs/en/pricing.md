@@ -1,6 +1,6 @@
 ---
 title: Pricing & Plans
-description: Simple, transparent pricing designed for startups. Pay only for what you use with LiteStartup.
+description: Simple, transparent pricing designed for startups. Pay per email sent, not per contact — and pay for AI only by actual usage.
 ---
 
 # Pricing & Plans
@@ -22,16 +22,25 @@ LiteStartup uses a **pay-per-email** model instead of per-contact pricing. This 
 
 | Feature | Free | Pro | Enterprise |
 |---------|------|-----|------------|
-| Monthly Emails | 10K | 110K | Unlimited |
-| Price | Free | $20 | Custom |
-| Overage Rate | N/A | $0.20/1K | Included |
-| Contacts | 3000 | Unlimited | Unlimited |
-| Contacts Tags | 1 | Unlimited | Unlimited |
+| Price | $0 | $20/month or $200/year | Custom |
+| Sent emails / month | 5,000 | 50,000 | Unlimited |
+| Sent emails / day | 200 | Unlimited | Unlimited |
+| Received emails / month | 5,000 | Unlimited | Unlimited |
+| Overage Rate | N/A | $0.40 / 1,000 sent | Included |
+| Contacts | 3,000 | Unlimited | Unlimited |
+| Contact tag groups | 1 | Unlimited | Unlimited |
 | Domains | 1 | 10 | Unlimited |
-| Workmail Accounts | 1 team & 20 members | 10 team & Unlimited members | Unlimited |
+| Domain emails | 20 | 200 | Unlimited |
+| Teams | 1 | 10 | Unlimited |
+| Team members | 3 | Unlimited | Unlimited |
+| Storage | 1 GB | 20 GB | Custom |
+| Bandwidth | 1 GB | 10 GB | Custom |
+| Data retention | 30 days | 100 days | Custom |
+| AI trial credit (one-time) | $1 | $1 + $5 on first upgrade | Custom |
+| AI Gateway usage | Pay-as-you-go | Pay-as-you-go | Pay-as-you-go |
 | Email Templates | Basic | All | All + Custom |
 | Automation | Basic | Advanced | Advanced + Custom |
-| AI Assistant | Yes | Yes | Yes |
+| AI Content Assistant | Yes | Yes | Yes |
 | AI Website Builder | Yes | Yes | Yes |
 | Ticket & Live chat | Yes | Yes | Yes |
 | Webhooks | Yes | Yes | Yes |
@@ -39,6 +48,10 @@ LiteStartup uses a **pay-per-email** model instead of per-contact pricing. This 
 | Support | 5x8 | 7x24 | 7x24(Dedicated) |
 | Uptime SLA | 99.9% | 99.9% | 99.99% |
 | Custom Domain | Yes | Yes | Yes |
+
+> **AI is billed separately from your plan.** Plan limits cover email, publishing, and
+> collaboration. AI Gateway usage is charged in USD by actual consumption — see
+> [AI Gateway Pricing](#ai-gateway-pricing) below.
 
 ## Plans
 
@@ -49,21 +62,25 @@ LiteStartup uses a **pay-per-email** model instead of per-contact pricing. This 
 Perfect for getting started and testing the platform.
 
 **Includes:**
-- 10,000 emails per month
-- Unlimited contacts
+- 5,000 sent emails per month (200 per day)
+- 5,000 received emails per month
+- 3,000 contacts
+- 1 domain and 20 domain emails
+- 1 team with 3 members
+- 1 GB storage and 1 GB bandwidth
 - Basic email templates
 - Email tracking (opens & clicks)
-- Workmail (1 team & 20 members)
 - Basic automation
 - API access
 - AI Website Builder
 - Ticket & Live chat
 - AI Content Assistant
-- AI Automation (coming soon)
+- $1 one-time AI trial credit for AI Gateway
 - Community support
 
 **Limitations:**
-- Limited to 10K emails/month
+- 5,000 sent emails/month, 200/day
+- 30-day data retention
 - Basic features only
 - Community support only
 
@@ -78,23 +95,30 @@ Perfect for getting started and testing the platform.
 
 For growing startups and small businesses.
 
+**$20/month, or $200/year (save $40)**
+
 **Includes:**
-- 110,000 emails per month
-- Unlimited contacts
+- 50,000 sent emails per month, unlimited per day
+- Unlimited received emails
+- Unlimited contacts and tag groups
+- 10 domains and 200 domain emails
+- 10 teams with unlimited members
+- 20 GB storage and 10 GB bandwidth
+- 100-day data retention
 - All email templates
 - Advanced email tracking
-- Workmail (5 email accounts)
 - Advanced automation & workflows
 - Subscription forms
 - Waitlist management
 - AI Content Assistant
+- An extra $5 one-time AI trial credit on your first upgrade
 - Priority support
 - Custom domain support
 - API access
 - Webhooks
 
 **Additional:**
-- $0.20 per 1,000 emails over limit
+- $0.40 per 1,000 sent emails over limit
 - Overage billing only when needed
 
 **Best for:**
@@ -139,12 +163,12 @@ For large-scale operations and enterprises.
 
 ### Overage Pricing
 
-**Pro Plan**: $0.20 per 1,000 emails over 110,000/month
+**Pro Plan**: $0.40 per 1,000 sent emails over 50,000/month
 
 **Examples:**
-- 120,000 emails sent = $20 + $2 (10K overage) = $22
-- 150,000 emails sent = $20 + $8 (40K overage) = $28
-- 210,000 emails sent = $20 + $20 (100K overage) = $40
+- 60,000 emails sent = $20 + $4 (10K overage) = $24
+- 90,000 emails sent = $20 + $16 (40K overage) = $36
+- 150,000 emails sent = $20 + $40 (100K overage) = $60
 
 ### Payment Methods
 
@@ -167,6 +191,41 @@ We accept:
 - Upgrade: Prorated credit applied
 - Downgrade: Prorated refund or credit applied
 
+## AI Gateway Pricing
+
+AI Gateway is billed **in USD by actual usage**, independently of your plan. There are
+no AI quotas and no monthly AI allowance — you pay for exactly what you generate.
+
+### Two wallets
+
+| | Trial credit | Pay-as-you-go balance |
+|---|---|---|
+| **Where it comes from** | Granted automatically | You top it up |
+| **Amount** | $1 on signup, plus $5 the first time you upgrade to Pro | Any amount |
+| **Expires** | Never | Never |
+| **Resets** | Never — it is a one-time trial fund | Never |
+| **Covers** | AI Gateway only | AI Gateway, email overage, and other extras |
+| **Lifetime cap** | $6 per account | None |
+
+### How a request is charged
+
+1. The cost of the request is deducted from your **trial credit** first.
+2. When the trial credit is exhausted, the remainder is charged to your **balance**.
+3. A single request may draw on both — if $0.10 of trial credit is left and the request
+   costs $0.30, you are charged $0.10 of trial credit and $0.20 of balance.
+4. If neither wallet can cover it, the request is rejected with `429` and you are
+   prompted to top up.
+
+### Rates
+
+Every model publishes its own rate, billed per token, per image, per second, or per
+request depending on the capability. See the
+[model list](https://www.litestartup.com/models/list) for current rates, or call
+`GET /ai/models` to read them programmatically.
+
+> **Topping up is available on every plan, including Free.** You do not need to upgrade
+> to Pro to keep using AI Gateway after the trial credit runs out.
+
 ## Frequently Asked Questions
 
 ### Billing & Pricing
@@ -175,7 +234,16 @@ We accept:
 A: Yes! You can upgrade or downgrade your plan anytime. Changes take effect immediately.
 
 **Q: What happens if I exceed my email limit?**
-A: You'll be charged $0.20 per 1,000 additional emails. You can continue sending without interruption.
+A: You'll be charged $0.40 per 1,000 additional sent emails. You can continue sending without interruption.
+
+**Q: Is AI included in my plan?**
+A: No. AI Gateway is billed by actual usage in USD, separately from your plan. Every account starts with a $1 trial credit, plus $5 the first time you upgrade to Pro. After that, AI usage is charged to your pay-as-you-go balance.
+
+**Q: Does the AI trial credit reset every month?**
+A: No. It is a one-time trial fund, not a monthly allowance. It never expires and is never topped back up — once spent, AI usage continues from your balance.
+
+**Q: Can Free users pay for AI?**
+A: Yes. Topping up your balance is available on every plan, so you can keep using AI Gateway without upgrading.
 
 **Q: Do I pay for bounced emails?**
 A: Yes, bounced emails count toward your monthly limit. We recommend maintaining a clean contact list.
@@ -201,15 +269,15 @@ A: Yes, you can upgrade anytime. Your account will be upgraded immediately.
 A: Your data remains safe. You can continue using the free plan or upgrade whenever you're ready.
 
 **Q: Are there any limitations on the free plan?**
-A: The free plan includes 10,000 emails per month. Other features are limited to basic functionality.
+A: The free plan includes 5,000 sent emails per month (200 per day) and 5,000 received emails. Other features are limited to basic functionality.
 
 ### Pro Plan
 
 **Q: What's included in the Pro plan?**
-A: 110,000 emails/month, unlimited contacts, workmail, automation, AI assistant, and more.
+A: 50,000 sent emails/month, unlimited received emails, unlimited contacts, 10 domains, 200 domain emails, automation, AI Content Assistant, and more.
 
-**Q: Can I add more workmail accounts?**
-A: The Pro plan includes 5 workmail accounts. Contact support for additional accounts.
+**Q: Can I add more domain emails?**
+A: The Pro plan includes 200 domain emails across 10 domains. Contact support if you need more.
 
 **Q: Is there a contract?**
 A: No, all plans are month-to-month with no long-term commitment.
@@ -303,30 +371,33 @@ For enterprise inquiries:
 - Average emails per month: ___________
 
 **Step 2: Choose plan**
-- Free: 10,000 emails/month = $0
-- Pro: 110,000 emails/month = $20
+- Free: 5,000 sent emails/month = $0
+- Pro: 50,000 sent emails/month = $20
 
 **Step 3: Calculate overage (Pro plan)**
-- Emails over 110,000 × $0.20 per 1,000 = Overage cost
+- Sent emails over 50,000 × $0.40 per 1,000 = Overage cost
+
+**Step 4: Add AI usage (optional)**
+- AI Gateway is billed separately by actual usage, after your one-time trial credit
 
 **Example Calculations:**
 
 **Scenario 1: Small startup**
-- 10,000 emails/month
+- 4,000 emails/month
 - Plan: Free ($0)
 - Total: $0/month
 
 **Scenario 2: Growing business**
-- 85,000 emails/month
+- 45,000 emails/month
 - Plan: Pro ($20)
 - Overage: None
 - Total: $20/month
 
 **Scenario 3: Active marketing**
-- 150,000 emails/month
+- 90,000 emails/month
 - Plan: Pro ($20)
-- Overage: 40,000 × $0.20/1K = $8
-- Total: $28/month
+- Overage: 40,000 × $0.40/1K = $16
+- Total: $36/month
 
 **Scenario 4: High-volume sender**
 - 500,000 emails/month
