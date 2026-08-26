@@ -84,4 +84,4 @@ Rate-based thresholds now require a sample of at least 100 messages. Below that,
 
 ---
 
-Everything here is live for all LiteStartup users. See the [full v2.5.0 changelog](/changelog/v2.5.0) or [get an API key →](https://app.litestartup.com/signup)
+Everything here is live for all LiteStartup users. See the [full v2.5.0 changelog](/changelog) or [get an API key →](https://app.litestartup.com/signup)
